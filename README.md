@@ -90,15 +90,24 @@ A separate software project aligned with financial analytics, reporting and busi
 
 ## 📈 Professional engineering highlights
 
-These examples come from my professional CV. Some client deliverables are proprietary and are **not public source-code repositories**.
+These examples come from my professional CV and previous reporting engagements. Some client deliverables are proprietary and are **not public source-code repositories**.
+
+**What distinguishes my work:** I am comfortable moving from SQL Server and Power BI to application APIs, cloud infrastructure, security reviews and native mobile development planning—without treating a prototype as a production release.
 
 - **EFS / financial-wellness SaaS:** End-to-end engineering of a multi-tenant TypeScript/Fastify/PostgreSQL portal; 10-dataset ingestion contract, role-based administration, analytics, model governance and regression checks.
-- **Australian manufacturing analytics:** Delivered Microsoft Fabric scheduler analytics across **8 states**, with **35 DAX measures** and **11 model relationships**, alongside SQL reporting and Power Automate processes.
+- **Australian manufacturing and logistics analytics:** Delivered Microsoft Fabric scheduler analytics across **8 states**, with **35 DAX measures** and **11 model relationships**. Built Power BI/DAX reporting for stock forecasts, scrap, workforce productivity and delivery operations; traced SQL deadlocks, pivot-schema drift, faulty joins and duplicated data at source.
 - **FNB via IQbusiness:** Developed commercial and retail reporting across **4 African markets**, including **18 dynamic dashboards**, market-aware security and performance optimisation.
 - **JSE via IQbusiness:** Automated service reporting and Jira extraction workflows; CV reports a **70% reduction** in manual reporting effort.
 - **Diageo via IQbusiness:** Worked with **270M+ survey rows** for brand-performance reporting and data-quality-controlled modelling.
 - **VKB:** BI, query optimisation and Power Platform automation, including reported improvements to reporting turnaround.
 - **Data science work:** Customer churn modelling, sales forecasting, statistical analysis and predictive experiments using Python and R.
+
+## 🔎 Engineering problems I have worked through
+
+- **Logistics KPI correctness:** Preserved delivery-manifest line-level grain, validated truck/driver relationship paths and protected measures from duplicate schedule joins. Tracked cost, tonnage and delivery-state reporting separately from distance and waiting-time calculations that still required source validation.
+- **BI reliability:** Investigated Power BI dataflow failures caused by SQL deadlocks, dynamic-pivot column drift, malformed event records and downstream schema changes rather than masking refresh errors.
+- **Production and workforce data:** Reconciled cutting-production and scrap metrics at a Date + State grain; built DAX around textual time durations, duplicate payroll rows and differing location-key formats.
+- **Full-stack operations:** Developed tenant-aware integrations, reporting automation, security controls and regression checks. More recent Cloudflare + Render migration planning prioritises staging, offline Docker tests and safe database cutovers over rushed production changes.
 
 ## 🧰 Technology toolkit
 
@@ -143,7 +152,7 @@ A major goal with CABO Learning Hub is to deliver **genuine native experiences**
 - **Desktop:** installation and platform-specific delivery exploration.
 - **Across devices:** consistent learner, teacher, parent and administrator journeys, adapted to each form factor.
 
-**Current status:** These are development directions and validation goals from my product roadmap, **not a claim that complete native Android or iOS apps have shipped**.
+**Current status:** Native Android work in Kotlin/Android Studio and iOS delivery are active engineering goals; **complete feature parity, release binaries and production-readiness are not yet verified**. I do not represent a wrapped web app as a finished native application.
 
 ## 🎓 Education & development
 

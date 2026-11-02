@@ -16,6 +16,22 @@ Johannesburg, South Africa · Open to local & international remote opportunities
 
 ---
 
+## 🗺️ Complete portfolio — start here
+
+I work across **data engineering, analytics, full-stack systems, responsible AI, automation, security and product architecture**. These documents give detailed, evidence-aware descriptions rather than a list of buzzwords:
+
+| Explore | What is included |
+|:--|:--|
+| 📚 **[Full 14-repository project atlas](docs/PROJECT_PORTFOLIO.md)** | CABO Learning Hub, NewChanges/EFS, HR, finance, commerce, beauty, artists, CABO corporate site, supporting repositories, and current implementation limits |
+| 🏢 **[Professional and client case studies](docs/CLIENT_CASE_STUDIES.md)** | Bestbar, EFS, FNB, JSE, Diageo, AB InBev, MultiChoice, VKB, Jozi My Jozi, Seemanns and independent analytics |
+| 🧠 **[Technical capabilities and evidence matrix](docs/TECHNICAL_SKILLS.md)** | SQL, DAX, BI, Fabric, Python, React, TypeScript, PostgreSQL, AI, Docker, security, Android/iOS direction and competence boundaries |
+
+**What I can contribute:** understand the business problem, trace data and code to source, deliver readable analytics and applications, validate permissions/tests, and document the operational path. I am interested in **analytics engineering, data engineering, platform/full-stack development, applied AI, solutions architecture and technical leadership**.
+
+**Accuracy note:** Some initiatives below are working implementations, others are prototypes, current branches or plans. I make that distinction explicit and do not represent experimental AI, payments, native mobile or staging deployments as production services.
+
+---
+
 ## 👋 A little about me
 
 I'm a **data and software engineer with 3+ years of full-cycle delivery experience** across business intelligence, data engineering, analytics, full-stack applications, process automation and quality engineering.
@@ -174,3 +190,35 @@ I'm interested in opportunities across **data engineering, analytics engineering
 [LinkedIn](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/) · [GitHub repositories](https://github.com/CayelaemJ?tab=repositories) · [Email](mailto:cay.jantjies1703@gmail.com)
 
 </div>
+
+
+---
+
+## 🧭 Full project and engagement index
+
+The featured projects above are only a selection. My broader experience spans:
+
+| Domain | Projects and evidence |
+|:--|:--|
+| Education and opportunity | [CABO Learning Hub](https://github.com/CayelaemJ/Training-and-Development-Hub): document-grounded learning/examinations, grades, learner journeys, institutional pathways, role-based UX and native parity work |
+| Enterprise analytics | [NewChanges / empower-fin](https://github.com/CayelaemJ/NewChanges): ten-feed source contract, financial wellness, admin, branding, reporting, data quality, model governance and UI migration |
+| People and HR | [CABO Human Capital](https://github.com/CayelaemJ/HR-Software): tenant-aware recruitment and evidence-led decisions |
+| Financial controls | [CABO Financial Intelligence](https://github.com/CayelaemJ/Accounting-Audit-And-Analytics-Software): accounts, journals, invoices, banking and audit monitoring in gated staging |
+| CABO corporate | [CABOSOLUTIONS](https://github.com/CayelaemJ/CABOSOLUTIONS): brand experience, lead intake and backend persistence |
+| Botswana consumer products | [CABO Commerce](https://github.com/CayelaemJ/ecommerce-platform-for-botswana): shopping, logistics and five-service *demonstration* concepts |
+| Service marketplace | [CABO Beauty](https://github.com/CayelaemJ/Grooming-and-Beauty-Bookings): booking workflow with database-backed availability |
+| Creative economy | [CABO Artist Hub](https://github.com/CayelaemJ/Artist-Management-Hub): fictional career intelligence and booking prototype |
+| Supporting work | [EFS React Migration](https://github.com/CayelaemJ/EFS-React-Migration), [Testing-EFS](https://github.com/CayelaemJ/Testing-EFS), [Adhoc Updates](https://github.com/CayelaemJ/Adhoc-Updates), [Ecommerce-Platform-](https://github.com/CayelaemJ/Ecommerce-Platform-), [c](https://github.com/CayelaemJ/c), and this profile repository |
+| Client-facing professional work | [Bestbar logistics + production, EFS, IQbusiness / FNB / JSE / AB InBev / Diageo / MultiChoice, VKB, Jozi My Jozi, Seemanns](docs/CLIENT_CASE_STUDIES.md) |
+
+### Engineering details that matter to me
+
+- **Correctness at source:** Identifying table grain and foreign-key paths before calculating metrics; examining duplicated delivery schedules and source lineage instead of making dashboards look right by accident.
+- **Semantic integrity:** DAX measures that respect state/date grain, filter context, nulls, historical as-at dates and valid denominators.
+- **Operational resilience:** Root-causing SQL deadlocks, dynamic pivot drift, flawed units, import/rebuild failures and shared-dataflow dependencies.
+- **Trust and privacy:** Tenant isolation, admin MFA review, auditable actions, synthetic-only tests, accountable human decisions, POPIA-conscious data design.
+- **Full-stack ownership:** Data ingestion, database modelling, API routes, responsive UI, verification, performance, documentation and deployability.
+- **Pragmatic infrastructure:** Cloudflare + Render direction, Docker-based disposable tests and cautious free-tier PostgreSQL migrations; old Railway notes in individual repos describe historical deployments.
+- **Honest cross-platform progress:** Kotlin/Android Studio work and iOS design/build direction are material parts of my development plans, with full feature parity and release readiness **still to verify**.
+
+For a detailed chronology, proof points and limitations, open the **[complete portfolio atlas](docs/PROJECT_PORTFOLIO.md)** and **[professional engineering case studies](docs/CLIENT_CASE_STUDIES.md)**.

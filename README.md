@@ -1,274 +1,368 @@
-
 <div align="center">
-  <img src="./assets/omnimaster-banner.svg" alt="Cayelaem Jantjies. Building what data makes possible, across data engineering, software and applied AI." width="100%" />
-  <br/><br/>
-  <a href="https://omnimaster-portfolio.onrender.com"><img src="https://img.shields.io/badge/OPEN_PORTFOLIO-102B2D?style=for-the-badge&logo=render&logoColor=EFD08E" alt="Explore OmniMaster portfolio" /></a>
-  <a href="https://www.linkedin.com/in/cayelaem-jantjies-000b45144/"><img src="https://img.shields.io/badge/LINKEDIN-102B2D?style=for-the-badge&logo=linkedin&logoColor=76D9C8" alt="LinkedIn" /></a>
-  <a href="mailto:cay.jantjies1703@gmail.com"><img src="https://img.shields.io/badge/CONTACT-102B2D?style=for-the-badge&logo=gmail&logoColor=EFD08E" alt="Contact me" /></a>
-  <a href="https://github.com/CayelaemJ?tab=repositories"><img src="https://img.shields.io/badge/SOURCE_CODE-102B2D?style=for-the-badge&logo=github&logoColor=76D9C8" alt="Browse code" /></a>
-</div>
+
+<img src="./assets/omnimaster-banner.svg" width="100%" alt="THE OMNIMASTER! Original tech superhero, real engineering. Cayelaem Jantjies, data engineer, full-stack builder and applied AI specialist." />
 
 <br/>
 
+<a href="https://omnimaster-portfolio.onrender.com"><img alt="Explore the interactive OmniMaster portfolio" src="https://img.shields.io/badge/ENTER_THE_OMNIMASTER-182F3D?style=for-the-badge&logo=render&logoColor=F7CF80"/></a>
+<a href="https://www.linkedin.com/in/cayelaem-jantjies-000b45144/"><img alt="Connect on LinkedIn" src="https://img.shields.io/badge/LINKEDIN-182F3D?style=for-the-badge&logo=linkedin&logoColor=83E1D0"/></a>
+<a href="mailto:cay.jantjies1703@gmail.com"><img alt="Contact Cayelaem by email" src="https://img.shields.io/badge/CONTACT-182F3D?style=for-the-badge&logo=gmail&logoColor=F7CF80"/></a>
+
+**DATA ENGINEERING** · **FULL-STACK SYSTEMS** · **BUSINESS INTELLIGENCE** · **APPLIED AI** · **DEVSECOPS**
+
+<sub>Johannesburg, South Africa · 3+ years of engineering delivery · Building toward solutions architecture and technical leadership</sub>
+
+</div>
+
 <table>
 <tr>
-<td width="207" align="center" valign="middle">
-  <a href="https://omnimaster-portfolio.onrender.com"><img src="./assets/cayelaem-portrait.webp" width="188" height="188" alt="Cayelaem Jantjies smiling in a black shirt" /></a>
+<td width="200" align="center" valign="middle">
+  <a href="https://omnimaster-portfolio.onrender.com"><img src="./assets/cayelaem-portrait.webp" width="185" alt="Cayelaem Jantjies smiling, wearing a black shirt" /></a>
 </td>
 <td valign="middle">
-  <h2>Hi, I'm Cayelaem.</h2>
-  <p><strong>Data Engineer · Analytics Engineer · Full-Stack Developer · Applied AI Builder</strong></p>
-  <p>I don't just turn data into dashboards. I engineer the pipelines, models, APIs, applications, safeguards and deployment workflows that make information useful.</p>
-  <p><strong>Johannesburg, South Africa.</strong> Working across enterprise data, software platforms, intelligent products and technical delivery. Interested in challenging engineering, architecture and technology leadership.</p>
-  <a href="https://omnimaster-portfolio.onrender.com"><strong>Explore my interactive portfolio →</strong></a>
+  <h2>Under the suit: Cayelaem Jantjies.</h2>
+  <p>I'm a data engineer, analytics specialist and full-stack builder. I don't stop when a dashboard renders: I work through <strong>source systems, ingestion, transformation, application design, APIs, access controls, testing and deployment</strong> so the result is actually useful and maintainable.</p>
+  <p>I have delivered across banking, FMCG, media, manufacturing, agriculture and social impact, including remote engineering for an Australian manufacturing business. Alongside client work, I develop independent products through CABO Solutions and The Fixer.</p>
+  <p><strong>My advantage:</strong> I can discuss the business problem, locate the problem in the SQL, adjust the API, redesign the UI, investigate the failing test and help ship the release.</p>
+  <p><a href="https://omnimaster-portfolio.onrender.com">See the full visual portfolio and interactive experiences →</a></p>
 </td>
 </tr>
 </table>
 
+> **THE OMNIMASTER PRINCIPLE:** One mind, every layer. The alter ego is fictional. The engineering, decisions, bugs and lessons are real.
+
 <div align="center">
-  <sub><strong>MY APPROACH</strong> · Understand the problem. Engineer the system. Verify the outcome. Own the release.</sub>
+
+[**MISSIONS**](#03--declassified-mission-archive) · [**POWER MATRIX**](#04--the-power-matrix) · [**SYSTEM ARCHITECTURE**](#05--how-i-engineer-systems) · [**WORLDS**](#06--the-industries-ive-worked-across) · [**ORIGIN**](#07--the-origin-story) · [**CURRENT LAB**](#08--what-im-building-and-testing-now) · [**CHALLENGES**](#09--the-danger-room) · [**CONTACT**](#10--work-with-me)
+
 </div>
 
 ---
 
-## 01 / Selected engineering impact
+## 01 / The person behind the systems
 
-These are reported outcomes from professional engagements, not dynamically generated GitHub statistics.
+My professional background started in statistics and data analysis, but the problems I kept encountering never ended at the report. A broken data source meant tracing the extraction. An expensive dashboard meant fixing the model. A fragile process meant building automation. A product requirement meant touching the frontend, API, database and release pipeline.
 
-<table>
-<tr>
-<td align="center" width="25%"><h2>270M+</h2><sub>Survey records processed and visualised</sub></td>
-<td align="center" width="25%"><h2>40%</h2><sub>Dashboard load-time improvement</sub></td>
-<td align="center" width="25%"><h2>70%</h2><sub>Reduction in manual reporting effort</sub></td>
-<td align="center" width="25%"><h2>4 markets</h2><sub>African banking analytics delivery</sub></td>
-</tr>
-</table>
+Today, my work combines four overlapping responsibilities:
 
-I bring **3+ years of hands-on technology delivery** across financial services, manufacturing, FMCG, broadcasting, agriculture, social impact and independent product development. I have also delivered remote engineering for an Australian manufacturing operation.
+| What I own | What that means in practice |
+|:--|:--|
+| **Data platforms** | Understand source contracts; model and move data with SQL, Python, ETL/ELT and modern analytical platforms; investigate quality and performance. |
+| **Decision systems** | Build Power BI semantic models, DAX measures, row-level security, operational KPIs and analytical experiences that people can actually interpret. |
+| **Software products** | Build interfaces, backend routes, database models, integrations, tenant-aware permissions, product workflows and user journeys. |
+| **Trust and delivery** | Test the application, review security boundaries, automate CI, manage deployment risks and document what remains unverified. |
 
-The common thread is joining **business needs + data correctness + software implementation + operational ownership** rather than treating each as a separate discipline.
+**What I value:** useful software, source-level correctness, an honest delivery status, privacy and security controls that are testable, and stakeholder communication that does not hide behind technical jargon.
+
+**Where I am heading:** hands-on solution architecture, principal engineering and technology leadership. I'm interested in roles where data, products, AI and engineering execution intersect.
 
 ---
 
-## 02 / Featured systems and products
+## 02 / Proof of work, not just buzzwords
 
-Four workstreams that show how I design, build and verify full systems. **A prototype is not a production release, and a green test does not prove a complete cutover.** Development stages are labelled.
+<div align="center">
 
-<table>
-<tr>
-<td valign="top" width="50%">
-  <h3>01 · <a href="https://github.com/CayelaemJ/NewChanges">The Fixer / NewChanges</a></h3>
-  <p><strong>Data integration · SaaS · Security engineering</strong></p>
-  <p>Source contracts, SQL/API ingestion, synchronisation, financial-wellness reporting, tenant-aware administration and dashboard experiences.</p>
-  <p><strong>My engineering focus:</strong> CDC-oriented read models, PostgreSQL and MySQL, TypeScript services, admin MFA, Docker regression suites, secure migrations and release gates.</p>
-  <p><code>TypeScript</code> <code>PostgreSQL</code> <code>MySQL</code> <code>Docker</code> <code>React</code></p>
-  <p><strong>Status:</strong> active engineering; production security and migration validations are ongoing.</p>
-  <p><a href="https://github.com/CayelaemJ/NewChanges">Review the source →</a></p>
-</td>
-<td valign="top" width="50%">
-  <h3>02 · <a href="https://github.com/CayelaemJ/Training-and-Development-Hub">CABO Learning Hub</a></h3>
-  <p><strong>Education intelligence · Applied AI · Product architecture</strong></p>
-  <p>Connecting learning, assessments, longitudinal learner progress, interventions, parent journeys and institutional intelligence. More than a conventional LMS.</p>
-  <p><strong>My engineering focus:</strong> React, APIs, document-grounded examinations, responsible AI routing, learner permissions, child-data privacy and multi-platform pathways.</p>
-  <p><code>React</code> <code>Node.js</code> <code>AI workflows</code> <code>PostgreSQL</code></p>
-  <p><strong>Status:</strong> active product engineering and pilots; national integration is a goal, not an accomplished rollout.</p>
-  <p><a href="https://github.com/CayelaemJ/Training-and-Development-Hub">Explore the platform →</a></p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-  <h3>03 · <a href="https://github.com/CayelaemJ/HR-Software">CABO Human Capital</a></h3>
-  <p><strong>People systems · Responsible AI · Tenant isolation</strong></p>
-  <p>Recruitment, workforce operations, evidence-led screening, onboarding and performance-development experiences with human accountability.</p>
-  <p><strong>My engineering focus:</strong> multi-tenant React/Express architecture, PostgreSQL RLS, audit histories, privacy, safe synthetic demonstrations and reviewable decisions.</p>
-  <p><code>React</code> <code>Express</code> <code>TypeScript</code> <code>PostgreSQL</code></p>
-  <p><strong>Status:</strong> active development and controlled demonstration.</p>
-  <p><a href="https://github.com/CayelaemJ/HR-Software">Explore the architecture →</a></p>
-</td>
-<td valign="top" width="50%">
-  <h3>04 · <a href="https://github.com/CayelaemJ/Accounting-Audit-And-Analytics-Software">CABO Financial Intelligence</a></h3>
-  <p><strong>Financial software · Accounting systems · Analytics</strong></p>
-  <p>Modular financial operations exploring ledgers, transactions, reconciliation, business reporting and audit-oriented monitoring.</p>
-  <p><strong>My engineering focus:</strong> exact-decimal double-entry accounting, atomic posting, account-level permissions, configurable controls and explanation workflows.</p>
-  <p><code>Next.js</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>SQL</code></p>
-  <p><strong>Status:</strong> gated staging, not production-certified financial software.</p>
-  <p><a href="https://github.com/CayelaemJ/Accounting-Audit-And-Analytics-Software">Explore the repository →</a></p>
-</td>
-</tr>
-</table>
+| **270M+** | **40%** | **Up to 70%** | **4 markets** |
+|:--:|:--:|:--:|:--:|
+| Survey records processed and visualised | Reported dashboard load-time improvement | Reduction in manual reporting effort | Banking reporting across African markets |
+
+</div>
+
+These are historical project outcomes from my documented professional experience, **not live usage statistics or independent production benchmarks**. Behind the numbers were data modelling, semantic-layer tuning, business rules, workflow automation and debugging source systems.
+
+Other documented project scope includes **18 banking dashboards**, an Australian scheduler solution covering **eight states**, **35 DAX measures**, **11 model relationships**, and a **15-temporary-table SQL design**. These are reported engagement characteristics, not a claim that all source code can be published.
+
+[**Read the real client and project case studies →**](docs/CLIENT_CASE_STUDIES.md)
+
+---
+
+## 03 / Declassified mission archive
+
+<img src="./assets/mission-archive.svg" width="100%" alt="Six OmniMaster missions spanning The Fixer, CABO Learning Hub, manufacturing, banking and FMCG analytics, Human Capital and Financial Intelligence." />
+
+**The work is varied, but the core question is the same:** how do I turn a messy real-world problem into a reliable, secure and understandable system? Each mission below includes its purpose, technical choices and limitations.
+
+### MISSION 01 · The Fixer: integration, analytics and the machinery behind the UI
+
+**[Explore the code: NewChanges](https://github.com/CayelaemJ/NewChanges)** · **Status: substantial application with ongoing integrations, security hardening and controlled migration work**
+
+**The problem.** Organisations need to bring SQL views, APIs and files into governed reporting without losing source semantics, tenant isolation or control over administration. Simply copying records into another database creates little value if downstream dashboards remain stale or inconsistent.
+
+**What I have been engineering**
+
+- A **TypeScript / Fastify / PostgreSQL / Prisma** application, with the existing dashboard and a separate React modernisation path. Tenant-aware employer, portfolio and administrative experiences are part of the documented architecture.
+- A documented **ten-feed source contract** spanning operational SQL views, APIs and file-based inputs, with reporting definitions, metadata and incremental-load considerations.
+- **MySQL reporting and AWS CDC simulation experiments** to explore more direct change-to-dashboard propagation, source timestamps, nullable watermarks, idempotency and refresh semantics.
+- Security work around **admin TOTP/WebAuthn MFA**, sensitive-operation step-up, recovery, server-side validation, email-address handling, audit trails and synthetic-data controls.
+- **Disposable Docker test environments, Playwright/Vitest checks and self-hosted CI** so testing does not depend on production databases or paid external services.
+
+**The engineering trade-off:** a second store or transformation hop is not automatically useful. I prefer a clear source contract, transformation ownership and measured latency over validation duplicated at every boundary.
+
+**What still needs evidence:** MFA coverage across deployed sensitive routes, complete CDC/update-to-dashboard propagation, production data migration parity, cutover approval and rollback rehearsals. **A green test or staging branch is not a production sign-off.**
+
+**Deep dive:** [Integration architecture, security and decisions](docs/OMNIMASTER_MISSION_DOSSIERS.md#mission-01--the-fixer-integration-platform)
+
+### MISSION 02 · CABO Learning Hub: intelligence across the learner journey
+
+**[Explore the code: Training-and-Development-Hub](https://github.com/CayelaemJ/Training-and-Development-Hub)** · **Status: active development, demonstrable workflows and pilots; not a national deployment**
+
+**The problem.** A learner's needs are broader than quizzes, content and term marks. Schools and families also need assessment history, interventions, progression, educator support and a way to connect information across years or institutions.
+
+**What I have been designing and implementing**
+
+- Document and learning-material ingestion; **multiple-choice and written examinations** using source-grounded questions, rubrics, partial-credit AI marking, feedback and review flags, as documented by the repository.
+- Learner, educator, guardian, institution and administrator journeys with distinct permissions and suitable interfaces for different ages and responsibilities.
+- A longer-term **longitudinal learner profile**, with school-system onboarding, historical marks migration, interventions and school/district reporting rather than treating the system as a conventional LMS.
+- **Applied AI provider routing** and failure behaviour: Groq/Hugging Face exploration, evaluation, latency/cost awareness, fallback, privacy and explicit human review.
+- A multi-platform direction for **web, Android/Kotlin, iOS and desktop**, with real native experiences rather than assuming a web wrapper is equivalent.
+
+**The engineering trade-off:** AI can help educators, but it should not silently turn a model's prediction into an official mark or learner intervention. Source evidence, consent, roles, bias evaluation and educator oversight are non-negotiable design concerns.
+
+**What is not yet complete:** national or government integration, independently approved child-data processing and full native app feature parity. Botswana expansion and system replacement are **product goals**, not signed public-sector deployments.
+
+**Deep dive:** [Education workflows, data migration and AI governance](docs/OMNIMASTER_MISSION_DOSSIERS.md#mission-02--cabo-learning-hub)
+
+### MISSION 03 · Australian manufacturing: get the grain right before the chart
+
+**Professional engagement: Bitberry / Bestbar, remote Australian manufacturing delivery** · **Status: historical delivered client work, proprietary source**
+
+**The problem.** Production, workforce scheduling, dispatch, stock and deliveries came from operational systems with changing schemas, inconsistent keys and different measurement grains. Joining the wrong tables can make a perfectly polished dashboard report incorrect figures.
+
+**What I did**
+
+- Delivered SQL Server, Microsoft Fabric, Power BI, DAX and Power Automate reporting as a primary data engineering resource across operational manufacturing datasets.
+- Built a scheduler-performance model described in my CV across **eight Australian states**, using **15 SQL temporary tables, 35 DAX measures and 11 model relationships**.
+- Worked on rebar and mesh production, scrap and cutting, stock forecasting, workforce output, dispatch and logistics reporting.
+- Investigated **SQL deadlocks**, cascading dataflow failures, dynamic-pivot column drift, manifest versus schedule grain, duplicated joins and durations stored in inconsistent units.
+- Automated recurring reports and document-handling flows, including mill-certificate processing.
+
+**Example decision:** before measuring deliveries per driver, first prove which record represents a schedule, which represents a manifest line, and how a truck/driver assignment behaves over time. Otherwise a one-to-many join multiplies tonnage or cost.
+
+**Evidence boundary:** detailed client data and internal systems are not public. This is an experience case study, not a downloadable source repository.
+
+[**Read the manufacturing case study →**](docs/CLIENT_CASE_STUDIES.md#1-bitberry--bestbar--australia-data-platform-manufacturing-and-delivery-analytics)
+
+### MISSION 04 · Enterprise BI: 270 million rows are useless without trusted measures
+
+**Professional consulting across banking, capital markets, FMCG and broadcasting** · **Status: historical engagements; client-owned work**
+
+- **FNB:** commercial and retail analytics across **South Africa, Namibia, Botswana and Zambia**; an **18-dashboard** body of work, model and DAX optimisation, market-specific access and a reported **40% dashboard load-time improvement**.
+- **Diageo:** worked with a reported **270M+ survey-row** dataset for brand and market performance. Data quality, query design, semantic modelling and insight communication mattered as much as visual design.
+- **JSE:** SLA/service reporting and Jira extraction workflows, with a reported **up to 70% reduction** in recurring manual reporting.
+- **AB InBev:** commercial analytics and Microsoft Fabric/BI reporting across African markets.
+- **MultiChoice:** customer-experience reporting, NPS, service patterns, sentiment and broadcast operations.
+- **VKB:** ERP/NAV and warehouse staging, SQL/MDX analytics, Power Platform and reporting modernisation.
+
+**The engineering trade-off:** optimise the SQL and semantic layer, not just the visuals. Respect historical dates, denominators, dynamic RLS, data completeness and row-level grain when designing executive metrics.
+
+[**Client-by-client engineering stories →**](docs/CLIENT_CASE_STUDIES.md)
+
+### MISSION 05 · CABO Human Capital: responsible decisions need evidence
+
+**[Explore the code: HR-Software](https://github.com/CayelaemJ/HR-Software)** · **Status: active product development and synthetic-data demonstration**
+
+Building a React/TypeScript/Express/PostgreSQL foundation for recruitment, employer/candidate journeys, employee operations, performance management and accountable decision support. The interesting engineering challenges include **tenant data boundaries, audit trails, evidence provenance, CV retention, human-controlled AI drafting and fairness evaluation**.
+
+An AI ranking or recommendation should not quietly become an employment decision. Permission checks, meaningful explanations and human review are product requirements, not optional polish. The current demonstration is **not approved for real applicant data or as a regulated payroll replacement**.
+
+[**Deep dive: Human Capital and data ethics →**](docs/OMNIMASTER_MISSION_DOSSIERS.md#mission-05--cabo-human-capital)
+
+### MISSION 06 · CABO Financial Intelligence: trustworthy financial operations
+
+**[Explore the code: Accounting-Audit-And-Analytics-Software](https://github.com/CayelaemJ/Accounting-Audit-And-Analytics-Software)** · **Status: gated staging, not certified production accounting software**
+
+Developing a modular **Next.js / TypeScript / PostgreSQL** platform covering organisation access, **exact-decimal double-entry ledgers, immutable journals, invoices, bank CSV matching, budgets, management reports, audit controls and reviewer gates**.
+
+A noteworthy design choice is to keep financial posting **deterministic and transactional**. AI may explain a read-only report, but it should not silently change accounting records. The project documentation explicitly identifies missing tax/year-end, evidence-storage and live bank-feed capabilities.
+
+[**Deep dive: financial correctness and controls →**](docs/OMNIMASTER_MISSION_DOSSIERS.md#mission-06--cabo-financial-intelligence)
 
 <details>
-<summary><strong>Explore more projects and supporting work</strong></summary>
+<summary><strong>+ Open additional missions: social impact, artist systems, CABO products, predictive analytics and more</strong></summary>
 
 <br/>
 
-| Project | Engineering focus | Scope |
-| :-- | :-- | :-- |
-| [CABO Solutions website](https://github.com/CayelaemJ/CABOSOLUTIONS) | React/Vite experience, interactive UI and persisted enquiry API | Website and API |
-| [CABO Artist Hub](https://github.com/CayelaemJ/Artist-Management-Hub) | Artist operations, bookings and synthetic career insights | Prototype |
-| [Testing-EFS](https://github.com/CayelaemJ/Testing-EFS) | Quality and verification workstreams | Supporting repository |
-| [EFS React Migration](https://github.com/CayelaemJ/EFS-React-Migration) | Modernisation of enterprise analytics UI | Supporting repository |
-| [OmniMaster portfolio](https://omnimaster-portfolio.onrender.com) | Personal story, work archive, project walkthroughs and interactive content | Live portfolio |
-| Additional private projects | Botswana commerce, service bookings and independent experiments | Private source, not publicly browseable |
+| Work / product | What it demonstrates | Evidence or status |
+|:--|:--|:--|
+| **[CABO Artist Hub](https://github.com/CayelaemJ/Artist-Management-Hub)** | Artist discovery, booking enquiries, synthetic PR/career-health indicators, management dashboards and AI advice with fallback. | Public prototype; fictional records; not live social integration. |
+| **[CABO Solutions website](https://github.com/CayelaemJ/CABOSOLUTIONS)** | React/Vite/Three.js frontend with a Node API and persisted enquiry workflow. | Public product repository. |
+| **Jozi My Jozi** | Shelter and social-outcome capture using Power Apps, SharePoint and Power BI, with practical staff training. | Historic volunteer work; sensitive records private. |
+| **Predictive modelling** | Customer churn, forecasting, Python/R statistics and exploratory ML experiments. | Individual work and learning history; not all code available. |
+| **Botswana commerce** | E-commerce, bookings, business-process automation and customer experience. | Independent private/product experiments; no public source claimed. |
+| **[EFS React Migration](https://github.com/CayelaemJ/EFS-React-Migration)** | Frontend migration direction, UI parity and separation of legacy/current systems. | Supporting repository, not a finished standalone product. |
+| **[Testing-EFS](https://github.com/CayelaemJ/Testing-EFS)** | Historical integration, product and quality workstreams. | Supporting/legacy snapshot. |
+| **[OmniMaster portfolio](https://omnimaster-portfolio.onrender.com)** | An interactive, responsive work history with an engineering journal and recruiter-friendly exploration. | Public portfolio, includes games and guided project sections. |
+
+For the larger catalogue, see the [project atlas](docs/PROJECT_PORTFOLIO.md). A public description does not imply a private repository or client dataset is accessible.
 
 </details>
 
-**Detailed evidence:** [14-repository portfolio atlas](docs/PROJECT_PORTFOLIO.md) · [Professional case studies](docs/CLIENT_CASE_STUDIES.md) · [Skills and evidence matrix](docs/TECHNICAL_SKILLS.md)
+---
+
+## 04 / The power matrix
+
+<img src="./assets/power-matrix.svg" width="100%" alt="OmniMaster power matrix featuring data engineering, BI, full-stack software, applied AI, platform security and growing multi-platform engineering skills." />
+
+I work across multiple disciplines, but **not every technology represents the same maturity or depth**. Here is how those capabilities come together in actual delivery.
+
+| Discipline | Hands-on work | What it looks like in practice |
+|:--|:--|:--|
+| **Data engineering** | SQL Server/T-SQL, PostgreSQL, MySQL, ETL/ELT, Fabric, source validation, dimensional models, API/file ingestion | Trace incorrect data, model sources, plan transformations, measure refresh and query behaviour. |
+| **Analytics engineering and BI** | Power BI, DAX, Power Query, RLS, report performance and semantic models | Reliable KPIs, access-aware measures, historical comparisons and executive decision support. |
+| **Full-stack software** | React, TypeScript, JavaScript, Node.js, Express/Fastify, Prisma and REST | From database design to authentication, API contracts, mobile-responsive interfaces and deployment. |
+| **Applied AI and data science** | Python, pandas, statistical modelling, ML experiments, model integrations, grounded assessments | Helpful product features with source grounding, evaluation, fallback and review. |
+| **Automation / DevSecOps** | Power Automate, Docker, CI/CD, self-hosted runners, Playwright, Vitest, Semgrep/Trivy/Gitleaks | Replace repetitive tasks and build confidence before releases. |
+| **Cloud and native pathways** | Render, Cloudflare, AWS experimentation, React web, Kotlin Android and iOS planning | Practical hosting and careful migration; native parity remains a verification target. |
+
+<details>
+<summary><strong>+ Technical tools and the evidence behind them</strong></summary>
+
+<br/>
+
+**Languages, databases and modelling:** Python, SQL/T-SQL, PostgreSQL, MySQL, JavaScript/TypeScript, R, pandas, PySpark, Prisma, dimensional modelling and data contracts.
+
+**BI and modern analytics:** Power BI, Power Query M, DAX, Microsoft Fabric, SQL Server, data warehousing, reporting automation, and experience/training with Databricks and PySpark.
+
+**Applications and infrastructure:** React, Node.js, Fastify/Express, REST APIs, Docker, Render, Cloudflare, GitHub, local CI and API integrations.
+
+**Quality and security:** Vitest, Playwright, SAST, secrets/dependency scans, TOTP and WebAuthn workstreams, RBAC/RLS, privacy-aware design, contract and regression testing.
+
+**Development paths:** Kotlin/Android, iOS and desktop application workflows are evolving capabilities. I do not describe unapproved native releases as shipped.
+
+[Open the comprehensive evidence matrix](docs/TECHNICAL_SKILLS.md).
+
+</details>
 
 ---
 
-## 03 / How I engineer an end-to-end system
+## 05 / How I engineer systems
+
+<img src="./assets/system-map.svg" width="100%" alt="System architecture: source ingestion via SQL, APIs and events; trusted ELT/CDC models; React, Power BI and AI experiences; and reliable operations with access controls, testing and CI." />
+
+The platform matters less than the engineering boundaries. Every pipeline or application needs a clear contract, owner, recovery path and consumer.
+
+| Stage | Questions I ask | Examples |
+|:--|:--|:--|
+| **01 / Source** | What is the real event, natural key, history, timestamp precision and grain? | ERP/NAV, SQL, MySQL reporting views, APIs, documents and files. |
+| **02 / Transform** | Where should validation happen? Does an incremental load miss updates or deletes? | ETL/ELT, transformation SQL, lakehouse patterns, CDC simulations, semantic modelling. |
+| **03 / Serve** | What should the consumer actually see? How are access and historical semantics enforced? | Power BI/DAX, React dashboards, tenant-aware APIs, AI-assisted workflows. |
+| **04 / Operate** | How do we prove this is safe to ship? What happens on a replay, failure or rollback? | Docker CI, MFA, test suites, migrations, health checks, audit trails and monitoring. |
+
+### Selected problems and decisions
+
+<details>
+<summary><strong>01. I prefer correcting the data grain to correcting the chart.</strong></summary>
+
+In manufacturing and logistics work, joining schedules, deliveries, manifests and workforce tables at incompatible grains can multiply output measures. The right fix starts with the business event and relationship model, validates keys and timing, then creates measures with explicit filter semantics. It is a data problem first, a DAX problem second.
+
+</details>
+
+<details>
+<summary><strong>02. A dashboard refresh is not a CDC guarantee.</strong></summary>
+
+For The Fixer, I am exploring source-change simulation and MySQL reporting integration. Timestamp precision, nullable watermarks, deletes, retries, ordering and idempotency matter. A read-only view can be a useful contract, but a full change-stream design also needs replay handling, monitoring and evidence of actual propagation to consumers.
+
+</details>
+
+<details>
+<summary><strong>03. Avoid validation that doesn't add protection.</strong></summary>
+
+Multiple application and database layers can validate the same field differently and create stale or inconsistent states. I prefer clearly owned contracts, deterministic database constraints, domain validation at appropriate boundaries and observable failures, rather than duplicating checks without purpose.
+
+</details>
+
+<details>
+<summary><strong>04. A green test doesn't certify production.</strong></summary>
+
+I favour synthetic tests in isolated local Docker environments, reliable CI reporting, integration checks against real HTTP routes, role-specific negative tests, migrations rehearsed in staging, and an explicit rollback plan. CI results, application security and production readiness are different questions.
+
+</details>
+
+[**Technical design decisions and failure modes →**](docs/OMNIMASTER_SYSTEM_DESIGN.md)
+
+---
+
+## 06 / The industries I've worked across
+
+| World | Delivery focus | Example experience |
+|:--|:--|:--|
+| **Banking and financial services** | Commercial/retail analytics, market-aware permissions, financial-wellness operations | FNB, financial-wellness engineering |
+| **Capital markets** | Service-level analytics and workforce reporting | JSE |
+| **FMCG, retail and agriculture** | Large-scale survey analytics, commercial measures, ERP and warehousing | Diageo, AB InBev, VKB |
+| **Broadcasting and media** | Customer experience, NPS, sentiment and operational metrics | MultiChoice |
+| **Manufacturing and logistics** | Production, scheduling, scrap, stock and dispatch automation | Remote Australian manufacturing |
+| **Social impact and education** | Outcome capture, learner intelligence, responsibly applied AI | Jozi My Jozi, CABO Learning Hub |
+
+The same architectural problems appear in different disguises: source lineage, changing schemas, confusing metrics, permissions, workflow design and adoption. I adapt the solution to the operational context, not the other way around.
+
+---
+
+## 07 / The origin story
+
+<img src="./assets/origin-story.svg" width="100%" alt="Engineering timeline from Statistics and Data Science graduation in 2023 through enterprise BI, multi-industry delivery and 2026 full-stack and AI product engineering." />
+
+**Education:** BCom in Statistics and Data Science, University of Pretoria (2023).
+
+| Period | Focus | What changed in my engineering |
+|:--|:--|:--|
+| **2023** | Statistical foundations, early analytics and broadcast operations exposure | Learned to frame problems quantitatively and handle operational source data. |
+| **2024** | Enterprise BI and consulting engagements | Built DAX, Power BI, SQL and reporting automation across banking, capital markets, FMCG and media. |
+| **2025** | Analytics at scale, agriculture, nonprofit and independent projects | Deepened source modelling, industry adaptation, reporting performance and delivery ownership. |
+| **2026** | Remote manufacturing data engineering; full-stack products and platform work | Expanded into application architecture, security, applied AI, DevOps, cloud and multi-platform product design. |
+
+I have worked as a consultant, delivery engineer, analyst, developer and sole engineering resource on projects. I am most interested in roles where I can **own a complete technical problem and grow toward architecture and leadership** rather than only maintain isolated dashboards.
+
+[**Full documented professional engagements →**](docs/CLIENT_CASE_STUDIES.md)
+
+---
+
+## 08 / What I'm building and testing now
+
+<div align="center"><sub>ENGINEERING JOURNAL · NOVEMBER 2026 · WORK IN PROGRESS, NOT A CLAIM OF FINISHED RELEASES</sub></div>
+
+| Workstream | Why it matters | Current engineering questions |
+|:--|:--|:--|
+| **The Fixer / MFA** | High-risk admin actions require stronger identity proofs. | TOTP/WebAuthn enrolment and recovery, step-up enforcement, complete route coverage and production wiring. |
+| **AWS / MySQL CDC lab** | Reporting should reflect meaningful source changes without unnecessary copy cycles. | Watermarks, timestamp granularity, changed rows, deletes, batch/replay rules, view-to-dashboard latency. |
+| **PostgreSQL and cloud migrations** | Avoid destabilising live systems during infrastructure changes. | Schema/security parity, staged cutovers, backups, rollbacks and Render/Cloudflare integration. |
+| **Self-hosted quality gates** | Tests should be reproducible and isolated from expensive external services. | Docker-based integration suites, local databases, browser checks, scanning and failure reporting. |
+| **Learning Hub AI** | Helpful learning support needs reliability and safeguards. | Document grounding, provider fallback, educator review, child-data policy and scale. |
+| **Native product development** | Genuine cross-platform delivery needs more than responsive CSS. | Android/Kotlin and iOS implementation, accessibility, parity and real device testing. |
+
+**My current technical mindset:** understand the failure path first, run isolated experiments, document the evidence, then choose the least risky release path.
+
+[Engineering journal](docs/ENGINEERING_FIELD_NOTES.md) · [Detailed mission dossiers](docs/OMNIMASTER_MISSION_DOSSIERS.md) · [System design](docs/OMNIMASTER_SYSTEM_DESIGN.md)
+
+---
+
+## 09 / The danger room
+
+The OmniMaster website has interactive engineering challenges and mini-games. GitHub READMEs cannot safely run custom JavaScript, so this is the launchpad, not a fake embedded game.
+
+| Challenge | What it exercises | Where |
+|:--|:--|:--|
+| **Engineering scenario challenge** | Source truth, analytics logic, architecture and trade-offs | [Launch the danger room](https://omnimaster-portfolio.onrender.com/#play) |
+| **Memory match / reaction / tic-tac-toe** | A little personality between engineering case studies | [Open the OmniMaster arcade](https://omnimaster-portfolio.onrender.com/#omni-arcade) |
+| **Recruiter exploration** | Browse my experience through different engineering lenses | [Explore the interactive recruiter tour](https://omnimaster-portfolio.onrender.com/#recruiter-tour) |
+
+These experiences are optional. The main portfolio and linked dossiers contain the technical evidence without needing to play anything.
+
+---
+
+## 10 / Work with me
+
+I'm a **hands-on South African data and software engineer** building toward solution architecture and technology leadership. I'm interested in complex data platform problems, analytics engineering, Fabric/Power BI, full-stack platform development, applied AI and high-ownership engineering roles.
+
+You can see my complete project evidence, interact with the portfolio, inspect public code and contact me below. Where source belongs to a client or a private product, I describe architecture and outcomes without exposing protected information.
 
 <div align="center">
-  <img src="./assets/system-map.svg" width="100%" alt="An architecture diagram from SQL/API ingestion through trusted data transformations to applications and AI, with secure operations and release verification." />
-</div>
 
-Architecture is a sequence of decisions. A successful dashboard can still display incorrect data, and a passing test suite can still miss an unsafe release.
+### ONE MIND. EVERY LAYER.
 
-| Layer | Questions that matter | Tools and methods |
-| :-- | :-- | :-- |
-| **Sources and ingestion** | What is the grain? What changed? Are the keys and timestamps reliable? | SQL, source contracts, API integration, staging, CDC simulation |
-| **Transformations and semantics** | What belongs in a query, model, view or semantic layer? | ETL/ELT, Fabric, SQL Server, PostgreSQL, MySQL, dimensional modelling, DAX |
-| **Applications and intelligence** | Who uses this? Who is allowed to see or change it? | React, TypeScript, REST APIs, Power BI, applied AI and role-based UX |
-| **Quality and operations** | What happens when a release, job, API or migration fails? | Docker CI, tests, authorisation, MFA, scanning, observability and rollback |
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)**
 
-### Engineering problems I've worked through
+**[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 
-- **Manufacturing reporting correctness:** traced duplicated schedule joins, inconsistent location keys, stock and productivity grain, and SQL deadlocks rather than hiding bad numbers in a visual.
-- **BI scalability:** optimised semantic models and query patterns while preserving security, time-context and filter behaviour.
-- **Operational automation:** removed repetitive reporting steps and improved handoff through data pipelines and automated distribution.
-- **Safer product delivery:** separated synthetic tests from real data, added reproducible container-based tests and investigated admin MFA and release-verification gaps.
-- **Responsible AI integration:** planned for document grounding, evaluation, fallback providers, privacy boundaries, latency, cost and human review instead of assuming that an API response is correct.
-
-[Read the current engineering field notes →](docs/ENGINEERING_FIELD_NOTES.md)
-
----
-
-## 04 / Technology across the stack
-
-<table>
-<tr>
-<td width="50%" valign="top">
-  <p><strong>DATA AND ANALYTICS</strong></p>
-  <ul>
-    <li>SQL, T-SQL, PostgreSQL and MySQL</li>
-    <li>Microsoft Fabric and lakehouse concepts</li>
-    <li>Power BI, DAX, Power Query and semantic models</li>
-    <li>Python, pandas, PySpark and statistical modelling</li>
-    <li>ETL/ELT, data quality and CDC experiments</li>
-  </ul>
-</td>
-<td width="50%" valign="top">
-  <p><strong>SOFTWARE AND PLATFORMS</strong></p>
-  <ul>
-    <li>React, TypeScript, JavaScript and Node.js</li>
-    <li>Fastify, Express, REST APIs and Prisma</li>
-    <li>Responsive UX and multi-tenant applications</li>
-    <li>Authentication, role-based access and integrations</li>
-    <li>Automation, background workflows and deployment</li>
-  </ul>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-  <p><strong>APPLIED AI AND AUTOMATION</strong></p>
-  <ul>
-    <li>Document-grounded learning and assessment</li>
-    <li>AI routing and provider fallback</li>
-    <li>Human review and model evaluation</li>
-    <li>Predictive analytics, forecasting and churn modelling</li>
-    <li>Power Automate, Power Apps and scheduled jobs</li>
-  </ul>
-</td>
-<td width="50%" valign="top">
-  <p><strong>DEVSECOPS AND RELIABILITY</strong></p>
-  <ul>
-    <li>Docker, Git, CI/CD and self-hosted runners</li>
-    <li>Vitest, Playwright, regression and contract tests</li>
-    <li>Static analysis, dependency and secret scanning</li>
-    <li>Render and Cloudflare architecture</li>
-    <li>Monitoring, incident investigation and release gates</li>
-  </ul>
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-203C45?style=flat-square&logo=python&logoColor=F7CD81)
-![SQL](https://img.shields.io/badge/SQL-203C45?style=flat-square&logo=postgresql&logoColor=74D8C6)
-![Power BI](https://img.shields.io/badge/Power_BI-203C45?style=flat-square&logo=powerbi&logoColor=F7CD81)
-![Fabric](https://img.shields.io/badge/Microsoft_Fabric-203C45?style=flat-square&logoColor=74D8C6)
-![TypeScript](https://img.shields.io/badge/TypeScript-203C45?style=flat-square&logo=typescript&logoColor=74D8C6)
-![React](https://img.shields.io/badge/React-203C45?style=flat-square&logo=react&logoColor=74D8C6)
-![Node.js](https://img.shields.io/badge/Node.js-203C45?style=flat-square&logo=nodedotjs&logoColor=74D8C6)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-203C45?style=flat-square&logo=postgresql&logoColor=74D8C6)
-![Docker](https://img.shields.io/badge/Docker-203C45?style=flat-square&logo=docker&logoColor=74D8C6)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-203C45?style=flat-square&logo=cloudflare&logoColor=F7CD81)
-
-</div>
-
-*Tools are not claims of equal production depth. My [technical evidence matrix](docs/TECHNICAL_SKILLS.md) separates demonstrated work from ongoing experiments and future goals.*
-
----
-
-## 05 / Applied AI, security and multi-platform engineering
-
-**Applied AI is a feature in a real workflow, not a decorative chatbot.** My product interests include education support, source-grounded assessment, learner insights, organisational assistance and explainable decision support. I treat permissions, evaluation, human review, fallback and costs as part of its architecture.
-
-**Security belongs in both design and delivery.** My work includes tenant boundaries, server-side validation, administrator TOTP/WebAuthn workstreams, synthetic-data testing, security scans and repeatable release gates. Some of these remain under integration or verification; I do not claim a completed security audit where one has not occurred.
-
-**Across devices:** I am extending my product-development skills into Android/Kotlin, iOS and desktop experiences alongside established web/full-stack delivery. Native feature parity, approved distribution and full production readiness still require verification.
-
----
-
-## 06 / Professional breadth
-
-| Industry | Problems and engineering experience |
-| :-- | :-- |
-| **Banking and financial services** | Commercial/retail reporting across four African markets, data security, financial-wellness analytics and operational platforms |
-| **Capital markets** | Service reporting, Jira extraction, workforce data and workflow automation |
-| **FMCG and broadcasting** | Commercial intelligence, survey analytics, customer insights and executive dashboards |
-| **Australian manufacturing** | Microsoft Fabric, SQL, Power BI, stock/production reporting, logistics and automated operations |
-| **Agriculture** | ERP/NAV staging, SQL modelling, BI modernisation and reporting automation |
-| **Social sector** | Structured data capture, nonprofit outcome reporting and measurable service insights |
-| **Independent platforms** | Education intelligence, HR, finance, commerce, artist operations and application security |
-
-Past delivery has involved **FNB, JSE, Diageo, AB InBev, MultiChoice, VKB Group** and an Australian manufacturing client. Client-owned datasets and source code are not disclosed here.
-
-**Professional case studies:** [Read what was delivered, why it mattered and what can be verified](docs/CLIENT_CASE_STUDIES.md)
-
----
-
-## 07 / Current engineering directions
-
-| Workstream | What I'm investigating | Stage |
-| :-- | :-- | :-- |
-| **Data movement and CDC** | AWS database simulations, MySQL views, source timestamps, change propagation and database-first transformations | Experimentation / validation |
-| **Security and identity** | Admin MFA, safe recovery, step-up access, isolation and observable audit behaviour | Active integration |
-| **CI/CD and quality** | Local Docker test suites, self-hosted runners, Playwright and security automation | Active engineering |
-| **Cloud/data migration** | Cloudflare and Render, PostgreSQL migration parity, staging gates and rollback | Gated migrations |
-| **Education intelligence** | Longitudinal learner data, AI assistance and Botswana school-system interoperability | Pilot / roadmap |
-| **Native and desktop** | Kotlin Android, iOS and Windows experiences, device-specific UX and parity tests | Active exploration |
-
-**Read:** [Engineering field notes, November 2026](docs/ENGINEERING_FIELD_NOTES.md)
-
----
-
-## 08 / Education and where I'm heading
-
-**BCom in Statistics and Data Science**, University of Pretoria (2023).
-
-I am a hands-on technologist who likes to understand both the business problem and every layer of the implementation. I enjoy the route from stakeholder requirements to source systems, useful software, secure delivery and production support.
-
-I'm developing toward **solution architecture and technology leadership** while continuing to build. Open to engineering conversations about data platforms, analytics engineering, Power BI/Fabric, full-stack systems, applied AI and technical ownership.
-
-<div align="center">
-
-### Make it useful. Make it trustworthy. Make it maintainable.
-
-**[Interactive portfolio](https://omnimaster-portfolio.onrender.com)** · **[Full project atlas](docs/PROJECT_PORTFOLIO.md)** · **[LinkedIn](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[Email](mailto:cay.jantjies1703@gmail.com)**
-
-<sub>© Cayelaem Jantjies · Editorial update: 7 November 2026 · Stages and verification limits are stated deliberately.</sub>
+<sub>Updated 7 November 2026. Outcomes are attributed to earlier engagements. Active work, pilots, prototypes and future plans are marked as such.</sub>
 
 </div>

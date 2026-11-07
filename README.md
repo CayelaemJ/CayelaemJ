@@ -149,50 +149,46 @@ Architecture is a sequence of decisions. A successful dashboard can still displa
 <table>
 <tr>
 <td width="50%" valign="top">
-
-**DATA AND ANALYTICS**
-
-- SQL, T-SQL, PostgreSQL and MySQL
-- Microsoft Fabric and lakehouse concepts
-- Power BI, DAX, Power Query and semantic models
-- Python, pandas, PySpark and statistical modelling
-- ETL/ELT, data contracts, data quality and CDC experiments
-
+  <p><strong>DATA AND ANALYTICS</strong></p>
+  <ul>
+    <li>SQL, T-SQL, PostgreSQL and MySQL</li>
+    <li>Microsoft Fabric and lakehouse concepts</li>
+    <li>Power BI, DAX, Power Query and semantic models</li>
+    <li>Python, pandas, PySpark and statistical modelling</li>
+    <li>ETL/ELT, data quality and CDC experiments</li>
+  </ul>
 </td>
 <td width="50%" valign="top">
-
-**SOFTWARE AND PLATFORMS**
-
-- React, TypeScript, JavaScript and Node.js
-- Fastify, Express, REST APIs and Prisma
-- Responsive web UX and multi-tenant applications
-- Authentication, role-based access and API integration
-- Automation, background workflows and deployment
-
+  <p><strong>SOFTWARE AND PLATFORMS</strong></p>
+  <ul>
+    <li>React, TypeScript, JavaScript and Node.js</li>
+    <li>Fastify, Express, REST APIs and Prisma</li>
+    <li>Responsive UX and multi-tenant applications</li>
+    <li>Authentication, role-based access and integrations</li>
+    <li>Automation, background workflows and deployment</li>
+  </ul>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
-**APPLIED AI AND AUTOMATION**
-
-- Document-grounded learning and assessment
-- AI routing and provider fallback
-- Human-in-the-loop review and model evaluation
-- Predictive analytics, forecasting and churn modelling
-- Power Automate, Power Apps and scheduled jobs
-
+  <p><strong>APPLIED AI AND AUTOMATION</strong></p>
+  <ul>
+    <li>Document-grounded learning and assessment</li>
+    <li>AI routing and provider fallback</li>
+    <li>Human review and model evaluation</li>
+    <li>Predictive analytics, forecasting and churn modelling</li>
+    <li>Power Automate, Power Apps and scheduled jobs</li>
+  </ul>
 </td>
 <td width="50%" valign="top">
-
-**DEVSECOPS AND RELIABILITY**
-
-- Docker, Git, CI/CD and self-hosted runners
-- Vitest, Playwright, regression and contract tests
-- Static analysis, dependency checks and secret scanning
-- Render and Cloudflare architecture
-- Monitoring, incident investigations and release gates
-
+  <p><strong>DEVSECOPS AND RELIABILITY</strong></p>
+  <ul>
+    <li>Docker, Git, CI/CD and self-hosted runners</li>
+    <li>Vitest, Playwright, regression and contract tests</li>
+    <li>Static analysis, dependency and secret scanning</li>
+    <li>Render and Cloudflare architecture</li>
+    <li>Monitoring, incident investigation and release gates</li>
+  </ul>
 </td>
 </tr>
 </table>

@@ -80,6 +80,15 @@ jobs:
         run: node docs/interactive/test_library_worker.mjs
       - name: Verify static shareable mirror and all local lesson links
         run: node docs/interactive/test_static_export.mjs
+      - name: Render PDF pages and reject visually blank documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdftoppm >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          python docs/interactive/test_pdf_render.py
       - name: Verify offline study room HTML
         run: |
           cd docs/interactive

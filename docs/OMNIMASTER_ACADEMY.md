@@ -78,7 +78,10 @@ For worked explanations and reviewer questions, use the [Volume II workbook](fie
 
 ## Go beyond the course
 
-[**Volume V: Build a System With Me**](OMNIMASTER_BUILD_WITH_ME.md) supplies a complete fictional SQLite pipeline with six guided engineering chapters, replay and failure tests. [The 30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) turns the syllabus into daily artifacts. For a more playful format, open the [offline study room](interactive/index.html) from a cloned repository.
+[**Volume V: Build a System With Me**](OMNIMASTER_BUILD_WITH_ME.md) supplies a complete fictional SQLite pipeline with six guided engineering chapters, replay and failure tests. [The 30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) turns the syllabus into daily artifacts. For a more playful format, open the [live interactive Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) in any browser.
 
 
 [Start lesson 01 →](academy/01_START_HERE.md) · [Try the arcade →](OMNIMASTER_ARCADE.md)
+
+
+**Design for people:** [Volume VI](OMNIMASTER_HUMAN_INTERFACE.md) adds a six-chapter UI/UX development and usability course.

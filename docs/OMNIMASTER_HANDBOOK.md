@@ -16,6 +16,8 @@ This handbook is the long-form companion to my GitHub profile. It is not a gener
 
 **Study or meet the human:** [Volume III · OmniMaster Academy](OMNIMASTER_ACADEMY.md) teaches the skills with exercises and capstones.
 
+**Learn how I design for people:** [Volume VI · The Human Interface](OMNIMASTER_HUMAN_INTERFACE.md) covers UI/UX development, usability, inclusive interface systems and real product design trade-offs.
+
 **Build a real teaching project:** [Volume V · Build a System With Me](OMNIMASTER_BUILD_WITH_ME.md) teaches a complete synthetic data-to-decision system, with replay, rollback, reconciliation and tests. The [30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) turns those skills into daily practice.
  [Volume IV · The Person Behind the Code](OMNIMASTER_OPERATING_MANUAL.md) explains my self-described INTJ habits, systems mindset, collaboration style and IT range. [The Arcade](OMNIMASTER_ARCADE.md) adds executable detective scenarios.
 

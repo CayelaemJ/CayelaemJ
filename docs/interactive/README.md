@@ -2,18 +2,22 @@
 
 This is a **static, self-contained HTML experience** for readers of [Volume V: Build a System With Me](../OMNIMASTER_BUILD_WITH_ME.md).
 
-## Run it
+## Launch the hosted experience
+
+**[Open the live OmniMaster Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/).** The public, static page is served from a separate Cloudflare Worker. There is no GitHub Pages deployment involved. [Source HTML](index.html) is available for inspection.
+
+## Run locally
 
 1. Clone or download the [CayelaemJ profile repository](https://github.com/CayelaemJ/CayelaemJ).
 2. Double-click **`docs/interactive/index.html`** or open it in your browser.
-3. Browse seven lessons, answer five engineering scenarios and tick off the 30 daily study missions.
+3. Browse seven lessons, answer six engineering scenarios and tick off the 30 daily study missions.
 
-GitHub's normal file preview displays HTML as source and **does not execute it**. I have not claimed or configured GitHub Pages hosting for this page.
+GitHub's normal file preview displays HTML as source and **does not execute it**. Use the live Cloudflare URL above to interact without cloning, or open the HTML file locally. See [hosting and maintenance notes](HOSTING.md).
 
 ## What it includes
 
 - An offline, browser-readable guide to the Academy and Volume V.
-- Five fictional engineering decision scenarios with explanations.
+- Six fictional engineering decision scenarios with explanations.
 - An optional 30-day checklist, with a progress bar and a clear-progress button.
 - Dark OmniMaster styling, responsive layouts, visible keyboard focus, semantic sections and accessible announcements.
 

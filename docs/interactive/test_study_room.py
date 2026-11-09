@@ -76,7 +76,13 @@ class StudyRoomTests(unittest.TestCase):
             parsed = urlsplit(uri)
             if not parsed.path or parsed.path.startswith("#"):
                 continue
-            self.assertFalse(parsed.scheme or parsed.netloc)
+            if parsed.scheme or parsed.netloc:
+                self.assertEqual(
+                    uri,
+                    "https://github.com/CayelaemJ/CayelaemJ/blob/main/docs/interactive/index.html",
+                    "Only the explicitly labelled HTML-source link may leave this offline page",
+                )
+                continue
             path = (PAGE.parent / parsed.path).resolve()
             self.assertTrue(path.is_relative_to(ROOT), uri)
             self.assertTrue(path.exists(), uri)
@@ -85,10 +91,10 @@ class StudyRoomTests(unittest.TestCase):
         for n in range(1, 8):
             self.assertIn(f"../academy/0{n}_", self.html)
 
-    def test_exactly_five_scenarios_have_explanations(self):
+    def test_exactly_six_scenarios_have_explanations(self):
         questions = self.script.split("const questions = [", 1)[1].split("];", 1)[0]
-        self.assertEqual(len(re.findall(r"\{q:", questions)), 5)
-        self.assertEqual(len(re.findall(r",why:", questions)), 5)
+        self.assertEqual(len(re.findall(r"\{q:", questions)), 6)
+        self.assertEqual(len(re.findall(r",why:", questions)), 6)
 
     def test_exactly_thirty_mission_titles(self):
         titles = self.script.split("const titles=[", 1)[1].split("];", 1)[0]

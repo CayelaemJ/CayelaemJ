@@ -20,7 +20,8 @@ This is a small, public learning experience with no user accounts, external scri
 | Hosted copy | Cloudflare Worker `omnimaster-study-room` | Embedded HTML plus 48 public teaching chapters, with read-only lesson routes |
 | Cloudflare account subdomain | `cabo-solutions-za.workers.dev` | Worker route enabled |
 | Study material | Approved educational Markdown chapters | Bundled into the Worker when deployed, served on-site as HTML rather than GitHub redirects |
-| Downloadable textbook | `/downloads/omnimaster-fullstack.pdf` | Actual PDF response generated from the public full-stack playbook at deployment build |\n| Optional progress | Browser `localStorage` | No backend sync; browser/device-specific; can be cleared |
+| Downloadable textbook | `/downloads/omnimaster-fullstack.pdf` | Actual PDF response generated from the public full-stack playbook at deployment build |
+| Optional progress | Browser `localStorage` | No backend sync; browser/device-specific; can be cleared |
 | CI | `engineering-labs-ci.yml` | Static structure and link tests; **not** a live browser or deployment check |
 
 ## Publishing a new study-room version

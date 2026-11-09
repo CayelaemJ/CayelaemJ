@@ -57,6 +57,8 @@
 
 **[LAUNCH THE LIVE STUDY ROOM · READ EVERY LESSON ON THE WEBSITE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
 
+**[SEARCH ALL 54 LEARNING PAGES · INTERACTIVE COURSE CATALOGUE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/library)**
+
 **[STUDY FRONTEND VS BACKEND · INTERACTIVE HTML BOOK →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)**
 
 **[DOWNLOAD THE FULL-STACK PDF EDITION →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf)**

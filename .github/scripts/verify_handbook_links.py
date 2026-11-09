@@ -1,7 +1,8 @@
-"""Check that the public OmniMaster handbook is complete and locally navigable.
+"""Offline integrity checks for both OmniMaster textbook volumes.
 
-Runs offline, using only the Python standard library. External URLs and anchors
-inside already-existing documents are not validated here.
+Only validates local Markdown paths, navigation completeness and chapter structure.
+External URLs, historical companion-doc links and GitHub-rendered anchors are not
+certified by this checker.
 """
 from __future__ import annotations
 
@@ -12,65 +13,88 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[2]
-INDEX = ROOT / "docs" / "OMNIMASTER_HANDBOOK.md"
 COVER = ROOT / "README.md"
-CHAPTER_DIR = ROOT / "docs" / "handbook"
-LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
+VOLUME_ONE = ROOT / "docs" / "OMNIMASTER_HANDBOOK.md"
+VOLUME_TWO = ROOT / "docs" / "OMNIMASTER_FIELD_GUIDE.md"
+CHAPTERS = ROOT / "docs" / "handbook"
+FIELD_GUIDE = ROOT / "docs" / "field-guide"
+MARKDOWN_LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
 CHAPTER_HEADING = re.compile(r"^# Chapter (\d\d) \| ", re.MULTILINE)
+GUIDE_HEADING = re.compile(r"^# Field Guide (\d\d) \| ", re.MULTILINE)
+
+
+def numbered_files(directory: Path, expected: int, label: str, issues: list[str]) -> list[Path]:
+    files = sorted(directory.glob("[0-9][0-9]_*.md"))
+    if len(files) != expected:
+        issues.append(f"{label}: expected {expected} files, found {len(files)}")
+    for expected_number, file in enumerate(files, start=1):
+        if not file.name.startswith(f"{expected_number:02d}_"):
+            issues.append(f"{label}: sequence mismatch at {file.name}")
+    return files
+
+
+def validate_local_links(document: Path, issues: list[str]) -> None:
+    source = document.read_text(encoding="utf-8")
+    for match in MARKDOWN_LINK.finditer(source):
+        raw = match.group(1).strip()
+        if raw.startswith("<") and raw.endswith(">"):
+            raw = raw[1:-1]
+        parsed = urlsplit(raw)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue
+        target = (document.parent / unquote(parsed.path)).resolve()
+        if not target.is_relative_to(ROOT):
+            issues.append(f"{document.relative_to(ROOT)}: path outside repo: {raw}")
+        elif not target.exists():
+            issues.append(f"{document.relative_to(ROOT)}: broken link: {raw}")
 
 
 def verify() -> list[str]:
-    problems: list[str] = []
-    chapters = sorted(CHAPTER_DIR.glob("[0-9][0-9]_*.md"))
-    if len(chapters) != 10:
-        problems.append(f"Expected 10 chapters, found {len(chapters)}")
-    for expected, chapter in enumerate(chapters, start=1):
-        prefix = f"{expected:02d}_"
-        if not chapter.name.startswith(prefix):
-            problems.append(f"Missing chapter {expected:02d}: found {chapter.name}")
+    issues: list[str] = []
+    for required in (COVER, VOLUME_ONE, VOLUME_TWO):
+        if not required.is_file():
+            issues.append(f"Required index missing: {required.relative_to(ROOT)}")
+    if issues:
+        return issues
 
-    if not INDEX.is_file() or not COVER.is_file():
-        return problems + ["Handbook index or profile cover is missing"]
+    cover = COVER.read_text(encoding="utf-8")
+    main = VOLUME_ONE.read_text(encoding="utf-8")
+    field = VOLUME_TWO.read_text(encoding="utf-8")
+    for target in ("docs/OMNIMASTER_HANDBOOK.md", "docs/OMNIMASTER_FIELD_GUIDE.md"):
+        if target not in cover:
+            issues.append(f"GitHub profile cover must link to {target}")
+    if "OMNIMASTER_FIELD_GUIDE.md" not in main:
+        issues.append("Volume I must link to Volume II")
+    if "OMNIMASTER_HANDBOOK.md" not in field:
+        issues.append("Volume II must link to Volume I")
 
-    index_content = INDEX.read_text(encoding="utf-8")
-    cover_content = COVER.read_text(encoding="utf-8")
-    if "docs/OMNIMASTER_HANDBOOK.md" not in cover_content:
-        problems.append("Profile cover must link to the handbook index")
+    chapters = numbered_files(CHAPTERS, 10, "Volume I", issues)
+    guide_files = numbered_files(FIELD_GUIDE, 5, "Volume II", issues)
 
-    for chapter in chapters:
-        chapter_relative = f"handbook/{chapter.name}"
-        cover_relative = f"docs/handbook/{chapter.name}"
-        if chapter_relative not in index_content:
-            problems.append(f"Handbook index omits {chapter_relative}")
-        if cover_relative not in cover_content:
-            problems.append(f"Profile cover omits {cover_relative}")
-        actual_numbers = CHAPTER_HEADING.findall(chapter.read_text(encoding="utf-8"))
-        if actual_numbers != [chapter.name[:2]]:
-            problems.append(f"{chapter.name}: expected one matching Chapter heading")
+    for file in chapters:
+        content = file.read_text(encoding="utf-8")
+        if f"handbook/{file.name}" not in main or f"docs/handbook/{file.name}" not in cover:
+            issues.append(f"Chapter not discoverable from both indexes: {file.name}")
+        if CHAPTER_HEADING.findall(content) != [file.name[:2]]:
+            issues.append(f"Chapter heading does not match filename: {file.name}")
 
-    for document in [INDEX, *chapters]:
-        content = document.read_text(encoding="utf-8")
-        for match in LINK.finditer(content):
-            raw = match.group(1).strip()
-            if raw.startswith("<") and raw.endswith(">"):
-                raw = raw[1:-1]
-            # No spaces/titles in our internal handbook links.
-            parsed = urlsplit(raw)
-            if parsed.scheme or parsed.netloc or not parsed.path:
-                continue
-            target = (document.parent / unquote(parsed.path)).resolve()
-            if not target.is_relative_to(ROOT):
-                problems.append(f"{document.relative_to(ROOT)}: escaped repository: {raw}")
-            elif not target.exists():
-                problems.append(f"{document.relative_to(ROOT)}: broken link: {raw}")
+    for file in guide_files:
+        content = file.read_text(encoding="utf-8")
+        if f"field-guide/{file.name}" not in field or f"docs/field-guide/{file.name}" not in cover:
+            issues.append(f"Field guide not discoverable from both indexes: {file.name}")
+        if GUIDE_HEADING.findall(content) != [file.name[:2]]:
+            issues.append(f"Field guide heading does not match filename: {file.name}")
 
-    return problems
+    for document in (COVER, VOLUME_ONE, VOLUME_TWO, *chapters, *guide_files):
+        validate_local_links(document, issues)
+
+    return issues
 
 
 if __name__ == "__main__":
-    failures = verify()
-    if failures:
-        for failure in failures:
-            print(f"ERROR: {failure}", file=sys.stderr)
+    errors = verify()
+    if errors:
+        for error in errors:
+            print(f"ERROR: {error}", file=sys.stderr)
         sys.exit(1)
-    print("Handbook validated: 10 chapters, cover/index navigation, and local links.")
+    print("Textbook checks passed: 2 volumes, 10 chapters, 5 field guides, local links.")

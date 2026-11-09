@@ -1,8 +1,7 @@
-"""Offline integrity checks for both OmniMaster textbook volumes.
+"""Validate navigation for the OmniMaster library and synthetic learning projects.
 
-Only validates local Markdown paths, navigation completeness and chapter structure.
-External URLs, historical companion-doc links and GitHub-rendered anchors are not
-certified by this checker.
+Offline standard-library checker. Does NOT validate external URLs, CI outcomes
+or GitHub-generated Markdown heading anchors.
 """
 from __future__ import annotations
 
@@ -14,28 +13,28 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 COVER = ROOT / "README.md"
-VOLUME_ONE = ROOT / "docs" / "OMNIMASTER_HANDBOOK.md"
-VOLUME_TWO = ROOT / "docs" / "OMNIMASTER_FIELD_GUIDE.md"
-CHAPTERS = ROOT / "docs" / "handbook"
-FIELD_GUIDE = ROOT / "docs" / "field-guide"
+VOLUMES = (
+    ROOT / "docs/OMNIMASTER_HANDBOOK.md",
+    ROOT / "docs/OMNIMASTER_FIELD_GUIDE.md",
+    ROOT / "docs/OMNIMASTER_ACADEMY.md",
+    ROOT / "docs/OMNIMASTER_OPERATING_MANUAL.md",
+)
+ARCADE = ROOT / "docs/OMNIMASTER_ARCADE.md"
+STUDY_INDEX = ROOT / "projects/README.md"
+GAME_README = ROOT / "projects/omnimaster-incident-academy/README.md"
+GAME = ROOT / "projects/omnimaster-incident-academy/quest.py"
+TEST = ROOT / "projects/omnimaster-incident-academy/test_quest.py"
+GROUPS = (
+    (ROOT / "docs/handbook", 10, "Chapter", VOLUMES[0], True),
+    (ROOT / "docs/field-guide", 5, "Field Guide", VOLUMES[1], True),
+    (ROOT / "docs/academy", 7, "Lesson", VOLUMES[2], False),
+    (ROOT / "docs/personal", 4, "Personal Chapter", VOLUMES[3], False),
+)
 MARKDOWN_LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
-CHAPTER_HEADING = re.compile(r"^# Chapter (\d\d) \| ", re.MULTILINE)
-GUIDE_HEADING = re.compile(r"^# Field Guide (\d\d) \| ", re.MULTILINE)
 
 
-def numbered_files(directory: Path, expected: int, label: str, issues: list[str]) -> list[Path]:
-    files = sorted(directory.glob("[0-9][0-9]_*.md"))
-    if len(files) != expected:
-        issues.append(f"{label}: expected {expected} files, found {len(files)}")
-    for expected_number, file in enumerate(files, start=1):
-        if not file.name.startswith(f"{expected_number:02d}_"):
-            issues.append(f"{label}: sequence mismatch at {file.name}")
-    return files
-
-
-def validate_local_links(document: Path, issues: list[str]) -> None:
-    source = document.read_text(encoding="utf-8")
-    for match in MARKDOWN_LINK.finditer(source):
+def local_links(document: Path, errors: list[str]) -> None:
+    for match in MARKDOWN_LINK.finditer(document.read_text(encoding="utf-8")):
         raw = match.group(1).strip()
         if raw.startswith("<") and raw.endswith(">"):
             raw = raw[1:-1]
@@ -44,57 +43,69 @@ def validate_local_links(document: Path, issues: list[str]) -> None:
             continue
         target = (document.parent / unquote(parsed.path)).resolve()
         if not target.is_relative_to(ROOT):
-            issues.append(f"{document.relative_to(ROOT)}: path outside repo: {raw}")
+            errors.append(f"{document.relative_to(ROOT)}: path escapes repository: {raw}")
         elif not target.exists():
-            issues.append(f"{document.relative_to(ROOT)}: broken link: {raw}")
+            errors.append(f"{document.relative_to(ROOT)}: broken local link: {raw}")
 
 
 def verify() -> list[str]:
-    issues: list[str] = []
-    for required in (COVER, VOLUME_ONE, VOLUME_TWO):
-        if not required.is_file():
-            issues.append(f"Required index missing: {required.relative_to(ROOT)}")
-    if issues:
-        return issues
+    errors: list[str] = []
+    required = (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, GAME, TEST)
+    for document in required:
+        if not document.is_file():
+            errors.append(f"Missing required file: {document.relative_to(ROOT)}")
+    if errors:
+        return errors
 
     cover = COVER.read_text(encoding="utf-8")
-    main = VOLUME_ONE.read_text(encoding="utf-8")
-    field = VOLUME_TWO.read_text(encoding="utf-8")
-    for target in ("docs/OMNIMASTER_HANDBOOK.md", "docs/OMNIMASTER_FIELD_GUIDE.md"):
-        if target not in cover:
-            issues.append(f"GitHub profile cover must link to {target}")
-    if "OMNIMASTER_FIELD_GUIDE.md" not in main:
-        issues.append("Volume I must link to Volume II")
-    if "OMNIMASTER_HANDBOOK.md" not in field:
-        issues.append("Volume II must link to Volume I")
+    indexes = [doc.read_text(encoding="utf-8") for doc in VOLUMES]
 
-    chapters = numbered_files(CHAPTERS, 10, "Volume I", issues)
-    guide_files = numbered_files(FIELD_GUIDE, 5, "Volume II", issues)
+    for index in VOLUMES:
+        if f"docs/{index.name}" not in cover:
+            errors.append(f"Profile cover does not advertise {index.name}")
+    if "docs/OMNIMASTER_ARCADE.md" not in cover:
+        errors.append("Profile cover does not advertise the Arcade")
+    if "projects/omnimaster-incident-academy" not in cover:
+        errors.append("Profile cover omits the playable game")
+    if "omnimaster-incident-academy/" not in STUDY_INDEX.read_text(encoding="utf-8"):
+        errors.append("Project index omits playable game")
 
-    for file in chapters:
-        content = file.read_text(encoding="utf-8")
-        if f"handbook/{file.name}" not in main or f"docs/handbook/{file.name}" not in cover:
-            issues.append(f"Chapter not discoverable from both indexes: {file.name}")
-        if CHAPTER_HEADING.findall(content) != [file.name[:2]]:
-            issues.append(f"Chapter heading does not match filename: {file.name}")
+    for i, content in enumerate(indexes):
+        if i != 0 and "OMNIMASTER_HANDBOOK.md" not in content:
+            errors.append(f"{VOLUMES[i].name} must link back to Volume I")
+    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0]:
+        errors.append("Volume I must link forward to the new volumes")
 
-    for file in guide_files:
-        content = file.read_text(encoding="utf-8")
-        if f"field-guide/{file.name}" not in field or f"docs/field-guide/{file.name}" not in cover:
-            issues.append(f"Field guide not discoverable from both indexes: {file.name}")
-        if GUIDE_HEADING.findall(content) != [file.name[:2]]:
-            issues.append(f"Field guide heading does not match filename: {file.name}")
+    all_sections: list[Path] = []
+    for directory, count, title, index, require_cover_sections in GROUPS:
+        files = sorted(directory.glob("[0-9][0-9]_*.md"))
+        if len(files) != count:
+            errors.append(f"{title}: expected {count} sections, found {len(files)}")
+        index_text = index.read_text(encoding="utf-8")
+        for number, file in enumerate(files, 1):
+            expected_prefix = f"{number:02d}_"
+            if not file.name.startswith(expected_prefix):
+                errors.append(f"{title}: nonsequential filename {file.name}")
+            body = file.read_text(encoding="utf-8")
+            if not re.search(rf"^# {re.escape(title)} {number:02d} \| ", body, re.MULTILINE):
+                errors.append(f"{title}: heading does not match {file.name}")
+            short = f"{directory.name}/{file.name}"
+            if short not in index_text:
+                errors.append(f"{index.name}: does not link to {short}")
+            if require_cover_sections and f"docs/{short}" not in cover:
+                errors.append(f"Profile cover does not link to {short}")
+        all_sections.extend(files)
 
-    for document in (COVER, VOLUME_ONE, VOLUME_TWO, *chapters, *guide_files):
-        validate_local_links(document, issues)
-
-    return issues
+    for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, *all_sections):
+        local_links(document, errors)
+    return errors
 
 
 if __name__ == "__main__":
     errors = verify()
     if errors:
-        for error in errors:
-            print(f"ERROR: {error}", file=sys.stderr)
+        for problem in errors:
+            print("ERROR:", problem, file=sys.stderr)
         sys.exit(1)
-    print("Textbook checks passed: 2 volumes, 10 chapters, 5 field guides, local links.")
+    print("OmniMaster navigation passed: 4 volumes, 10 handbook chapters, "
+          "5 field guides, 7 academy lessons, 4 personal chapters, arcade and game.")

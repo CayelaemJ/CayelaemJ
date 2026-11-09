@@ -95,3 +95,6 @@ The [live OmniMaster Study Room](https://omnimaster-study-room.cabo-solutions-za
 ### Learn how systems fail safely
 
 [**Volume VII: The Reliability Field Guide**](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) explains retries, idempotency, dead-letter handling and truthful user status. Its [Python lab](../projects/reliability-recovery-lab/) demonstrates the decisions with synthetic data and regression tests.
+
+
+**Browse by topic:** [Search all 54 lessons on the live Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/library). No source-code browsing or GitHub sign-in required.

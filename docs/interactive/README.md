@@ -14,6 +14,12 @@ This is a **static, self-contained HTML experience** for readers of [Volume V: B
 
 GitHub's normal file preview displays HTML as source and **does not execute it**. Use the live Cloudflare URL above to interact without cloning, or open the HTML file locally. See [hosting and maintenance notes](HOSTING.md).
 
+## Browse the complete online library
+
+The hosted site has a [searchable catalogue of all 54 lessons](https://omnimaster-study-room.cabo-solutions-za.workers.dev/library), filterable by subject. Every hosted article includes reading estimates, a contents panel where applicable, previous/next links within its subject and optional **Mark as read** progress stored in the visitor's own browser only. This does not create an account, send analytics events or sync between devices.
+
+The `/library` and book routes only exist on the hosted Worker, not when opening the standalone HTML file from disk.
+
 ## What it includes
 
 - An offline, browser-readable guide to the Academy and Volume V.

@@ -39,6 +39,15 @@ The deployment sequence is:
 
 Do not put API tokens in the repository or browser source. The canonical HTML remains runnable offline, independently of hosting.
 
+## Reader and catalogue routes
+
+- `GET /library`: a searchable, category-filtered 54-page catalogue, rendered directly by the Worker, with filtering handled only in the reader's browser.
+- `GET /academy/*.md`, `/human-interface/*.md`, `/reliability/*.md`, and other approved routes: HTML article reader with an on-page contents panel, reading estimates and next/previous navigation where applicable.
+- `GET /downloads/omnimaster-fullstack.pdf`: the existing generated PDF book.
+- Optional article-read state is stored under `omnimaster.reader.completed.v1` in browser `localStorage`; the 30-day expedition uses a separate local key. Neither is sent to the server.
+
+The source-based integration test exercises these routes, while live browser rendering should verify visual layout, category filtering, accessible keyboard access and article progression.
+
 ## UX acceptance criteria
 
 A visitor clicking **Launch the live Study Room** must open an interactive page, not a GitHub source viewer. A visitor clicking **Inspect the HTML source** should open the source viewer intentionally.

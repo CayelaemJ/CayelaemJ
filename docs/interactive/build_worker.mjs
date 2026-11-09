@@ -37,8 +37,9 @@ const lessons=[
 const content=Object.fromEntries(lessons.map(path=>[path,readFileSync(resolve(root,path),"utf8")]));
 const home=readFileSync(resolve(root,"docs/interactive/index.html"),"utf8");
 const template=readFileSync(resolve(root,"docs/interactive/library-worker-template.mjs"),"utf8");
-const built=template.replace("__HOME__",JSON.stringify(home)).replace("__PAGES__",JSON.stringify(content));
-if(built.includes("__HOME__")||built.includes("__PAGES__"))throw new Error("Unreplaced template marker");
+const discovery=readFileSync(resolve(root,"docs/interactive/course-discovery.mjs"),"utf8");
+const built=template.replace("__HOME__",JSON.stringify(home)).replace("__PAGES__",JSON.stringify(content)).replace("/*__COURSE_DISCOVERY__*/",discovery);
+if(built.includes("__HOME__")||built.includes("__PAGES__")||built.includes("/*__COURSE_DISCOVERY__*/"))throw new Error("Unreplaced template marker");
 const output=resolve(root,"docs/interactive/.generated-study-room-worker.mjs");
 writeFileSync(output,built,"utf8");
 console.log("Built "+Object.keys(content).length+" on-site lesson pages; Worker "+Buffer.byteLength(built)+" bytes.");

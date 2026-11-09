@@ -4,7 +4,7 @@ This is a **static, self-contained HTML experience** for readers of [Volume V: B
 
 ## Launch the hosted experience
 
-**[Open the public OmniMaster Study Room](https://omnimaster-study-room-share.onrender.com/).** For sharing on LinkedIn, use the crawler-compatible static copy hosted on Render. The same content is also served via the [original Cloudflare Worker](https://omnimaster-study-room-share.onrender.com/), which remains available as an independent fallback. [Source HTML](index.html) is available for technical inspection.
+**[Open the public OmniMaster Study Room](https://omnimaster-study-room-share.onrender.com/).** For sharing on LinkedIn, use the crawler-compatible static copy hosted on Render. The same content is also served via the [original Cloudflare Worker](https://omnimaster-study-room.cabo-solutions-za.workers.dev/), which remains available as an independent fallback. [Source HTML](index.html) is available for technical inspection.
 
 ## Run locally
 

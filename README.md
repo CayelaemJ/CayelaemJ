@@ -2,6 +2,8 @@
 
 <img src="./assets/omnimaster-banner.svg" width="100%" alt="THE OMNIMASTER! Original tech superhero, real engineering. Cayelaem Jantjies, data engineer, full-stack builder and applied AI specialist." />
 
+<p><strong>THE OMNIMASTER HANDBOOK</strong> · A living engineering textbook about the person, the systems, the decisions and the code.</p>
+
 <br/>
 
 <a href="https://omnimaster-portfolio.onrender.com"><img alt="Explore the interactive OmniMaster portfolio" src="https://img.shields.io/badge/ENTER_THE_OMNIMASTER-182F3D?style=for-the-badge&logo=render&logoColor=F7CF80"/></a>
@@ -30,6 +32,32 @@
 </table>
 
 > **THE OMNIMASTER PRINCIPLE:** One mind, every layer. The alter ego is fictional. The engineering, decisions, bugs and lessons are real.
+
+---
+
+## Open the book | A deeper look at my work
+
+**[READ THE OMNIMASTER HANDBOOK: 10 CHAPTERS →](docs/OMNIMASTER_HANDBOOK.md)**
+
+Not another list of frameworks. This is my technical autobiography: **where I started, the organisations and systems I've worked with, the failures that taught me something, how I design trustworthy data and software, and what you can run yourself**.
+
+| **PART I · The person & the journey** | **PART II · Engineering practice** |
+|---|---|
+| [01 · The engineer behind the systems](docs/handbook/01_THE_ENGINEER.md) | [04 · Data engineering discipline](docs/handbook/04_DATA_ENGINEERING.md) |
+| [02 · From statistics to full-stack ownership](docs/handbook/02_THE_CAREER.md) | [05 · BI and analytics engineering](docs/handbook/05_ANALYTICS_ENGINEERING.md) |
+| [03 · Systems in the wild: real case studies](docs/handbook/03_SYSTEMS_IN_THE_WILD.md) | [06 · Software products and responsible AI](docs/handbook/06_PRODUCTS_AND_AI.md) |
+
+| **PART III · Reliability, evidence & direction** | **What's inside** |
+|---|---|
+| [07 · Security, testing and release engineering](docs/handbook/07_SECURITY_AND_DELIVERY.md) | Real trust boundaries and honest release gates |
+| [08 · Reproduce the work](docs/handbook/08_REPRODUCE_THE_WORK.md) | Four synthetic engineering labs and executable tests |
+| [09 · Leadership and where I'm going](docs/handbook/09_LEADERSHIP_AND_NEXT.md) | Delivery philosophy and solution-architecture ambitions |
+| [10 · Glossary and evidence register](docs/handbook/10_GLOSSARY_AND_EVIDENCE.md) | Verify the terms, metrics and project maturity |
+
+<sub>READING GUIDE: [90-second introduction](docs/handbook/01_THE_ENGINEER.md) · [Technical deep dive](docs/handbook/04_DATA_ENGINEERING.md) · [Working code](projects/README.md) · [Full bibliography and claim register](docs/handbook/10_GLOSSARY_AND_EVIDENCE.md).</sub>
+
+---
+
 
 <div align="center">
 
@@ -370,7 +398,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

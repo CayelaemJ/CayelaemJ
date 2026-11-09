@@ -1,4 +1,4 @@
-name: Engineering Labs & Handbook
+name: Engineering Labs & OmniMaster Textbook
 
 on:
   push:
@@ -8,6 +8,8 @@ on:
       - "README.md"
       - "docs/OMNIMASTER_HANDBOOK.md"
       - "docs/handbook/**"
+      - "docs/OMNIMASTER_FIELD_GUIDE.md"
+      - "docs/field-guide/**"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   pull_request:
@@ -16,6 +18,8 @@ on:
       - "README.md"
       - "docs/OMNIMASTER_HANDBOOK.md"
       - "docs/handbook/**"
+      - "docs/OMNIMASTER_FIELD_GUIDE.md"
+      - "docs/field-guide/**"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   workflow_dispatch:
@@ -46,5 +50,5 @@ jobs:
             (cd "$lab" && python -m unittest discover -v)
             echo "::endgroup::"
           done
-      - name: Verify handbook chapters and links
+      - name: Verify both textbook volumes, chapter indexes and links
         run: python .github/scripts/verify_handbook_links.py

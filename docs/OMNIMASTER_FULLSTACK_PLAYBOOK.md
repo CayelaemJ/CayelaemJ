@@ -2,7 +2,7 @@
 ### Frontend, backend, and everything that joins them
 **Cayelaem Jantjies · Engineer's field textbook · Edition 2026**
 
-[GitHub cover](../README.md) · [UI/UX development](OMNIMASTER_HUMAN_INTERFACE.md) · [Volume V: Build with me](OMNIMASTER_BUILD_WITH_ME.md) · [Interactive full-stack reader](fullstack/index.html)
+[GitHub cover](../README.md) · [UI/UX development](OMNIMASTER_HUMAN_INTERFACE.md) · [Volume V: Build with me](OMNIMASTER_BUILD_WITH_ME.md) · [Read the full-stack book on the Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)
 
 ---
 

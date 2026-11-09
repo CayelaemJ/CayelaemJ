@@ -144,3 +144,6 @@ My preferred power-up: a smaller scope, a test that reproduces the problem and s
 The game is fiction. The habit it teaches is simple:**New challenge:** build the real educational capstone in [Volume V](OMNIMASTER_BUILD_WITH_ME.md), follow the [30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md), or open the [offline interactive study room](interactive/index.html).
 
  **question the easy answer, verify the invariant, and leave the system more understandable than you found it.**
+
+
+For the browser-based experience, [launch the live Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/). Read [Volume VI: The Human Interface](OMNIMASTER_HUMAN_INTERFACE.md) for the usability reasoning behind its design.

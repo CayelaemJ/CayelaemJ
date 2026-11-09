@@ -3,7 +3,7 @@
 
 **Designed by Cayelaem Jantjies as a self-study path; no qualification, paid account or professional experience is implied.**
 
-[Academy](OMNIMASTER_ACADEMY.md) · [Volume V](OMNIMASTER_BUILD_WITH_ME.md) · [Interactive study room](interactive/index.html) · [The person behind the methods](personal/02_WHY_I_THINK_IN_SYSTEMS.md)
+[Academy](OMNIMASTER_ACADEMY.md) · [Volume V](OMNIMASTER_BUILD_WITH_ME.md) · [Live Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) · [The person behind the methods](personal/02_WHY_I_THINK_IN_SYSTEMS.md)
 
 ---
 
@@ -124,4 +124,4 @@ Follow the routine I use:
 
 A finished day is one with **an honest result**, not necessarily a green result.
 
-[Go to Volume V](OMNIMASTER_BUILD_WITH_ME.md) · [Play the offline Incident Academy](../projects/omnimaster-incident-academy/) · [Launch the study room](interactive/index.html)
+[Go to Volume V](OMNIMASTER_BUILD_WITH_ME.md) · [Play the offline Incident Academy](../projects/omnimaster-incident-academy/) · [Launch the live Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)

@@ -10,7 +10,7 @@
 <a href="https://www.linkedin.com/in/cayelaem-jantjies-000b45144/"><img alt="Connect on LinkedIn" src="https://img.shields.io/badge/LINKEDIN-182F3D?style=for-the-badge&logo=linkedin&logoColor=83E1D0"/></a>
 <a href="mailto:cay.jantjies1703@gmail.com"><img alt="Contact Cayelaem by email" src="https://img.shields.io/badge/CONTACT-182F3D?style=for-the-badge&logo=gmail&logoColor=F7CF80"/></a>
 
-**DATA ENGINEERING** · **FULL-STACK SYSTEMS** · **BUSINESS INTELLIGENCE** · **APPLIED AI** · **DEVSECOPS**
+**DATA ENGINEERING** · **FULL-STACK SYSTEMS** · **UI/UX DEVELOPMENT** · **BUSINESS INTELLIGENCE** · **APPLIED AI** · **DEVSECOPS**
 
 <sub>Johannesburg, South Africa · 3+ years of engineering delivery · Building toward solutions architecture and technical leadership</sub>
 
@@ -23,7 +23,7 @@
 </td>
 <td valign="middle">
   <h2>Under the suit: Cayelaem Jantjies.</h2>
-  <p>I'm a data engineer, analytics specialist and full-stack builder. I don't stop when a dashboard renders: I work through <strong>source systems, ingestion, transformation, application design, APIs, access controls, testing and deployment</strong> so the result is actually useful and maintainable.</p>
+  <p>I'm a data engineer, analytics specialist, UI/UX developer and full-stack builder. I don't stop when a dashboard renders or a screen looks polished: I work through <strong>source systems, ingestion, transformation, application design, APIs, access controls, testing and deployment</strong> so people can understand, use and trust the result.</p>
   <p>I have delivered across banking, FMCG, media, manufacturing, agriculture and social impact, including remote engineering for an Australian manufacturing business. Alongside client work, I develop independent products through CABO Solutions and The Fixer.</p>
   <p><strong>My advantage:</strong> I can discuss the business problem, locate the problem in the SQL, adjust the API, redesign the UI, investigate the failing test and help ship the release.</p>
   <p><a href="https://omnimaster-portfolio.onrender.com">See the full visual portfolio and interactive experiences →</a></p>

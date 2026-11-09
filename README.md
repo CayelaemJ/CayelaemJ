@@ -80,8 +80,10 @@ Want to inspect working code rather than read another list of tools? These two s
 
 - **[CDC Replay Lab](projects/cdc-replay-lab/)**: ordered change events, deduplication, deletion tombstones, atomic replay and Bronze/Silver/Gold projections.
 - **[Data Quality Contracts](projects/data-quality-contracts/)**: ingestion-time schema, duplicate-key, decimal and timestamp/freshness checks with machine-readable findings.
+- **[SQL Query Plans](projects/sql-query-plans/)**: inspect full scans versus composite-index range searches with 2,400 synthetic records and explain query shape.
+- **[Offline AI Output Evaluation](projects/ai-output-evaluation/)**: enforce extractive source references and human-review flags using synthetic, testable failure cases.
 
-Both are intentionally local teaching examples, **not deployed production CDC services or compliance certifications**. [Browse the project index](projects/README.md).
+All four are intentionally local, tested educational examples, **not deployed production systems, complete AI safety evaluations or compliance certifications**. [Browse the project index](projects/README.md).
 
 ---
 

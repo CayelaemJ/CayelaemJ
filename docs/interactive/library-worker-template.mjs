@@ -2,6 +2,7 @@
 const HOME=__HOME__;
 const PAGES=__PAGES__;
 /*__COURSE_DISCOVERY__*/
+/*__SOCIAL_META__*/
 const CSS=":root{color-scheme:dark;--bg:#091724;--ink:#eff8f8;--muted:#b9cfd7;--panel:#173547;--line:#33566c;--mint:#85eeda;--gold:#f2cd87}*{box-sizing:border-box}body{margin:0;background:linear-gradient(120deg,#163a49,var(--bg) 55%);color:var(--ink);font:16px/1.7 system-ui,-apple-system,sans-serif}a{color:var(--mint);text-underline-offset:.2em}a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}header{background:#102838;border-bottom:1px solid var(--line);padding:16px 5vw}header>div{max-width:920px;display:flex;gap:17px;justify-content:space-between;flex-wrap:wrap;margin:auto}.brand{font-weight:900;color:var(--gold);text-decoration:none}nav{display:flex;gap:16px;flex-wrap:wrap}main{max-width:920px;margin:35px auto 70px;padding:0 22px}h1,h2,h3{line-height:1.2;scroll-margin-top:25px}h1{font-size:clamp(2rem,5vw,3.1rem)}h2{margin-top:35px}h3{margin-top:24px}p,li{max-width:80ch}table{display:block;overflow-x:auto;border-collapse:collapse;margin:22px 0}td,th{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#23475b}td{background:#132d40}pre{overflow:auto;padding:16px;border:1px solid var(--line);background:#102738;border-radius:9px}code{background:#1b4052;padding:1px 5px}pre code{background:none}blockquote{margin:22px 0;padding:10px 16px;border-left:4px solid var(--gold);background:#182f40}footer{max-width:920px;margin:auto;border-top:1px solid var(--line);padding:25px;color:var(--muted)}.action{display:inline-block;padding:9px 15px;border:1px solid var(--mint);border-radius:30px;margin:6px 10px 6px 0;text-decoration:none}details{border:1px solid var(--line);background:#152e40;border-radius:8px;padding:10px;margin:8px 0}summary{cursor:pointer}hr{border:0;border-top:1px solid var(--line);margin:34px 0}";
 const TICK=String.fromCharCode(96);
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
@@ -83,10 +84,12 @@ const PDF=makePdf(PAGES["docs/OMNIMASTER_FULLSTACK_PLAYBOOK.md"]);
 const H={"cache-control":"public,max-age=300","x-content-type-options":"nosniff","referrer-policy":"no-referrer","content-security-policy":"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"};
 export default {async fetch(request){
  let path=new URL(request.url).pathname;if(request.method!=="GET"&&request.method!=="HEAD")return new Response("Method not allowed",{status:405,headers:{allow:"GET, HEAD"}});
- if(path==="/"||path==="/index.html")return new Response(request.method==="HEAD"?null:HOME,{headers:{...H,"content-type":"text/html;charset=utf-8"}});
- if(path==="/library")return new Response(request.method==="HEAD"?null:catalogPage(),{headers:{...H,"content-type":"text/html;charset=utf-8"}});
+ if(path==="/og/omnimaster-study-room.png")return new Response(request.method==="HEAD"?null:SHARE_PNG,{headers:{"content-type":"image/png","cache-control":"public,max-age=3600","content-length":String(SHARE_PNG.length),"x-content-type-options":"nosniff","referrer-policy":"no-referrer"}});
+ if(path==="/robots.txt")return new Response(request.method==="HEAD"?null:"User-agent: *\nAllow: /\n",{headers:{"content-type":"text/plain;charset=utf-8","cache-control":"public,max-age=86400"}});
+ if(path==="/"||path==="/index.html")return new Response(request.method==="HEAD"?null:withSocialHead(HOME,"/"),{headers:{...H,"content-type":"text/html;charset=utf-8"}});
+ if(path==="/library")return new Response(request.method==="HEAD"?null:withSocialHead(catalogPage(),"/library"),{headers:{...H,"content-type":"text/html;charset=utf-8"}});
  if(path==="/downloads/omnimaster-fullstack.pdf")return new Response(request.method==="HEAD"?null:PDF,{headers:{...H,"content-type":"application/pdf","content-disposition":'attachment; filename="OmniMaster_Fullstack_Playbook.pdf"',"content-length":String(PDF.length)}});
  let key=path.startsWith("/projects/")?path.slice(1):"docs"+path;
- if(Object.prototype.hasOwnProperty.call(PAGES,key))return new Response(request.method==="HEAD"?null:page(key),{headers:{...H,"content-type":"text/html;charset=utf-8"}});
+ if(Object.prototype.hasOwnProperty.call(PAGES,key))return new Response(request.method==="HEAD"?null:withSocialHead(page(key),path),{headers:{...H,"content-type":"text/html;charset=utf-8"}});
  return new Response(request.method==="HEAD"?null:"Not found",{status:404,headers:{...H,"content-type":"text/plain;charset=utf-8"}});
 }};

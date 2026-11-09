@@ -39,6 +39,16 @@ The deployment sequence is:
 
 Do not put API tokens in the repository or browser source. The canonical HTML remains runnable offline, independently of hosting.
 
+## Social sharing / link previews
+
+The Worker injects canonical and Open Graph metadata **server-side**, including `og:title`, `og:description`, `og:url`, `og:image`, `og:image:width`, `og:image:height`, and a `twitter:card=summary_large_image` tag.
+
+- `GET /og/omnimaster-study-room.png` returns a locally generated **1200 × 630 image/png**, built using standard Node.js code and embedded in the Worker. No external image hosting or cookies.
+- Metadata is on `/`, `/library`, the frontend/backend textbook and the other public lesson routes, with page-specific titles.
+- The original `docs/interactive/social-preview-image.mjs` builds the card; `docs/interactive/social-metadata.mjs` creates the link-preview tags.
+- `node docs/interactive/test_library_worker.mjs` validates PNG dimensions, size, MIME, public access, and initial-HTML tags without relying on a JavaScript-rendering crawler.
+- After deployment, test the raw live HTML and publicly served image. Use LinkedIn Post Inspector to refresh any previously cached preview. A successful deployment does not guarantee LinkedIn will generate a card until the platform re-fetches it.
+
 ## Reader and catalogue routes
 
 - `GET /library`: a searchable, category-filtered 54-page catalogue, rendered directly by the Worker, with filtering handled only in the reader's browser.

@@ -37,6 +37,50 @@ assert.ok(catalogueHtml.includes('search.addEventListener("input",render)'),"Loc
 const catalogueHead=await worker.fetch(new Request(url+"/library",{method:"HEAD"}));
 assert.equal(catalogueHead.status,200);
 assert.equal((await catalogueHead.arrayBuffer()).byteLength,0);
+const socialOrigin="https://omnimaster-study-room.cabo-solutions-za.workers.dev";
+const socialImage=socialOrigin+"/og/omnimaster-study-room.png";
+function validateSocialMeta(text,path,expectedTitle){
+ for(const tag of ['property="og:title"','property="og:description"','property="og:url"',
+                   'property="og:image"','property="og:type"','property="og:image:width"','property="og:image:height"',
+                   'name="twitter:card"','name="twitter:image"']) {
+   assert.ok(text.includes(tag),"Social metadata missing: "+tag+" on "+path);
+ }
+ assert.ok(text.includes('property="og:url" content="'+socialOrigin+path+'"'),"Bad canonical URL "+path);
+ assert.ok(text.includes('property="og:image" content="'+socialImage+'"'),"Bad preview image URL");
+ assert.ok(text.includes('property="og:image:width" content="1200"'));
+ assert.ok(text.includes('property="og:image:height" content="630"'));
+ assert.ok(text.includes('name="twitter:card" content="summary_large_image"'));
+ assert.ok(text.includes('content="'+expectedTitle+'"'),"Wrong page-specific share title "+path);
+ assert.ok(!text.includes('href="https://github.com/'),"Preview page links to source repository");
+}
+validateSocialMeta(html,"/","OmniMaster Study Room | Learn Engineering");
+validateSocialMeta(catalogueHtml,"/library","54 Free Engineering Lessons | OmniMaster");
+const socialResponse=await check("/og/omnimaster-study-room.png",200,/image\/png/);
+const socialBytes=Buffer.from(await socialResponse.arrayBuffer());
+assert.ok(socialBytes.length>20000 && socialBytes.length<5*1024*1024,"Preview image must be substantive and under LinkedIn 5 MB limit");
+assert.equal(socialBytes.subarray(0,8).toString("hex"),"89504e470d0a1a0a","Expected real PNG signature");
+assert.equal(socialBytes.readUInt32BE(16),1200,"OG width must be 1200");
+assert.equal(socialBytes.readUInt32BE(20),630,"OG height must be 630");
+assert.equal(socialResponse.headers.get("content-length"),String(socialBytes.length));
+assert.ok(!socialResponse.headers.has("set-cookie"),"OG image must not set tracking cookies");
+const imageHead=await worker.fetch(new Request(url+"/og/omnimaster-study-room.png",{method:"HEAD"}));
+assert.equal(imageHead.status,200);
+assert.equal((await imageHead.arrayBuffer()).byteLength,0);
+const robots=await check("/robots.txt",200,/text\/plain/);
+assert.match(await robots.text(),/User-agent: \*/);
+for(const [path,title] of [
+ ["/OMNIMASTER_FULLSTACK_PLAYBOOK.md","Frontend vs Backend | OmniMaster Textbook"],
+ ["/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md","Reliability Engineering | OmniMaster"],
+ ["/academy/01_START_HERE.md","Academy"]
+]) {
+ const response=await check(path,200,/text\/html/);
+ const body=await response.text();
+ if(path.startsWith("/academy")) {
+   assert.ok(body.includes('property="og:title"'));
+   assert.ok(body.includes('property="og:url" content="'+socialOrigin+path+'"'));
+ } else validateSocialMeta(body,path,title);
+}
+
 const lessonPaths=[
  "/academy/01_START_HERE.md",
  "/academy/02_SQL_AND_MODELLING.md",
@@ -87,4 +131,4 @@ const disallowed=await worker.fetch(new Request(url+"/",{method:"POST"}));
 assert.equal(disallowed.status,405);
 const head=await worker.fetch(new Request(url+"/downloads/omnimaster-fullstack.pdf",{method:"HEAD"}));
 assert.equal(head.status,200);assert.equal((await head.arrayBuffer()).byteLength,0);
-console.log("Reader integration OK: "+assertions+" routes, 54-page searchable catalogue, chapter navigation, local reading marks and downloadable PDF.");
+console.log("Reader integration OK: "+assertions+" routes, 54-page catalogue, social sharing PNG (1200x630), per-page OG cards, chapter navigation, local progress and PDF.");

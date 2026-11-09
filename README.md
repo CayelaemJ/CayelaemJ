@@ -59,6 +59,8 @@
 
 **[SEARCH ALL 54 LEARNING PAGES · INTERACTIVE COURSE CATALOGUE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/library)**
 
+The Study Room has a branded link preview for sharing the public learning website on LinkedIn or in messages. The preview links to the actual site, not a GitHub HTML source viewer.
+
 **[STUDY FRONTEND VS BACKEND · INTERACTIVE HTML BOOK →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)**
 
 **[DOWNLOAD THE FULL-STACK PDF EDITION →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf)**

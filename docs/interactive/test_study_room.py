@@ -95,6 +95,13 @@ class StudyRoomTests(unittest.TestCase):
         self.assertIn('href="/library"', self.html)
         self.assertIn("complete searchable learning library", self.html)
 
+    def test_share_action_accessible_and_no_external_dependencies(self):
+        self.assertIn('id="share-study-room"', self.html)
+        self.assertIn('id="share-feedback"', self.html)
+        self.assertIn('aria-live="polite"', self.html)
+        self.assertIn("navigator.clipboard.writeText", self.script)
+        self.assertIn("Copy and share:", self.script)
+
     def test_seven_lessons_are_linked(self):
         for n in range(1, 8):
             self.assertIn(f"../academy/0{n}_", self.html)

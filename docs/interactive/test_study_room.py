@@ -76,6 +76,9 @@ class StudyRoomTests(unittest.TestCase):
             parsed = urlsplit(uri)
             if not parsed.path or parsed.path.startswith("#"):
                 continue
+            if uri == "/downloads/omnimaster-fullstack.pdf":
+                # The hosted Worker generates a PDF; no static file exists offline.
+                continue
             if parsed.scheme or parsed.netloc:
                 self.assertEqual(
                     uri,

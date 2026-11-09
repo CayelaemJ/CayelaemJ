@@ -12,6 +12,9 @@
 
 This handbook is the long-form companion to my GitHub profile. It is not a generic tech stack dump, a collection of AI-written product claims or a claim to have mastered every platform. Think of it as an open engineering notebook about **who I am, what I have built, how I think, what has gone wrong, how I investigate it, and where I want to go**.
 
+**Continue to [Volume II: The OmniMaster Field Guide](OMNIMASTER_FIELD_GUIDE.md)** for architecture diagrams, debugging casebooks, worked engineering exercises, a role-to-evidence navigator and six decision records. Volume I is the narrative; Volume II is the engineer's desk.
+
+
 ### Choose your reading path
 
 | If you have… | Start here | You will learn |
@@ -73,4 +76,4 @@ The chapters add the narrative and reasoning. These deeper references retain sou
 
 **The principle behind everything here: one mind, every layer.** The OmniMaster persona is creative. The engineering history, open issues, experiments and limitations are not.
 
-[Open Chapter 01: The engineer →](handbook/01_THE_ENGINEER.md)
+[Open Chapter 01: The engineer →](handbook/01_THE_ENGINEER.md) · [Open Volume II: The field guide →](OMNIMASTER_FIELD_GUIDE.md)

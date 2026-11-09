@@ -85,3 +85,8 @@ For worked explanations and reviewer questions, use the [Volume II workbook](fie
 
 
 **Design for people:** [Volume VI](OMNIMASTER_HUMAN_INTERFACE.md) adds a six-chapter UI/UX development and usability course.
+
+
+### Learn how systems fail safely
+
+[**Volume VII: The Reliability Field Guide**](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) explains retries, idempotency, dead-letter handling and truthful user status. Its [Python lab](../projects/reliability-recovery-lab/) demonstrates the decisions with synthetic data and regression tests.

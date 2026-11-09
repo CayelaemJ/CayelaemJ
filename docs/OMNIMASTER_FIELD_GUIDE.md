@@ -62,3 +62,6 @@ I want these materials to show **how I reason**, not invent achievements. Where 
 **Evidence standard:** a design diagram is not proof of deployment. A scenario is not a disclosed client incident. A green unit test is not an operational acceptance test. A career metric from my CV is reported history, not a new benchmark.
 
 [Begin with the architecture atlas →](field-guide/01_ARCHITECTURE_ATLAS.md)
+
+
+[Volume VII: Reliability & Recovery](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) extends these field investigations into a runnable retry/dead-letter example, with accurate frontend status contracts.

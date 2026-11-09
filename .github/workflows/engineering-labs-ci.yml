@@ -1,4 +1,4 @@
-name: Engineering Labs & OmniMaster Textbook
+name: OmniMaster Engineering Library CI
 
 on:
   push:
@@ -10,6 +10,11 @@ on:
       - "docs/handbook/**"
       - "docs/OMNIMASTER_FIELD_GUIDE.md"
       - "docs/field-guide/**"
+      - "docs/OMNIMASTER_ACADEMY.md"
+      - "docs/academy/**"
+      - "docs/OMNIMASTER_OPERATING_MANUAL.md"
+      - "docs/personal/**"
+      - "docs/OMNIMASTER_ARCADE.md"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   pull_request:
@@ -20,6 +25,11 @@ on:
       - "docs/handbook/**"
       - "docs/OMNIMASTER_FIELD_GUIDE.md"
       - "docs/field-guide/**"
+      - "docs/OMNIMASTER_ACADEMY.md"
+      - "docs/academy/**"
+      - "docs/OMNIMASTER_OPERATING_MANUAL.md"
+      - "docs/personal/**"
+      - "docs/OMNIMASTER_ARCADE.md"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   workflow_dispatch:
@@ -33,7 +43,7 @@ concurrency:
 
 jobs:
   unit-tests:
-    name: Four local-only Python lab suites
+    name: Five local-only Python project suites and docs
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -45,10 +55,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation; do
+          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation projects/omnimaster-incident-academy; do
             echo "::group::${lab}"
             (cd "$lab" && python -m unittest discover -v)
             echo "::endgroup::"
           done
-      - name: Verify both textbook volumes, chapter indexes and links
+      - name: Verify all four volumes, chapters, academy, game and links
         run: python .github/scripts/verify_handbook_links.py

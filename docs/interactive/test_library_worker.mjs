@@ -23,6 +23,20 @@ assert.ok(html.includes("OMNIMASTER_FULLSTACK_PLAYBOOK.md"));
 assert.ok(html.includes("/downloads/omnimaster-fullstack.pdf"));
 assert.ok(!html.includes("github.com/CayelaemJ"));
 assert.ok(!html.includes("blob/main"));
+const catalogue=await check("/library",200,/text\/html/);
+const catalogueHtml=await catalogue.text();
+assert.ok(catalogueHtml.includes('id="lesson-search"'),"Search input missing");
+assert.ok(catalogueHtml.includes('id="lesson-filter"'),"Category selector missing");
+assert.ok(catalogueHtml.includes('id="catalogue-count"'),"Live result count missing");
+assert.ok(catalogueHtml.includes("54 lessons"),"Incorrect course catalogue total");
+assert.equal((catalogueHtml.match(/class="catalogue-card"/g)||[]).length,54,"Every approved lesson must be discoverable");
+assert.ok(catalogueHtml.includes('href="/reliability/01_JOBS_AND_STATE.md"'),"Reliability course missing");
+assert.ok(catalogueHtml.includes('href="/OMNIMASTER_FULLSTACK_PLAYBOOK.md"'),"Full-stack textbook missing");
+assert.ok(!catalogueHtml.includes('href="https://github.com/'),"Catalogue must not send learners into GitHub source");
+assert.ok(catalogueHtml.includes('search.addEventListener("input",render)'),"Local-only search logic missing");
+const catalogueHead=await worker.fetch(new Request(url+"/library",{method:"HEAD"}));
+assert.equal(catalogueHead.status,200);
+assert.equal((await catalogueHead.arrayBuffer()).byteLength,0);
 const lessonPaths=[
  "/academy/01_START_HERE.md",
  "/academy/02_SQL_AND_MODELLING.md",
@@ -51,7 +65,15 @@ for(const path of lessonPaths){
  assert.ok(text.includes("OMNIMASTER"),path);
  assert.ok(!text.includes('href="https://github.com/'),"Article unexpectedly links visitors to source: "+path);
  assert.ok(text.includes("All lessons"),path);
+ assert.ok(text.includes('class="reader-toc"')||text.includes('class="reader-meta"'),"Reader navigation missing: "+path);
+ assert.ok(text.includes('id="mark-read"'),"Reader progress button missing: "+path);
+ assert.ok(text.includes("omnimaster.reader.completed.v1"),"Browser-local reading progress missing: "+path);
 }
+const chapter=await check("/reliability/02_RETRIES_AND_IDEMPOTENCY.md",200,/text\/html/);
+const chapterHtml=await chapter.text();
+assert.ok(chapterHtml.includes('aria-label="Previous and next lessons"'),"Prev/next lesson navigation missing");
+assert.ok(chapterHtml.includes('href="/reliability/01_JOBS_AND_STATE.md"'));
+assert.ok(chapterHtml.includes('href="/reliability/03_DEAD_LETTERS_AND_RECONCILIATION.md"'));
 const book=(await worker.fetch(new Request(url+"/OMNIMASTER_FULLSTACK_PLAYBOOK.md"))).text();
 assert.match(await book,/id="2-frontend-what-people-experience"/);
 const pdf=await check("/downloads/omnimaster-fullstack.pdf",200,/application\/pdf/);
@@ -65,4 +87,4 @@ const disallowed=await worker.fetch(new Request(url+"/",{method:"POST"}));
 assert.equal(disallowed.status,405);
 const head=await worker.fetch(new Request(url+"/downloads/omnimaster-fullstack.pdf",{method:"HEAD"}));
 assert.equal(head.status,200);assert.equal((await head.arrayBuffer()).byteLength,0);
-console.log("Reader integration OK: "+assertions+" valid HTTP routes, live book chapters, repository-free navigation, downloadable PDF.");
+console.log("Reader integration OK: "+assertions+" routes, 54-page searchable catalogue, chapter navigation, local reading marks and downloadable PDF.");

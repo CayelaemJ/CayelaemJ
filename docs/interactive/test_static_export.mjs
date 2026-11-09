@@ -65,6 +65,8 @@ assert.equal(preview.readUInt32BE(20),630);
 const pdf=read("downloads/omnimaster-fullstack.pdf");
 assert.equal(pdf.subarray(0,8).toString("utf8"),"%PDF-1.4");
 assert.ok(pdf.length>10000);
+assert.ok(pdf.includes(Buffer.from('/F1 3 0 R')),'Page must reference Helvetica font object');
+assert.ok(!pdf.includes(Buffer.from('/F1 4 0 R')),'Regression: page wrongly referenced as font');
 assert.ok(pdf.toString("latin1").includes("%%EOF"));
 assert.match(read("robots.txt").toString("utf8"),/Allow: \//);
 assert.match(read("sitemap.xml").toString("utf8"),/OMNIMASTER_FULLSTACK_PLAYBOOK.html/);

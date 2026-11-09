@@ -78,6 +78,8 @@ jobs:
           done
       - name: Test bundled HTML lessons and generated PDF
         run: node docs/interactive/test_library_worker.mjs
+      - name: Verify static shareable mirror and all local lesson links
+        run: node docs/interactive/test_static_export.mjs
       - name: Verify offline study room HTML
         run: |
           cd docs/interactive

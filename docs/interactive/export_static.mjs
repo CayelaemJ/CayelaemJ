@@ -47,7 +47,7 @@ function editHtml(source,route){
   // The original homepage share action holds a literal workers.dev URL;
   // global hostname replacement above makes the shared URL match the mirror.
   // Social crawlers must see a self-consistent canonical URL in raw HTML.
-  const canonical=publicOrigin+published;
+  const canonical=publicOrigin+(route==="/"?"/":published);
   html=html.replace(/(<meta property="og:url" content=")[^"]+(")/,
                     (_,start,end)=>start+canonical+end);
   html=html.replace(/(<link rel="canonical" href=")[^"]+(")/,
@@ -94,7 +94,7 @@ for(const route of routes)results.push(await output(route));
 const sitemap='<?xml version="1.0" encoding="UTF-8"?>\n'+
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+
   routes.filter(x=>x==="/"||x==="/library"||x.endsWith(".md"))
-    .map(x=>'  <url><loc>'+publicOrigin+staticPath(x)+'</loc></url>').join("\n")+
+    .map(x=>'  <url><loc>'+publicOrigin+(x==="/"?"/":staticPath(x))+'</loc></url>').join("\n")+
   '\n</urlset>\n';
 writeFileSync(join(directory,"sitemap.xml"),sitemap);
 

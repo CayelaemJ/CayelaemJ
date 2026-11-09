@@ -3,7 +3,7 @@
 
 **Cayelaem Jantjies | A complete, fictional, runnable engineering walkthrough · November 2026**
 
-[GitHub cover](../README.md) · [Volume III: Academy](OMNIMASTER_ACADEMY.md) · [Data-to-Decision code](../projects/data-to-decision-platform/) · [Interactive study room](interactive/index.html)
+[GitHub cover](../README.md) · [Volume I: My engineering history](OMNIMASTER_HANDBOOK.md) · [Volume III: Academy](OMNIMASTER_ACADEMY.md) · [Data-to-Decision code](../projects/data-to-decision-platform/) · [Interactive study room](interactive/index.html)
 
 ---
 

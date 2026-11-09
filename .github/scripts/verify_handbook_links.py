@@ -18,17 +18,26 @@ VOLUMES = (
     ROOT / "docs/OMNIMASTER_FIELD_GUIDE.md",
     ROOT / "docs/OMNIMASTER_ACADEMY.md",
     ROOT / "docs/OMNIMASTER_OPERATING_MANUAL.md",
+    ROOT / "docs/OMNIMASTER_BUILD_WITH_ME.md",
 )
 ARCADE = ROOT / "docs/OMNIMASTER_ARCADE.md"
 STUDY_INDEX = ROOT / "projects/README.md"
 GAME_README = ROOT / "projects/omnimaster-incident-academy/README.md"
 GAME = ROOT / "projects/omnimaster-incident-academy/quest.py"
 TEST = ROOT / "projects/omnimaster-incident-academy/test_quest.py"
+CAPSTONE = ROOT / "projects/data-to-decision-platform/engine.py"
+CAPSTONE_TEST = ROOT / "projects/data-to-decision-platform/test_engine.py"
+CAPSTONE_README = ROOT / "projects/data-to-decision-platform/README.md"
+EXPEDITION = ROOT / "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
+STUDY_ROOM = ROOT / "docs/interactive/index.html"
+STUDY_ROOM_TEST = ROOT / "docs/interactive/test_study_room.py"
+STUDY_ROOM_README = ROOT / "docs/interactive/README.md"
 GROUPS = (
     (ROOT / "docs/handbook", 10, "Chapter", VOLUMES[0], True),
     (ROOT / "docs/field-guide", 5, "Field Guide", VOLUMES[1], True),
     (ROOT / "docs/academy", 7, "Lesson", VOLUMES[2], False),
     (ROOT / "docs/personal", 4, "Personal Chapter", VOLUMES[3], False),
+    (ROOT / "docs/build-with-me", 6, "Build With Me", VOLUMES[4], False),
 )
 MARKDOWN_LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
 
@@ -50,7 +59,9 @@ def local_links(document: Path, errors: list[str]) -> None:
 
 def verify() -> list[str]:
     errors: list[str] = []
-    required = (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, GAME, TEST)
+    required = (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, GAME, TEST,
+                CAPSTONE, CAPSTONE_TEST, CAPSTONE_README, EXPEDITION,
+                STUDY_ROOM, STUDY_ROOM_TEST, STUDY_ROOM_README)
     for document in required:
         if not document.is_file():
             errors.append(f"Missing required file: {document.relative_to(ROOT)}")
@@ -67,13 +78,20 @@ def verify() -> list[str]:
         errors.append("Profile cover does not advertise the Arcade")
     if "projects/omnimaster-incident-academy" not in cover:
         errors.append("Profile cover omits the playable game")
-    if "omnimaster-incident-academy/" not in STUDY_INDEX.read_text(encoding="utf-8"):
+    project_index = STUDY_INDEX.read_text(encoding="utf-8")
+    if "omnimaster-incident-academy/" not in project_index:
         errors.append("Project index omits playable game")
+    if "data-to-decision-platform/" not in project_index:
+        errors.append("Project index omits runnable end-to-end capstone")
+    for target in ("docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md",
+                   "docs/interactive/index.html", "projects/data-to-decision-platform/"):
+        if target not in cover:
+            errors.append(f"Profile cover omits {target}")
 
     for i, content in enumerate(indexes):
         if i != 0 and "OMNIMASTER_HANDBOOK.md" not in content:
             errors.append(f"{VOLUMES[i].name} must link back to Volume I")
-    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0]:
+    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0] or "OMNIMASTER_BUILD_WITH_ME.md" not in indexes[0]:
         errors.append("Volume I must link forward to the new volumes")
 
     all_sections: list[Path] = []
@@ -96,7 +114,8 @@ def verify() -> list[str]:
                 errors.append(f"Profile cover does not link to {short}")
         all_sections.extend(files)
 
-    for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, *all_sections):
+    for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,
+                     CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, *all_sections):
         local_links(document, errors)
     return errors
 
@@ -107,5 +126,6 @@ if __name__ == "__main__":
         for problem in errors:
             print("ERROR:", problem, file=sys.stderr)
         sys.exit(1)
-    print("OmniMaster navigation passed: 4 volumes, 10 handbook chapters, "
-          "5 field guides, 7 academy lessons, 4 personal chapters, arcade and game.")
+    print("OmniMaster navigation passed: 5 volumes, 10 handbook chapters, "
+          "5 field guides, 7 academy lessons, 4 personal chapters, "
+          "6 build-with-me chapters, expedition, arcade, and both runnable demos.")

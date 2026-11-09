@@ -51,6 +51,8 @@ I want these materials to show **how I reason**, not invent achievements. Where 
 - **Volume III:** [The OmniMaster Academy](OMNIMASTER_ACADEMY.md), seven study modules and capstone blueprints.
 - **Volume IV:** [The Person Behind the Code](OMNIMASTER_OPERATING_MANUAL.md), INTJ as self-description and my approach to working across IT.
 - **Arcade:** [The OmniMaster Arcade](OMNIMASTER_ARCADE.md), learning puzzles and a runnable incident game.
+- **Volume V:** [Build a System With Me](OMNIMASTER_BUILD_WITH_ME.md), six guided lessons and a runnable end-to-end synthetic data platform.
+- **Daily practice:** [30-Day Engineering Expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) and [offline interactive study room](interactive/index.html).
 - **Source archive:** [Project portfolio atlas](PROJECT_PORTFOLIO.md) and [real-world mission dossiers](OMNIMASTER_MISSION_DOSSIERS.md).
 - **Professional engagements:** [Client case studies](CLIENT_CASE_STUDIES.md), subject to appropriate confidentiality.
 - **Code you can run:** [Four synthetic engineering labs](../projects/README.md), with tests and CI.

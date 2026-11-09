@@ -76,4 +76,9 @@ For worked explanations and reviewer questions, use the [Volume II workbook](fie
 
 **Graduation means you have a project that another engineer can question, run and improve.** There is no imaginary certificate. Your source, tests and explanations are the credential.
 
+## Go beyond the course
+
+[**Volume V: Build a System With Me**](OMNIMASTER_BUILD_WITH_ME.md) supplies a complete fictional SQLite pipeline with six guided engineering chapters, replay and failure tests. [The 30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) turns the syllabus into daily artifacts. For a more playful format, open the [offline study room](interactive/index.html) from a cloned repository.
+
+
 [Start lesson 01 →](academy/01_START_HERE.md) · [Try the arcade →](OMNIMASTER_ARCADE.md)

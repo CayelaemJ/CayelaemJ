@@ -48,5 +48,7 @@ It does not mean I should do every job alone. It means I care about the interact
 - [Volume II: Engineering Field Guide](OMNIMASTER_FIELD_GUIDE.md), diagrams, investigations and worked decisions.
 - [Volume III: OmniMaster Academy](OMNIMASTER_ACADEMY.md), learn these methods yourself.
 - [OmniMaster Arcade](OMNIMASTER_ARCADE.md), technical puzzles, quests and a tiny terminal game.
+- [Volume V: Build a System With Me](OMNIMASTER_BUILD_WITH_ME.md), the actual end-to-end engineering lesson project.
+- [30-Day Expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md), practise the habits one verifiable artifact at a time.
 
 [Begin with the INTJ chapter →](personal/01_INTJ_AND_ME.md)

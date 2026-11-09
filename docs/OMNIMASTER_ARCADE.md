@@ -141,4 +141,6 @@ My preferred power-up: a smaller scope, a test that reproduces the problem and s
 
 [Volume III: Take the seven-module engineering course](OMNIMASTER_ACADEMY.md) · [Volume II: Work through seven technical exercises](field-guide/03_ENGINEERING_WORKBOOK.md) · [Run the four original labs](../projects/README.md) · [The INTJ chapter](personal/01_INTJ_AND_ME.md)
 
-The game is fiction. The habit it teaches is simple: **question the easy answer, verify the invariant, and leave the system more understandable than you found it.**
+The game is fiction. The habit it teaches is simple:**New challenge:** build the real educational capstone in [Volume V](OMNIMASTER_BUILD_WITH_ME.md), follow the [30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md), or open the [offline interactive study room](interactive/index.html).
+
+ **question the easy answer, verify the invariant, and leave the system more understandable than you found it.**

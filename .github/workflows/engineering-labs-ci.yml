@@ -1,4 +1,4 @@
-name: OmniMaster Engineering Library CI
+name: OmniMaster Library and End-to-End Learning CI
 
 on:
   push:
@@ -15,6 +15,10 @@ on:
       - "docs/OMNIMASTER_OPERATING_MANUAL.md"
       - "docs/personal/**"
       - "docs/OMNIMASTER_ARCADE.md"
+      - "docs/OMNIMASTER_BUILD_WITH_ME.md"
+      - "docs/build-with-me/**"
+      - "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
+      - "docs/interactive/**"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   pull_request:
@@ -30,6 +34,10 @@ on:
       - "docs/OMNIMASTER_OPERATING_MANUAL.md"
       - "docs/personal/**"
       - "docs/OMNIMASTER_ARCADE.md"
+      - "docs/OMNIMASTER_BUILD_WITH_ME.md"
+      - "docs/build-with-me/**"
+      - "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
+      - "docs/interactive/**"
       - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   workflow_dispatch:
@@ -43,7 +51,7 @@ concurrency:
 
 jobs:
   unit-tests:
-    name: Five local-only Python project suites and docs
+    name: Six Python project suites, offline study room and docs
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -55,10 +63,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation projects/omnimaster-incident-academy; do
+          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation projects/omnimaster-incident-academy projects/data-to-decision-platform; do
             echo "::group::${lab}"
             (cd "$lab" && python -m unittest discover -v)
             echo "::endgroup::"
           done
-      - name: Verify all four volumes, chapters, academy, game and links
+      - name: Verify offline study room HTML
+        run: |
+          cd docs/interactive
+          python -m unittest discover -v
+      - name: Verify five volumes, end-to-end lessons and local navigation
         run: python .github/scripts/verify_handbook_links.py

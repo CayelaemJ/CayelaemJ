@@ -74,6 +74,15 @@ Other documented project scope includes **18 banking dashboards**, an Australian
 
 [**Read the real client and project case studies →**](docs/CLIENT_CASE_STUDIES.md)
 
+### Reproducible engineering labs
+
+Want to inspect working code rather than read another list of tools? These two small, dependency-free projects contain synthetic demos, executable Python and unit tests:
+
+- **[CDC Replay Lab](projects/cdc-replay-lab/)**: ordered change events, deduplication, deletion tombstones, atomic replay and Bronze/Silver/Gold projections.
+- **[Data Quality Contracts](projects/data-quality-contracts/)**: ingestion-time schema, duplicate-key, decimal and timestamp/freshness checks with machine-readable findings.
+
+Both are intentionally local teaching examples, **not deployed production CDC services or compliance certifications**. [Browse the project index](projects/README.md).
+
 ---
 
 ## 03 / Declassified mission archive

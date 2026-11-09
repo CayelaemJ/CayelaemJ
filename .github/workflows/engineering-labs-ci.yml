@@ -1,14 +1,22 @@
-name: Engineering Labs (Python)
+name: Engineering Labs & Handbook
 
 on:
   push:
     branches: [main]
     paths:
       - "projects/**"
+      - "README.md"
+      - "docs/OMNIMASTER_HANDBOOK.md"
+      - "docs/handbook/**"
+      - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   pull_request:
     paths:
       - "projects/**"
+      - "README.md"
+      - "docs/OMNIMASTER_HANDBOOK.md"
+      - "docs/handbook/**"
+      - ".github/scripts/verify_handbook_links.py"
       - ".github/workflows/engineering-labs-ci.yml"
   workflow_dispatch:
 
@@ -38,3 +46,5 @@ jobs:
             (cd "$lab" && python -m unittest discover -v)
             echo "::endgroup::"
           done
+      - name: Verify handbook chapters and links
+        run: python .github/scripts/verify_handbook_links.py

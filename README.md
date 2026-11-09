@@ -37,7 +37,9 @@
 
 ## Open the book | A deeper look at my work
 
-**[READ THE OMNIMASTER HANDBOOK: 10 CHAPTERS →](docs/OMNIMASTER_HANDBOOK.md)**
+**[VOLUME I · THE OMNIMASTER HANDBOOK: MY STORY AND TEN TECHNICAL CHAPTERS →](docs/OMNIMASTER_HANDBOOK.md)**
+
+**[VOLUME II · THE ENGINEERING FIELD GUIDE: ARCHITECTURES, INCIDENTS AND WORKED EXERCISES →](docs/OMNIMASTER_FIELD_GUIDE.md)**
 
 Not another list of frameworks. This is my technical autobiography: **where I started, the organisations and systems I've worked with, the failures that taught me something, how I design trustworthy data and software, and what you can run yourself**.
 
@@ -55,6 +57,18 @@ Not another list of frameworks. This is my technical autobiography: **where I st
 | [10 · Glossary and evidence register](docs/handbook/10_GLOSSARY_AND_EVIDENCE.md) | Verify the terms, metrics and project maturity |
 
 <sub>READING GUIDE: [90-second introduction](docs/handbook/01_THE_ENGINEER.md) · [Technical deep dive](docs/handbook/04_DATA_ENGINEERING.md) · [Working code](projects/README.md) · [Full bibliography and claim register](docs/handbook/10_GLOSSARY_AND_EVIDENCE.md).</sub>
+
+### Inside Volume II · Explore how I actually engineer things
+
+| Read | What it shows |
+|---|---|
+| [**The architecture atlas**](docs/field-guide/01_ARCHITECTURE_ATLAS.md) | Five visual reference architectures covering source-to-dashboard, secure APIs, applied AI and releases |
+| [**The debugging casebook**](docs/field-guide/02_DEBUGGING_CASEBOOK.md) | Six investigations with symptoms, hypotheses, safe experiments and regression requirements |
+| [**The engineering workbook**](docs/field-guide/03_ENGINEERING_WORKBOOK.md) | Seven worked exercises in SQL, CDC, access control, AI and reliability |
+| [**Role and evidence map**](docs/field-guide/04_ROLE_AND_EVIDENCE_MAP.md) | What I offer as a data, analytics, backend, AI or architecture-track engineer |
+| [**Architecture decision journal**](docs/field-guide/05_DECISION_JOURNAL.md) | Six explicit trade-off records, including migration and security gates |
+
+**[OPEN THE FULL FIELD GUIDE →](docs/OMNIMASTER_FIELD_GUIDE.md)**
 
 ---
 
@@ -398,7 +412,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

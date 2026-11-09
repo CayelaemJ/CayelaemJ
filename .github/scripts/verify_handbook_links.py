@@ -19,6 +19,7 @@ VOLUMES = (
     ROOT / "docs/OMNIMASTER_ACADEMY.md",
     ROOT / "docs/OMNIMASTER_OPERATING_MANUAL.md",
     ROOT / "docs/OMNIMASTER_BUILD_WITH_ME.md",
+    ROOT / "docs/OMNIMASTER_HUMAN_INTERFACE.md",
 )
 ARCADE = ROOT / "docs/OMNIMASTER_ARCADE.md"
 STUDY_INDEX = ROOT / "projects/README.md"
@@ -38,6 +39,7 @@ GROUPS = (
     (ROOT / "docs/academy", 7, "Lesson", VOLUMES[2], False),
     (ROOT / "docs/personal", 4, "Personal Chapter", VOLUMES[3], False),
     (ROOT / "docs/build-with-me", 6, "Build With Me", VOLUMES[4], False),
+    (ROOT / "docs/human-interface", 6, "Human Interface", VOLUMES[5], False),
 )
 MARKDOWN_LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
 
@@ -91,7 +93,7 @@ def verify() -> list[str]:
     for i, content in enumerate(indexes):
         if i != 0 and "OMNIMASTER_HANDBOOK.md" not in content:
             errors.append(f"{VOLUMES[i].name} must link back to Volume I")
-    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0] or "OMNIMASTER_BUILD_WITH_ME.md" not in indexes[0]:
+    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0] or "OMNIMASTER_BUILD_WITH_ME.md" not in indexes[0] or "OMNIMASTER_HUMAN_INTERFACE.md" not in indexes[0]:
         errors.append("Volume I must link forward to the new volumes")
 
     all_sections: list[Path] = []
@@ -114,6 +116,13 @@ def verify() -> list[str]:
                 errors.append(f"Profile cover does not link to {short}")
         all_sections.extend(files)
 
+    if "https://omnimaster-study-room.cabo-solutions-za.workers.dev/" not in cover:
+        errors.append("Profile cover does not link to the deployed Study Room")
+    if "docs/interactive/index.html" not in cover:
+        errors.append("Profile cover must retain a labelled source link")
+    if "OMNIMASTER_HUMAN_INTERFACE.md" not in STUDY_ROOM.read_text(encoding="utf-8"):
+        errors.append("Interactive Study Room must link to Volume VI")
+
     for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,
                      CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, *all_sections):
         local_links(document, errors)
@@ -126,6 +135,6 @@ if __name__ == "__main__":
         for problem in errors:
             print("ERROR:", problem, file=sys.stderr)
         sys.exit(1)
-    print("OmniMaster navigation passed: 5 volumes, 10 handbook chapters, "
+    print("OmniMaster navigation passed: 6 volumes, 10 handbook chapters, "
           "5 field guides, 7 academy lessons, 4 personal chapters, "
-          "6 build-with-me chapters, expedition, arcade, and both runnable demos.")
+          "6 build-with-me lessons, 6 UX chapters, live Study Room link, and demos.")

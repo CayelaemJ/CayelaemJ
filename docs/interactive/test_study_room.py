@@ -76,7 +76,13 @@ class StudyRoomTests(unittest.TestCase):
             parsed = urlsplit(uri)
             if not parsed.path or parsed.path.startswith("#"):
                 continue
-            self.assertFalse(parsed.scheme or parsed.netloc)
+            if parsed.scheme or parsed.netloc:
+                self.assertEqual(
+                    uri,
+                    "https://github.com/CayelaemJ/CayelaemJ/blob/main/docs/interactive/index.html",
+                    "Only the explicitly labelled HTML-source link may leave this offline page",
+                )
+                continue
             path = (PAGE.parent / parsed.path).resolve()
             self.assertTrue(path.is_relative_to(ROOT), uri)
             self.assertTrue(path.exists(), uri)

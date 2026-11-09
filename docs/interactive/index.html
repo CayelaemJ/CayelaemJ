@@ -55,6 +55,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <h1>Learn the system. Break the assumption. Prove the fix.</h1>
 <p>A tiny offline study room for the engineering habits behind my career: start with the business event, follow the data through the system, test what could go wrong, and explain the result.</p>
 <p><a class="pill" href="/library">Explore the complete searchable learning library</a> · <a href="/OMNIMASTER_FULLSTACK_PLAYBOOK.md">Read the frontend/backend textbook</a></p>
+<div class="btnrow"><button type="button" class="secondary" id="share-study-room" data-share-url="https://omnimaster-study-room.cabo-solutions-za.workers.dev/">Copy link to share</button><span role="status" aria-live="polite" id="share-feedback"></span></div>
 <nav aria-label="Page sections">
 <a href="/library">Browse all 54 lessons</a><a href="#paths">Study paths</a><a href="#book">Full-stack book</a><a href="#ux">Human-centred UX</a><a href="#cases">Decision room</a><a href="#expedition">30-day expedition</a><a href="#about">How it works</a>
 </nav>
@@ -222,6 +223,20 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
     save();update();
   });
   update();
+  const shareButton=document.getElementById("share-study-room");
+  const shareFeedback=document.getElementById("share-feedback");
+  shareButton.addEventListener("click",async function(){
+    const shareUrl=shareButton.dataset.shareUrl;
+    try {
+      if (!navigator.clipboard||typeof navigator.clipboard.writeText!=="function") {
+        throw new Error("Clipboard access not available");
+      }
+      await navigator.clipboard.writeText(shareUrl);
+      shareFeedback.textContent="Link copied. Paste it into LinkedIn or a message.";
+    } catch(_) {
+      shareFeedback.textContent="Copy and share: "+shareUrl;
+    }
+  });
 }());
 </script>
 </body>

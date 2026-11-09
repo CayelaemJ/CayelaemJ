@@ -20,6 +20,7 @@ VOLUMES = (
     ROOT / "docs/OMNIMASTER_OPERATING_MANUAL.md",
     ROOT / "docs/OMNIMASTER_BUILD_WITH_ME.md",
     ROOT / "docs/OMNIMASTER_HUMAN_INTERFACE.md",
+    ROOT / "docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md",
 )
 ARCADE = ROOT / "docs/OMNIMASTER_ARCADE.md"
 STUDY_INDEX = ROOT / "projects/README.md"
@@ -33,6 +34,9 @@ EXPEDITION = ROOT / "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
 STUDY_ROOM = ROOT / "docs/interactive/index.html"
 STUDY_ROOM_TEST = ROOT / "docs/interactive/test_study_room.py"
 STUDY_ROOM_README = ROOT / "docs/interactive/README.md"
+RELIABILITY_LAB = ROOT / "projects/reliability-recovery-lab/reliability.py"
+RELIABILITY_TEST = ROOT / "projects/reliability-recovery-lab/test_reliability.py"
+RELIABILITY_README = ROOT / "projects/reliability-recovery-lab/README.md"
 FULLSTACK = ROOT / "docs/OMNIMASTER_FULLSTACK_PLAYBOOK.md"
 SHARING = ROOT / "docs/ACCESS_AND_SHARING.md"
 GROUPS = (
@@ -42,6 +46,7 @@ GROUPS = (
     (ROOT / "docs/personal", 4, "Personal Chapter", VOLUMES[3], False),
     (ROOT / "docs/build-with-me", 6, "Build With Me", VOLUMES[4], False),
     (ROOT / "docs/human-interface", 6, "Human Interface", VOLUMES[5], False),
+    (ROOT / "docs/reliability", 5, "Reliability Chapter", VOLUMES[6], False),
 )
 MARKDOWN_LINK = re.compile(r'(?<!!)\[[^\]]+\]\(([^)]+)\)')
 
@@ -65,7 +70,8 @@ def verify() -> list[str]:
     errors: list[str] = []
     required = (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, GAME, TEST,
                 CAPSTONE, CAPSTONE_TEST, CAPSTONE_README, EXPEDITION,
-                STUDY_ROOM, STUDY_ROOM_TEST, STUDY_ROOM_README, FULLSTACK, SHARING)
+                STUDY_ROOM, STUDY_ROOM_TEST, STUDY_ROOM_README, FULLSTACK, SHARING,
+                RELIABILITY_LAB, RELIABILITY_TEST, RELIABILITY_README)
     for document in required:
         if not document.is_file():
             errors.append(f"Missing required file: {document.relative_to(ROOT)}")
@@ -85,6 +91,8 @@ def verify() -> list[str]:
     project_index = STUDY_INDEX.read_text(encoding="utf-8")
     if "omnimaster-incident-academy/" not in project_index:
         errors.append("Project index omits playable game")
+    if "reliability-recovery-lab/" not in project_index:
+        errors.append("Project index omits the reliability lab")
     if "data-to-decision-platform/" not in project_index:
         errors.append("Project index omits runnable end-to-end capstone")
     for target in ("docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md",
@@ -95,7 +103,7 @@ def verify() -> list[str]:
     for i, content in enumerate(indexes):
         if i != 0 and "OMNIMASTER_HANDBOOK.md" not in content:
             errors.append(f"{VOLUMES[i].name} must link back to Volume I")
-    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0] or "OMNIMASTER_BUILD_WITH_ME.md" not in indexes[0] or "OMNIMASTER_HUMAN_INTERFACE.md" not in indexes[0]:
+    if "OMNIMASTER_ACADEMY.md" not in indexes[0] or "OMNIMASTER_OPERATING_MANUAL.md" not in indexes[0] or "OMNIMASTER_BUILD_WITH_ME.md" not in indexes[0] or "OMNIMASTER_HUMAN_INTERFACE.md" not in indexes[0] or "OMNIMASTER_RELIABILITY_FIELD_GUIDE.md" not in indexes[0]:
         errors.append("Volume I must link forward to the new volumes")
 
     all_sections: list[Path] = []
@@ -130,7 +138,7 @@ def verify() -> list[str]:
     if "docs/ACCESS_AND_SHARING.md" not in cover:
         errors.append("Profile cover must explain source access boundaries")
     for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,
-                     CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, FULLSTACK, SHARING, *all_sections):
+                     CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, FULLSTACK, SHARING, RELIABILITY_README, *all_sections):
         local_links(document, errors)
     return errors
 
@@ -141,6 +149,6 @@ if __name__ == "__main__":
         for problem in errors:
             print("ERROR:", problem, file=sys.stderr)
         sys.exit(1)
-    print("OmniMaster navigation passed: 6 volumes, 10 handbook chapters, "
+    print("OmniMaster navigation passed: 7 volumes, 10 handbook chapters, "
           "5 field guides, 7 academy lessons, 4 personal chapters, "
           "6 build-with-me lessons, 6 UX chapters, live Study Room link, and demos.")

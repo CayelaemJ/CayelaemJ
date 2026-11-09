@@ -14,7 +14,10 @@ This handbook is the long-form companion to my GitHub profile. It is not a gener
 
 **Continue to [Volume II: The OmniMaster Field Guide](OMNIMASTER_FIELD_GUIDE.md)** for architecture diagrams, debugging casebooks, worked engineering exercises, a role-to-evidence navigator and six decision records. Volume I is the narrative; Volume II is the engineer's desk.
 
-**Study or meet the human:** [Volume III · OmniMaster Academy](OMNIMASTER_ACADEMY.md) teaches the skills with exercises and capstones. [Volume IV · The Person Behind the Code](OMNIMASTER_OPERATING_MANUAL.md) explains my self-described INTJ habits, systems mindset, collaboration style and IT range. [The Arcade](OMNIMASTER_ARCADE.md) adds executable detective scenarios.
+**Study or meet the human:** [Volume III · OmniMaster Academy](OMNIMASTER_ACADEMY.md) teaches the skills with exercises and capstones.
+
+**Build a real teaching project:** [Volume V · Build a System With Me](OMNIMASTER_BUILD_WITH_ME.md) teaches a complete synthetic data-to-decision system, with replay, rollback, reconciliation and tests. The [30-day expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md) turns those skills into daily practice.
+ [Volume IV · The Person Behind the Code](OMNIMASTER_OPERATING_MANUAL.md) explains my self-described INTJ habits, systems mindset, collaboration style and IT range. [The Arcade](OMNIMASTER_ARCADE.md) adds executable detective scenarios.
 
 
 

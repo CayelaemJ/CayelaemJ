@@ -1,0 +1,40 @@
+name: Engineering Labs (Python)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "projects/**"
+      - ".github/workflows/engineering-labs-ci.yml"
+  pull_request:
+    paths:
+      - "projects/**"
+      - ".github/workflows/engineering-labs-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: engineering-labs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit-tests:
+    name: Four local-only Python lab suites
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run all engineering lab tests (no dependencies or external services)
+        shell: bash
+        run: |
+          set -euo pipefail
+          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation; do
+            echo "::group::${lab}"
+            (cd "$lab" && python -m unittest discover -v)
+            echo "::endgroup::"
+          done

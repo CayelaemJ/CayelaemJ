@@ -87,7 +87,9 @@ class PipelineTests(unittest.TestCase):
 
     def test_conflicting_same_account_version_fails(self):
         self.pipeline.apply_batch(self.events)
-        invalid = replace(self.events[0], event_id="evt-09", position=9, amount_cents=100)
+        # acct-a is at version 2 after the sample batch; a second distinct
+        # event at version 2 is a true version conflict, not a stale v1 arrival.
+        invalid = replace(self.events[0], event_id="evt-09", position=9, version=2, amount_cents=100)
         with self.assertRaisesRegex(ValueError, "conflicting events"):
             self.pipeline.apply_batch((invalid,))
 

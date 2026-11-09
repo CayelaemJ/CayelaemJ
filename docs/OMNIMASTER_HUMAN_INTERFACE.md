@@ -69,3 +69,6 @@ I want readers to be able to critique their own apps, not simply copy my colours
 **An interface should help a person succeed, not make them admire how hard the developer worked.**
 
 [Start with my UI/UX journey →](human-interface/01_MY_UX_JOURNEY.md)
+
+
+**Connecting user experience to backend reliability:** [Volume VII](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) studies what people should see when processing is queued, retried, completed or awaiting manual review.

@@ -85,3 +85,8 @@ For worked explanations and reviewer questions, use the [Volume II workbook](fie
 
 
 **Design for people:** [Volume VI](OMNIMASTER_HUMAN_INTERFACE.md) adds a six-chapter UI/UX development and usability course.
+
+
+### Read lessons without opening GitHub
+
+The [live OmniMaster Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) serves all Academy lessons directly as readable HTML. The [frontend/backend book](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md) and its [PDF edition](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf) are part of the same public learning experience.

@@ -33,6 +33,8 @@ EXPEDITION = ROOT / "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
 STUDY_ROOM = ROOT / "docs/interactive/index.html"
 STUDY_ROOM_TEST = ROOT / "docs/interactive/test_study_room.py"
 STUDY_ROOM_README = ROOT / "docs/interactive/README.md"
+FULLSTACK = ROOT / "docs/OMNIMASTER_FULLSTACK_PLAYBOOK.md"
+SHARING = ROOT / "docs/ACCESS_AND_SHARING.md"
 GROUPS = (
     (ROOT / "docs/handbook", 10, "Chapter", VOLUMES[0], True),
     (ROOT / "docs/field-guide", 5, "Field Guide", VOLUMES[1], True),
@@ -63,7 +65,7 @@ def verify() -> list[str]:
     errors: list[str] = []
     required = (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README, GAME, TEST,
                 CAPSTONE, CAPSTONE_TEST, CAPSTONE_README, EXPEDITION,
-                STUDY_ROOM, STUDY_ROOM_TEST, STUDY_ROOM_README)
+                STUDY_ROOM, STUDY_ROOM_TEST, STUDY_ROOM_README, FULLSTACK, SHARING)
     for document in required:
         if not document.is_file():
             errors.append(f"Missing required file: {document.relative_to(ROOT)}")
@@ -123,8 +125,12 @@ def verify() -> list[str]:
     if "OMNIMASTER_HUMAN_INTERFACE.md" not in STUDY_ROOM.read_text(encoding="utf-8"):
         errors.append("Interactive Study Room must link to Volume VI")
 
+    if "OMNIMASTER_FULLSTACK_PLAYBOOK.md" not in cover:
+        errors.append("Profile cover must link to the full-stack book")
+    if "docs/ACCESS_AND_SHARING.md" not in cover:
+        errors.append("Profile cover must explain source access boundaries")
     for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,
-                     CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, *all_sections):
+                     CAPSTONE_README, EXPEDITION, STUDY_ROOM_README, FULLSTACK, SHARING, *all_sections):
         local_links(document, errors)
     return errors
 

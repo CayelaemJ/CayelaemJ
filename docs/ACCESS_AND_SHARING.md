@@ -1,6 +1,6 @@
 # Reading access and technical source review
 
-**Public learning website:** [OmniMaster Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)
+**Public learning website:** [OmniMaster Study Room](https://omnimaster-study-room-share.onrender.com/)
 
 The course lessons, interactive questions, frontend/backend textbook and PDF edition are intended for anyone who wants to learn. They are served directly on the website, so visitors do **not** need to browse a GitHub repository to use them.
 
@@ -35,4 +35,4 @@ The Study Room now hosts the lessons in its own read-only Cloudflare Worker bund
 
 **What it does not do:** change GitHub repository visibility, verify recruiter identity, create a private repository, or revoke public repository access. Those actions require an explicit repository migration and permission change.
 
-[Back to the Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) · [Read the frontend/backend book](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)
+[Back to the Study Room](https://omnimaster-study-room-share.onrender.com/) · [Read the frontend/backend book](https://omnimaster-study-room-share.onrender.com/OMNIMASTER_FULLSTACK_PLAYBOOK.html)

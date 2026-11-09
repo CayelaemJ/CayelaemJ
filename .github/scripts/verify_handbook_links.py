@@ -126,15 +126,17 @@ def verify() -> list[str]:
                 errors.append(f"Profile cover does not link to {short}")
         all_sections.extend(files)
 
+    if "https://omnimaster-study-room-share.onrender.com/" not in cover:
+        errors.append("Profile cover must link to the crawler-compatible Study Room sharing address")
     if "https://omnimaster-study-room.cabo-solutions-za.workers.dev/" not in cover:
-        errors.append("Profile cover does not link to the deployed Study Room")
+        errors.append("Profile cover should preserve the original Worker fallback")
     if "docs/interactive/index.html" not in cover:
         errors.append("Profile cover must retain a labelled source link")
     if "OMNIMASTER_HUMAN_INTERFACE.md" not in STUDY_ROOM.read_text(encoding="utf-8"):
         errors.append("Interactive Study Room must link to Volume VI")
 
-    if "OMNIMASTER_FULLSTACK_PLAYBOOK.md" not in cover:
-        errors.append("Profile cover must link to the full-stack book")
+    if "https://omnimaster-study-room-share.onrender.com/OMNIMASTER_FULLSTACK_PLAYBOOK.html" not in cover:
+        errors.append("Profile cover must link to the hosted HTML full-stack book")
     if "docs/ACCESS_AND_SHARING.md" not in cover:
         errors.append("Profile cover must explain source access boundaries")
     for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,

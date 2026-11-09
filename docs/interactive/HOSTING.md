@@ -1,6 +1,7 @@
 # Study Room hosting and publishing
 
-**Live website:** [omnimaster-study-room.cabo-solutions-za.workers.dev](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)  
+**Primary sharing website:** [https://omnimaster-study-room-share.onrender.com/](https://omnimaster-study-room-share.onrender.com/)  
+**Original Cloudflare Worker:** [https://omnimaster-study-room.cabo-solutions-za.workers.dev/](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)  
 **Canonical editable HTML source:** [index.html](index.html)  
 **Static checks:** [test_study_room.py](test_study_room.py)
 
@@ -11,6 +12,22 @@ GitHub's regular `blob/main/docs/interactive/index.html` page shows **HTML sourc
 The OmniMaster Study Room therefore has a **separate, public Cloudflare Worker deployment**. The profile's main action now targets the website. The source link remains available but is labelled accordingly.
 
 This is a small, public learning experience with no user accounts, external script dependencies, API requests or production data. The website now serves approved educational Markdown as **readable HTML directly from the Worker**, without redirecting visitors to GitHub. External source-code references from those articles are intentionally not clickable in public learning mode.
+
+## Public sharing fallback and manual Render update
+
+LinkedIn Post Inspector reported that it could not connect to the original `workers.dev` address. Cloudflare's managed Browser Integrity Check applies to `workers.dev` and cannot be disabled for that hostname. To avoid disrupting the working Worker, a **separate Render static site** was created at https://omnimaster-study-room-share.onrender.com/.
+
+- Render service: `omnimaster-study-room-share`, static hosting (not the private OmniMaster portfolio).
+- Public GitHub source: `CayelaemJ/CayelaemJ`, branch `main`.
+- Build: `node docs/interactive/export_static.mjs`.
+- Publish folder: `docs/interactive/.static-publish`.
+- `OMNIMASTER_PUBLIC_ORIGIN`: `https://omnimaster-study-room-share.onrender.com`.
+- **Auto-deploy is disabled**. After changes to course content, rebuild and manually deploy this Render static site; the Cloudflare Worker has its own independent publishing process.
+- The export writes 56 HTML files including 54 lessons, plus the PDF, original 1200 × 630 PNG, `robots.txt` and sitemap. Lesson links point to actual `.html` pages, not Markdown source.
+- Automated export testing checks all 1,003 internal hyperlinks, site-specific Open Graph URLs, image and PDF. A live browser independently verified the new site's homepage and social metadata; the user's LinkedIn Post Inspector outcome has not yet been confirmed.
+- Static site hosting is free on Render but consumes account-level bandwidth and build minutes, and usage beyond included allowances may be billable depending on account settings.
+
+Keep the original Worker URL online as a fallback. Do not change Cloudflare's Worker Open Graph canonical host to Render: each host must refer to its own address.
 
 ## Current deployment architecture
 

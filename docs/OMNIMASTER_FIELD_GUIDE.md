@@ -48,6 +48,9 @@ I want these materials to show **how I reason**, not invent achievements. Where 
 ## Companion volumes and evidence
 
 - **Volume I:** [The OmniMaster Handbook](OMNIMASTER_HANDBOOK.md), the career narrative and ten technical chapters.
+- **Volume III:** [The OmniMaster Academy](OMNIMASTER_ACADEMY.md), seven study modules and capstone blueprints.
+- **Volume IV:** [The Person Behind the Code](OMNIMASTER_OPERATING_MANUAL.md), INTJ as self-description and my approach to working across IT.
+- **Arcade:** [The OmniMaster Arcade](OMNIMASTER_ARCADE.md), learning puzzles and a runnable incident game.
 - **Source archive:** [Project portfolio atlas](PROJECT_PORTFOLIO.md) and [real-world mission dossiers](OMNIMASTER_MISSION_DOSSIERS.md).
 - **Professional engagements:** [Client case studies](CLIENT_CASE_STUDIES.md), subject to appropriate confidentiality.
 - **Code you can run:** [Four synthetic engineering labs](../projects/README.md), with tests and CI.

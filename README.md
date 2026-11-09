@@ -45,7 +45,13 @@
 
 **[VOLUME IV · THE PERSON BEHIND THE CODE: INTJ, SYSTEMS THINKING AND MY RANGE ACROSS IT →](docs/OMNIMASTER_OPERATING_MANUAL.md)**
 
+**[VOLUME V · BUILD A SYSTEM WITH ME: SOURCE EVENTS TO TRUSTWORTHY DECISIONS →](docs/OMNIMASTER_BUILD_WITH_ME.md)**
+
 **[THE OMNIMASTER ARCADE · PUZZLES, TECHNICAL QUESTS AND A PLAYABLE PYTHON GAME →](docs/OMNIMASTER_ARCADE.md)**
+
+**[30-DAY ENGINEERING EXPEDITION · A DAY-BY-DAY STUDY PLAN →](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)**
+
+**[INTERACTIVE STUDY ROOM · OPEN THE OFFLINE BROWSER EXPERIENCE →](docs/interactive/index.html)**
 
 > **Where I fit:** Across most software-oriented IT environments, from SQL and analytics through applications, AI integration, quality, security-conscious delivery and cloud/platform work. **Hardware engineering and physical device repair aren't my focus.** Breadth is my advantage; I still respect the depth each specialist discipline requires. [See the evidence and limits](docs/personal/03_IT_RANGE_AND_LIMITS.md).
 
@@ -88,6 +94,9 @@ Not another list of frameworks. This is my technical autobiography: **where I st
 | [**My range across IT**](docs/personal/03_IT_RANGE_AND_LIMITS.md) | What I have done, where I can contribute, and where I need specialist growth |
 | [**How to work with me**](docs/personal/04_COLLABORATION_AND_QUIRKS.md) | The collaboration guide, curiosities and non-negotiables |
 | [**Play Incident Academy**](projects/omnimaster-incident-academy/) | Eight offline engineering detective challenges, explained in code |
+| [**Build an event-to-decision platform**](projects/data-to-decision-platform/) | A complete, synthetic SQLite source-to-Bronze/Silver/Gold simulation with transaction and replay tests |
+| [**30 days of learning by doing**](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md) | Thirty daily assignments with expected artifacts and pass criteria |
+| [**Offline interactive study room**](docs/interactive/index.html) | Seven course routes, five decision questions and optional local-only checklist |
 
 ---
 
@@ -431,7 +440,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)** · **[BUILD WITH ME](docs/OMNIMASTER_BUILD_WITH_ME.md)** · **[30-DAY QUEST](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

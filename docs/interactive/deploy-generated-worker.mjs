@@ -196,7 +196,7 @@ function makePdf(md){
  let chunks=[];for(let i=0;i<lines.length;i+=51)chunks.push(lines.slice(i,i+51));
  let objs=[null,"<< /Type /Catalog /Pages 2 0 R >>",null,"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"],ids=[];
  for(let p=0;p<chunks.length;p++){
-  let id=objs.length;ids.push(id);objs.push("<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents "+(id+1)+" 0 R >>");
+  let id=objs.length;ids.push(id);objs.push("<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents "+(id+1)+" 0 R >>");
   let content="BT /F1 10 Tf 38 795 Td 14 TL\n";
   for(let x of chunks[p])content+="("+x.replace(/([\\()])/g,"\\$1")+") Tj T*\n";
   content+="ET\nBT /F1 8 Tf 38 31 Td (OmniMaster | Page "+(p+1)+" of "+chunks.length+") Tj ET\n";

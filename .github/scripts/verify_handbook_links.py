@@ -135,8 +135,8 @@ def verify() -> list[str]:
     if "OMNIMASTER_HUMAN_INTERFACE.md" not in STUDY_ROOM.read_text(encoding="utf-8"):
         errors.append("Interactive Study Room must link to Volume VI")
 
-    if "OMNIMASTER_FULLSTACK_PLAYBOOK.md" not in cover:
-        errors.append("Profile cover must link to the full-stack book")
+    if "https://omnimaster-study-room-share.onrender.com/OMNIMASTER_FULLSTACK_PLAYBOOK.html" not in cover:
+        errors.append("Profile cover must link to the hosted HTML full-stack book")
     if "docs/ACCESS_AND_SHARING.md" not in cover:
         errors.append("Profile cover must explain source access boundaries")
     for document in (COVER, *VOLUMES, ARCADE, STUDY_INDEX, GAME_README,

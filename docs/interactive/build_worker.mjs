@@ -2,6 +2,7 @@
    Run from the repository root: node docs/interactive/build_worker.mjs
    No remote GitHub fetch, secrets, external packages or tracking. */
 import {readFileSync,writeFileSync} from "node:fs";
+import {makeSocialPreviewPng} from "./social-preview-image.mjs";
 import {fileURLToPath} from "node:url";
 import {resolve,dirname} from "node:path";
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"../..");
@@ -38,8 +39,11 @@ const content=Object.fromEntries(lessons.map(path=>[path,readFileSync(resolve(ro
 const home=readFileSync(resolve(root,"docs/interactive/index.html"),"utf8");
 const template=readFileSync(resolve(root,"docs/interactive/library-worker-template.mjs"),"utf8");
 const discovery=readFileSync(resolve(root,"docs/interactive/course-discovery.mjs"),"utf8");
-const built=template.replace("__HOME__",JSON.stringify(home)).replace("__PAGES__",JSON.stringify(content)).replace("/*__COURSE_DISCOVERY__*/",discovery);
-if(built.includes("__HOME__")||built.includes("__PAGES__")||built.includes("/*__COURSE_DISCOVERY__*/"))throw new Error("Unreplaced template marker");
+const social=readFileSync(resolve(root,"docs/interactive/social-metadata.mjs"),"utf8");
+const png=makeSocialPreviewPng();
+if(png.length>5*1024*1024||png.readUInt32BE(16)!==1200||png.readUInt32BE(20)!==630)throw new Error("Bad social preview image dimensions/size");
+const built=template.replace("__HOME__",JSON.stringify(home)).replace("__PAGES__",JSON.stringify(content)).replace("/*__COURSE_DISCOVERY__*/",discovery).replace("/*__SOCIAL_META__*/",social.replace("__SOCIAL_IMAGE_BASE64__",JSON.stringify(png.toString("base64"))));
+if(built.includes("__HOME__")||built.includes("__PAGES__")||built.includes("/*__COURSE_DISCOVERY__*/")||built.includes("/*__SOCIAL_META__*/"))throw new Error("Unreplaced template marker");
 const output=resolve(root,"docs/interactive/.generated-study-room-worker.mjs");
 writeFileSync(output,built,"utf8");
-console.log("Built "+Object.keys(content).length+" on-site lesson pages; Worker "+Buffer.byteLength(built)+" bytes.");
+console.log("Built "+Object.keys(content).length+" on-site lesson pages with branded "+png.length+"-byte social PNG; Worker "+Buffer.byteLength(built)+" bytes.");

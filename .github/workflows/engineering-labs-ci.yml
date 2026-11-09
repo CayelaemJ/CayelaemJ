@@ -1,4 +1,4 @@
-name: OmniMaster Library and End-to-End Learning CI
+name: OmniMaster Library, UI UX and Applied Learning CI
 
 on:
   push:
@@ -17,6 +17,8 @@ on:
       - "docs/OMNIMASTER_ARCADE.md"
       - "docs/OMNIMASTER_BUILD_WITH_ME.md"
       - "docs/build-with-me/**"
+      - "docs/OMNIMASTER_HUMAN_INTERFACE.md"
+      - "docs/human-interface/**"
       - "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
       - "docs/interactive/**"
       - ".github/scripts/verify_handbook_links.py"
@@ -36,6 +38,8 @@ on:
       - "docs/OMNIMASTER_ARCADE.md"
       - "docs/OMNIMASTER_BUILD_WITH_ME.md"
       - "docs/build-with-me/**"
+      - "docs/OMNIMASTER_HUMAN_INTERFACE.md"
+      - "docs/human-interface/**"
       - "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
       - "docs/interactive/**"
       - ".github/scripts/verify_handbook_links.py"
@@ -72,5 +76,5 @@ jobs:
         run: |
           cd docs/interactive
           python -m unittest discover -v
-      - name: Verify five volumes, end-to-end lessons and local navigation
+      - name: Verify six volumes, UI/UX chapters and live study-room navigation
         run: python .github/scripts/verify_handbook_links.py

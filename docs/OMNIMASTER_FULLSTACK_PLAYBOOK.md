@@ -295,3 +295,5 @@ Create a fictional two-tenant exception workflow. Build only one complete path f
 **Explore further:** [The OmniMaster Academy](OMNIMASTER_ACADEMY.md) · [Engineering Field Guide](OMNIMASTER_FIELD_GUIDE.md) · [Build With Me](OMNIMASTER_BUILD_WITH_ME.md) · [UI/UX Development](OMNIMASTER_HUMAN_INTERFACE.md) · [Interactive Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)
 
 *Educational text written as a first-person field guide. Examples are synthetic. Private client information is intentionally excluded.*
+
+**The next lesson:** [Volume VII · Reliability and Recovery](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) shows why a frontend's message must reflect actual background-job state, and how the backend implements retries and failure recovery.

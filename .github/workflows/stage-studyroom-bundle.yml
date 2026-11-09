@@ -1,0 +1,66 @@
+name: Stage tested OmniMaster Study Room bundle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/stage-studyroom-bundle.yml"
+      - "docs/interactive/**"
+      - "docs/academy/**"
+      - "docs/reliability/**"
+      - "docs/handbook/**"
+      - "docs/human-interface/**"
+      - "docs/build-with-me/**"
+      - "docs/field-guide/**"
+      - "docs/personal/**"
+      - "docs/OMNIMASTER_*.md"
+      - "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md"
+      - "projects/README.md"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: omnimaster-stage-bundle
+  cancel-in-progress: true
+
+jobs:
+  stage:
+    name: Build, test, and stage a reviewable Worker snapshot
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout tested public course source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify bundled HTTP routes, social metadata, PNG and PDF
+        run: node docs/interactive/test_library_worker.mjs
+      - name: Preserve exact tested build and source SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/omnimaster-bundle"
+          cp docs/interactive/.generated-study-room-worker.mjs "$RUNNER_TEMP/omnimaster-bundle/worker.mjs"
+          printf '%s\n' "$GITHUB_SHA" > "$RUNNER_TEMP/omnimaster-bundle/source-sha.txt"
+          wc -c "$RUNNER_TEMP/omnimaster-bundle/worker.mjs"
+      - name: Stage generated Worker without deploying to production
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="deploy/study-room-embedded-course-bundle-20261109"
+          git fetch origin "$target"
+          git switch -C "$target" "origin/$target"
+          cp "$RUNNER_TEMP/omnimaster-bundle/worker.mjs" docs/interactive/deploy-generated-worker.mjs
+          cp "$RUNNER_TEMP/omnimaster-bundle/source-sha.txt" docs/interactive/deploy-generated-source-sha.txt
+          git add docs/interactive/deploy-generated-worker.mjs docs/interactive/deploy-generated-source-sha.txt
+          if git diff --cached --quiet; then
+            echo "Already staged this exact build"
+          else
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore(deploy): stage tested Study Room Worker from $GITHUB_SHA"
+            git push origin HEAD:"$target"
+          fi

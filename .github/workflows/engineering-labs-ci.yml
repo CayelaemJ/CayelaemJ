@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for lab in             projects/cdc-replay-lab             projects/data-quality-contracts             projects/sql-query-plans             projects/ai-output-evaluation; do
+          for lab in projects/cdc-replay-lab projects/data-quality-contracts projects/sql-query-plans projects/ai-output-evaluation; do
             echo "::group::${lab}"
             (cd "$lab" && python -m unittest discover -v)
             echo "::endgroup::"

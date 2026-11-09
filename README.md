@@ -2,7 +2,7 @@
 
 <img src="./assets/omnimaster-banner.svg" width="100%" alt="THE OMNIMASTER! Original tech superhero, real engineering. Cayelaem Jantjies, data engineer, full-stack builder and applied AI specialist." />
 
-<p><strong>THE OMNIMASTER LIBRARY</strong> · My engineering life in four volumes, a hands-on Academy, and a tiny technical arcade.</p>
+<p><strong>THE OMNIMASTER LIBRARY</strong> · My engineering life in five volumes, a hands-on Academy, runnable systems, and a technical arcade.</p>
 
 <br/>
 

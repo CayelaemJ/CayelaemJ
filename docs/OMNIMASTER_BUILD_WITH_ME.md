@@ -3,7 +3,7 @@
 
 **Cayelaem Jantjies | A complete, fictional, runnable engineering walkthrough · November 2026**
 
-[GitHub cover](../README.md) · [Volume I: My engineering history](OMNIMASTER_HANDBOOK.md) · [Volume III: Academy](OMNIMASTER_ACADEMY.md) · [Data-to-Decision code](../projects/data-to-decision-platform/) · [Interactive study room](interactive/index.html)
+[GitHub cover](../README.md) · [Volume I: My engineering history](OMNIMASTER_HANDBOOK.md) · [Volume III: Academy](OMNIMASTER_ACADEMY.md) · [Data-to-Decision code](../projects/data-to-decision-platform/) · [Live interactive Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)
 
 ---
 
@@ -76,7 +76,7 @@ It does **not** reproduce any employer's code, actual The Fixer architecture or 
 
 **[30-Day Engineering Expedition](THIRTY_DAY_ENGINEERING_EXPEDITION.md)** gives a day-by-day plan to create a real portfolio project, with tangible artifacts rather than an arbitrary course badge.
 
-**[Interactive Study Room](interactive/index.html)** is a small offline HTML/JavaScript interface with scenario questions and optional local progress. Download/clone the repo and open the HTML file in a browser; it is not presented as a hosted GitHub Pages app.
+**[Live Interactive Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)** runs as a standalone Cloudflare Worker website with scenario questions and optional browser-local progress. [Its HTML source](interactive/index.html) remains public in this repository.
 
 ## What you should have when you finish
 
@@ -85,3 +85,6 @@ A clear problem contract, a runnable synthetic dataset, deterministic tests, doc
 **Build small, understand deeply, test the denial path, and learn to say what is *not* verified.**
 
 [Start Chapter 01 →](build-with-me/01_SOURCE_AND_CONTRACT.md)
+
+
+[Volume VI: The Human Interface](OMNIMASTER_HUMAN_INTERFACE.md) explains the UI/UX reasoning behind this learning experience.

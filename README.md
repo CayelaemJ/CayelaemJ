@@ -2,7 +2,7 @@
 
 <img src="./assets/omnimaster-banner.svg" width="100%" alt="THE OMNIMASTER! Original tech superhero, real engineering. Cayelaem Jantjies, data engineer, full-stack builder and applied AI specialist." />
 
-<p><strong>THE OMNIMASTER LIBRARY</strong> · My engineering life in six volumes, a hands-on Academy, runnable systems, and a technical arcade.</p>
+<p><strong>THE OMNIMASTER LIBRARY</strong> · My engineering life in seven volumes, a hands-on Academy, runnable systems, and a technical arcade.</p>
 
 <br/>
 
@@ -48,6 +48,8 @@
 **[VOLUME V · BUILD A SYSTEM WITH ME: SOURCE EVENTS TO TRUSTWORTHY DECISIONS →](docs/OMNIMASTER_BUILD_WITH_ME.md)**
 
 **[VOLUME VI · THE HUMAN INTERFACE: MY UI/UX DEVELOPMENT JOURNEY AND DESIGN FOR PEOPLE →](docs/OMNIMASTER_HUMAN_INTERFACE.md)**
+
+**[VOLUME VII · RELIABILITY ENGINEERING: RETRIES, RECOVERY AND TRUTHFUL UX →](docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md)**
 
 **[THE OMNIMASTER ARCADE · PUZZLES, TECHNICAL QUESTS AND A PLAYABLE PYTHON GAME →](docs/OMNIMASTER_ARCADE.md)**
 
@@ -445,7 +447,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)** · **[BUILD WITH ME](docs/OMNIMASTER_BUILD_WITH_ME.md)** · **[30-DAY QUEST](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)** · **[UI/UX AND USABILITY](docs/OMNIMASTER_HUMAN_INTERFACE.md)** · **[LIVE STUDY ROOM](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)** · **[BUILD WITH ME](docs/OMNIMASTER_BUILD_WITH_ME.md)** · **[30-DAY QUEST](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)** · **[UI/UX AND USABILITY](docs/OMNIMASTER_HUMAN_INTERFACE.md)** · **[RELIABILITY FIELD GUIDE](docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md)** · **[LIVE STUDY ROOM](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

@@ -71,6 +71,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <div class="card"><div class="tag">CAPSTONE</div><h3>07. Demonstrate the work</h3><p>Small end-to-end builds with reproducible proof.</p><a href="../academy/07_CAPSTONES.md">Read lesson</a></div>
 <div class="card"><div class="tag">RUNNABLE PROJECT</div><h3>08. Build with me</h3><p>Python, transactional SQLite, fictional source events and business metrics.</p><a href="../OMNIMASTER_BUILD_WITH_ME.md">Open Volume V</a></div>
 <div class="card"><div class="tag">HUMAN-CENTRED DESIGN</div><h3>09. UI/UX and usability</h3><p>How I design interfaces that help people complete tasks, understand results, and recover from errors.</p><a href="../OMNIMASTER_HUMAN_INTERFACE.md">Read Volume VI</a></div>
+<div class="card"><div class="tag">RELIABILITY ENGINEERING</div><h3>10. Fail safely and recover</h3><p>Retry rules, idempotency, dead letters, incident review and truthful frontend progress.</p><a href="../OMNIMASTER_RELIABILITY_FIELD_GUIDE.md">Read Volume VII</a></div>
 </div>
 </section>
 <section id="book" aria-labelledby="book-title">
@@ -99,9 +100,9 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <section id="cases" aria-labelledby="cases-title">
 <div class="eyebrow">04 · Interactive engineering decisions</div>
 <h2 id="cases-title">The decision room</h2>
-<p>Six simplified, fictional incidents. The point is the reasoning, not collecting an impressive score. Use the choices to test your assumptions.</p>
+<p>Seven simplified, fictional incidents. The point is the reasoning, not collecting an impressive score. Use the choices to test your assumptions.</p>
 <div class="card">
-<p class="tag" id="quiz-counter">CASE 1 OF 6</p>
+<p class="tag" id="quiz-counter">CASE 1 OF 7</p>
 <h3 id="quiz-question">Loading case...</h3>
 <div id="quiz-options" role="group" aria-label="Choose an engineering decision"></div>
 <div class="btnrow"><button id="quiz-submit" type="button" disabled>Check decision</button><button class="secondary" id="quiz-next" type="button" hidden>Next case</button></div>
@@ -136,6 +137,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 "use strict";
 (function () {
   const questions = [
+    {q:"An upload API returns 202 Accepted. The worker has not yet run. What should the frontend display?",a:["Completed and published","Queued, with a way to check status","Retry immediately until the UI turns green"],c:1,why:"202 confirms acceptance, not completion. Use a status contract and show the actual backend state. Retrying blindly may duplicate work."},
     {q:"A Launch Study Room link opens HTML source in GitHub, not a usable page. What is the right UX fix?",a:["Tell users to learn HTML","Host and link the real experience; label source separately","Add another decorative badge"],c:1,why:"Navigation is part of usability. Link the user to the experience they expect, and test the whole task path."},
     {q:"One invoice has two deliveries and three inspections. The joined report sums the invoice six times. First move?",a:["Add DISTINCT to the amount","Define the invoice grain and reconcile join cardinality","Change the chart framework"],c:1,why:"The invoice belongs at invoice grain. The two child relationships multiplied the rows; a correct model or aggregation must preserve the source total."},
     {q:"Two source updates share one timestamp second. Your incremental query uses > last_timestamp. What is safest?",a:["Assume no change was missed","Refresh the browser faster","Prove a reliable change position or design bounded replay and reconciliation"],c:2,why:"A coarse exclusive watermark can miss boundary updates. A changed-row/event log is needed if full history and deletes matter."},

@@ -13,6 +13,7 @@ const lessons=[
  "docs/OMNIMASTER_OPERATING_MANUAL.md",
  "docs/OMNIMASTER_BUILD_WITH_ME.md",
  "docs/OMNIMASTER_HUMAN_INTERFACE.md",
+ "docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md",
  "docs/OMNIMASTER_ARCADE.md",
  "docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md",
  "projects/README.md",
@@ -28,7 +29,10 @@ const lessons=[
  ...["01_ARCHITECTURE_ATLAS","02_DEBUGGING_CASEBOOK","03_ENGINEERING_WORKBOOK",
      "04_ROLE_AND_EVIDENCE_MAP","05_DECISION_JOURNAL"].map(x=>"docs/field-guide/"+x+".md"),
  ...["01_INTJ_AND_ME","02_WHY_I_THINK_IN_SYSTEMS","03_IT_RANGE_AND_LIMITS",
-     "04_COLLABORATION_AND_QUIRKS"].map(x=>"docs/personal/"+x+".md")
+     "04_COLLABORATION_AND_QUIRKS"].map(x=>"docs/personal/"+x+".md"),
+ ...["01_JOBS_AND_STATE","02_RETRIES_AND_IDEMPOTENCY",
+     "03_DEAD_LETTERS_AND_RECONCILIATION","04_STATUS_UX_AND_OPERATIONS",
+     "05_PRODUCTION_BOUNDARIES"].map(x=>"docs/reliability/"+x+".md")
 ];
 const content=Object.fromEntries(lessons.map(path=>[path,readFileSync(resolve(root,path),"utf8")]));
 const home=readFileSync(resolve(root,"docs/interactive/index.html"),"utf8");

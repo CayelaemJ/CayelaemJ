@@ -85,3 +85,6 @@ The chapters add the narrative and reasoning. These deeper references retain sou
 **The principle behind everything here: one mind, every layer.** The OmniMaster persona is creative. The engineering history, open issues, experiments and limitations are not.
 
 [Open Chapter 01: The engineer →](handbook/01_THE_ENGINEER.md) · [Open Volume II: The field guide →](OMNIMASTER_FIELD_GUIDE.md)
+
+
+**[Volume VII · Reliability Engineering and the Human Experience](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md)** teaches a runnable retry/recovery system, audit trails, dead letters and trustworthy frontend status.

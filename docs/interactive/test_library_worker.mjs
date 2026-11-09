@@ -39,7 +39,11 @@ const lessonPaths=[
  "/THIRTY_DAY_ENGINEERING_EXPEDITION.md",
  "/projects/README.md",
  "/OMNIMASTER_FULLSTACK_PLAYBOOK.md",
- "/OMNIMASTER_HANDBOOK.md"
+ "/OMNIMASTER_HANDBOOK.md",
+ "/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md",
+ "/reliability/01_JOBS_AND_STATE.md",
+ "/reliability/02_RETRIES_AND_IDEMPOTENCY.md",
+ "/reliability/04_STATUS_UX_AND_OPERATIONS.md"
 ];
 for(const path of lessonPaths){
  const response=await check(path,200,/text\/html/);

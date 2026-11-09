@@ -10,14 +10,14 @@ This is a **static, self-contained HTML experience** for readers of [Volume V: B
 
 1. Clone or download the [CayelaemJ profile repository](https://github.com/CayelaemJ/CayelaemJ).
 2. Double-click **`docs/interactive/index.html`** or open it in your browser.
-3. Browse seven lessons, answer six engineering scenarios and tick off the 30 daily study missions.
+3. Browse seven foundational lessons plus additional specialist volumes, answer seven engineering scenarios and tick off the 30 daily study missions.
 
 GitHub's normal file preview displays HTML as source and **does not execute it**. Use the live Cloudflare URL above to interact without cloning, or open the HTML file locally. See [hosting and maintenance notes](HOSTING.md).
 
 ## What it includes
 
 - An offline, browser-readable guide to the Academy and Volume V.
-- Six fictional engineering decision scenarios with explanations.
+- Seven fictional engineering decision scenarios with explanations.
 - An optional 30-day checklist, with a progress bar and a clear-progress button.
 - Dark OmniMaster styling, responsive layouts, visible keyboard focus, semantic sections and accessible announcements.
 

@@ -17,7 +17,7 @@ This is a small, public learning experience with no user accounts, external scri
 | Component | Where it lives | Notes |
 |---|---|---|
 | Canonical HTML/CSS/JS | `docs/interactive/index.html` on GitHub | Single-page, self-contained, framework-free and testable offline |
-| Hosted copy | Cloudflare Worker `omnimaster-study-room` | Embedded HTML plus 48 public teaching chapters, with read-only lesson routes |
+| Hosted copy | Cloudflare Worker `omnimaster-study-room` | Embedded HTML plus 54 public teaching pages, with read-only lesson routes |
 | Cloudflare account subdomain | `cabo-solutions-za.workers.dev` | Worker route enabled |
 | Study material | Approved educational Markdown chapters | Bundled into the Worker when deployed, served on-site as HTML rather than GitHub redirects |
 | Downloadable textbook | `/downloads/omnimaster-fullstack.pdf` | Actual PDF response generated from the public full-stack playbook at deployment build |

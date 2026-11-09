@@ -94,10 +94,10 @@ class StudyRoomTests(unittest.TestCase):
         for n in range(1, 8):
             self.assertIn(f"../academy/0{n}_", self.html)
 
-    def test_exactly_six_scenarios_have_explanations(self):
+    def test_exactly_seven_scenarios_have_explanations(self):
         questions = self.script.split("const questions = [", 1)[1].split("];", 1)[0]
-        self.assertEqual(len(re.findall(r"\{q:", questions)), 6)
-        self.assertEqual(len(re.findall(r",why:", questions)), 6)
+        self.assertEqual(len(re.findall(r"\{q:", questions)), 7)
+        self.assertEqual(len(re.findall(r",why:", questions)), 7)
 
     def test_exactly_thirty_mission_titles(self):
         titles = self.script.split("const titles=[", 1)[1].split("];", 1)[0]

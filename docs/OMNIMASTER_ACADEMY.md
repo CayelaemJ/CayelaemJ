@@ -90,3 +90,8 @@ For worked explanations and reviewer questions, use the [Volume II workbook](fie
 ### Read lessons without opening GitHub
 
 The [live OmniMaster Study Room](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) serves all Academy lessons directly as readable HTML. The [frontend/backend book](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md) and its [PDF edition](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf) are part of the same public learning experience.
+
+
+### Learn how systems fail safely
+
+[**Volume VII: The Reliability Field Guide**](OMNIMASTER_RELIABILITY_FIELD_GUIDE.md) explains retries, idempotency, dead-letter handling and truthful user status. Its [Python lab](../projects/reliability-recovery-lab/) demonstrates the decisions with synthetic data and regression tests.

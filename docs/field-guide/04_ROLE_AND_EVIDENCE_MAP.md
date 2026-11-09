@@ -106,3 +106,8 @@ These are useful conversations because the answers require concrete engineering 
 **Contact:** [LinkedIn](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/) · [Interactive portfolio](https://omnimaster-portfolio.onrender.com) · [Email](mailto:cay.jantjies1703@gmail.com)
 
 [← Workbook](03_ENGINEERING_WORKBOOK.md) · [Next: Architecture decisions →](05_DECISION_JOURNAL.md)
+
+
+### If you are evaluating my UI/UX development experience
+
+My experience combines building data-rich interfaces, responsive React applications, operational workflows, dashboard design and mobile/dark-mode testing with growing attention to usability, accessibility, user feedback and design systems. See [Volume VI: The Human Interface](../OMNIMASTER_HUMAN_INTERFACE.md) for the full reasoning and public cases. This is integrated cross-stack UI/UX work, not a claim of formal design certification or independently measured user-research outcomes.

@@ -53,7 +53,13 @@
 
 **[30-DAY ENGINEERING EXPEDITION · A DAY-BY-DAY STUDY PLAN →](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)**
 
-**[LAUNCH THE LIVE STUDY ROOM · INTERACTIVE WEBSITE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
+**[LAUNCH THE LIVE STUDY ROOM · READ EVERY LESSON ON THE WEBSITE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
+
+**[STUDY FRONTEND VS BACKEND · INTERACTIVE HTML BOOK →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)**
+
+**[DOWNLOAD THE FULL-STACK PDF EDITION →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf)**
+
+Public learning is served directly from the site. Source review is separate: [access and visibility policy](docs/ACCESS_AND_SHARING.md).
 
 <sub>[Inspect the Study Room HTML source](docs/interactive/index.html) · No account or tracking · Optional progress stays in your browser.</sub>
 

@@ -76,8 +76,9 @@ class StudyRoomTests(unittest.TestCase):
             parsed = urlsplit(uri)
             if not parsed.path or parsed.path.startswith("#"):
                 continue
-            if uri == "/downloads/omnimaster-fullstack.pdf":
-                # The hosted Worker generates a PDF; no static file exists offline.
+            if uri in {"/downloads/omnimaster-fullstack.pdf", "/library",
+                       "/OMNIMASTER_FULLSTACK_PLAYBOOK.md"}:
+                # Hosted Worker routes do not map to individual offline files.
                 continue
             if parsed.scheme or parsed.netloc:
                 self.assertEqual(
@@ -89,6 +90,10 @@ class StudyRoomTests(unittest.TestCase):
             path = (PAGE.parent / parsed.path).resolve()
             self.assertTrue(path.is_relative_to(ROOT), uri)
             self.assertTrue(path.exists(), uri)
+
+    def test_searchable_catalogue_is_linked(self):
+        self.assertIn('href="/library"', self.html)
+        self.assertIn("complete searchable learning library", self.html)
 
     def test_seven_lessons_are_linked(self):
         for n in range(1, 8):

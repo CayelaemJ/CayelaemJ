@@ -1,0 +1,26 @@
+name: OmniMaster Public Sharing Health
+
+on:
+  pull_request:
+    paths:
+      - "scripts/check_public_share_urls.mjs"
+      - ".github/workflows/public-sharing-health.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live-url-check:
+    name: Public Render sites, canonical cards, PDF and preview PNG
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout read-only public source
+        uses: actions/checkout@v4
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check live public endpoints with normal and LinkedIn-style UAs
+        run: node scripts/check_public_share_urls.mjs

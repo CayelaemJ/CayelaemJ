@@ -2,7 +2,7 @@
 
 <img src="./assets/omnimaster-banner.svg" width="100%" alt="THE OMNIMASTER! Original tech superhero, real engineering. Cayelaem Jantjies, data engineer, full-stack builder and applied AI specialist." />
 
-<p><strong>THE OMNIMASTER HANDBOOK</strong> · A living engineering textbook about the person, the systems, the decisions and the code.</p>
+<p><strong>THE OMNIMASTER LIBRARY</strong> · My engineering life in four volumes, a hands-on Academy, and a tiny technical arcade.</p>
 
 <br/>
 
@@ -41,6 +41,14 @@
 
 **[VOLUME II · THE ENGINEERING FIELD GUIDE: ARCHITECTURES, INCIDENTS AND WORKED EXERCISES →](docs/OMNIMASTER_FIELD_GUIDE.md)**
 
+**[VOLUME III · THE OMNIMASTER ACADEMY: LEARN THE SKILLS AND BUILD THE SYSTEMS →](docs/OMNIMASTER_ACADEMY.md)**
+
+**[VOLUME IV · THE PERSON BEHIND THE CODE: INTJ, SYSTEMS THINKING AND MY RANGE ACROSS IT →](docs/OMNIMASTER_OPERATING_MANUAL.md)**
+
+**[THE OMNIMASTER ARCADE · PUZZLES, TECHNICAL QUESTS AND A PLAYABLE PYTHON GAME →](docs/OMNIMASTER_ARCADE.md)**
+
+> **Where I fit:** Across most software-oriented IT environments, from SQL and analytics through applications, AI integration, quality, security-conscious delivery and cloud/platform work. **Hardware engineering and physical device repair aren't my focus.** Breadth is my advantage; I still respect the depth each specialist discipline requires. [See the evidence and limits](docs/personal/03_IT_RANGE_AND_LIMITS.md).
+
 Not another list of frameworks. This is my technical autobiography: **where I started, the organisations and systems I've worked with, the failures that taught me something, how I design trustworthy data and software, and what you can run yourself**.
 
 | **PART I · The person & the journey** | **PART II · Engineering practice** |
@@ -69,6 +77,17 @@ Not another list of frameworks. This is my technical autobiography: **where I st
 | [**Architecture decision journal**](docs/field-guide/05_DECISION_JOURNAL.md) | Six explicit trade-off records, including migration and security gates |
 
 **[OPEN THE FULL FIELD GUIDE →](docs/OMNIMASTER_FIELD_GUIDE.md)**
+
+### Start studying or find out how I think
+
+| Start here | What you'll find |
+|---|---|
+| [**Academy: seven lessons**](docs/OMNIMASTER_ACADEMY.md) | SQL, CDC, backend systems, applied AI, security, CI and three capstones |
+| [**My INTJ perspective**](docs/personal/01_INTJ_AND_ME.md) | The useful habits, blind spots and limits of the label |
+| [**Why I think in systems**](docs/personal/02_WHY_I_THINK_IN_SYSTEMS.md) | How statistics, BI, manufacturing and software shaped my decisions |
+| [**My range across IT**](docs/personal/03_IT_RANGE_AND_LIMITS.md) | What I have done, where I can contribute, and where I need specialist growth |
+| [**How to work with me**](docs/personal/04_COLLABORATION_AND_QUIRKS.md) | The collaboration guide, curiosities and non-negotiables |
+| [**Play Incident Academy**](projects/omnimaster-incident-academy/) | Eight offline engineering detective challenges, explained in code |
 
 ---
 
@@ -412,7 +431,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

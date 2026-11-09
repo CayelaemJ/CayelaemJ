@@ -55,15 +55,15 @@
 
 **[30-DAY ENGINEERING EXPEDITION · A DAY-BY-DAY STUDY PLAN →](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)**
 
-**[LAUNCH THE LIVE STUDY ROOM · READ EVERY LESSON ON THE WEBSITE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
+**[LAUNCH THE LIVE STUDY ROOM · READ EVERY LESSON ON THE WEBSITE →](https://omnimaster-study-room-share.onrender.com/)**
 
-**[SEARCH ALL 54 LEARNING PAGES · INTERACTIVE COURSE CATALOGUE →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/library)**
+**[SEARCH ALL 54 LEARNING PAGES · INTERACTIVE COURSE CATALOGUE →](https://omnimaster-study-room-share.onrender.com/library.html)**
 
-The Study Room has a branded link preview for sharing the public learning website on LinkedIn or in messages. The preview links to the actual site, not a GitHub HTML source viewer.
+**For LinkedIn and social sharing, use the Render-hosted Study Room:** https://omnimaster-study-room-share.onrender.com/. Its HTML metadata and image are served directly from this URL. The older Cloudflare Worker remains available as a [fallback](https://omnimaster-study-room.cabo-solutions-za.workers.dev/), but Cloudflare's managed `workers.dev` bot checks may prevent LinkedIn from crawling that hostname. LinkedIn's Post Inspector result for the new URL still needs user confirmation.
 
-**[STUDY FRONTEND VS BACKEND · INTERACTIVE HTML BOOK →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/OMNIMASTER_FULLSTACK_PLAYBOOK.md)**
+**[STUDY FRONTEND VS BACKEND · INTERACTIVE HTML BOOK →](https://omnimaster-study-room-share.onrender.com/OMNIMASTER_FULLSTACK_PLAYBOOK.html)**
 
-**[DOWNLOAD THE FULL-STACK PDF EDITION →](https://omnimaster-study-room.cabo-solutions-za.workers.dev/downloads/omnimaster-fullstack.pdf)**
+**[DOWNLOAD THE FULL-STACK PDF EDITION →](https://omnimaster-study-room-share.onrender.com/downloads/omnimaster-fullstack.pdf)**
 
 Public learning is served directly from the site. Source review is separate: [access and visibility policy](docs/ACCESS_AND_SHARING.md).
 
@@ -112,7 +112,7 @@ Not another list of frameworks. This is my technical autobiography: **where I st
 | [**Play Incident Academy**](projects/omnimaster-incident-academy/) | Eight offline engineering detective challenges, explained in code |
 | [**Build an event-to-decision platform**](projects/data-to-decision-platform/) | A complete, synthetic SQLite source-to-Bronze/Silver/Gold simulation with transaction and replay tests |
 | [**30 days of learning by doing**](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md) | Thirty daily assignments with expected artifacts and pass criteria |
-| [**Live interactive Study Room**](https://omnimaster-study-room.cabo-solutions-za.workers.dev/) | A usable browser experience, with technical questions and optional browser-local progress |
+| [**Live interactive Study Room**](https://omnimaster-study-room-share.onrender.com/) | A usable browser experience, with technical questions and optional browser-local progress |
 | [**UI/UX and human-centred design**](docs/OMNIMASTER_HUMAN_INTERFACE.md) | Six chapters about my interface work, usability, design systems, accessibility and user research |
 
 ---
@@ -457,7 +457,7 @@ You can see my complete project evidence, interact with the portfolio, inspect p
 
 ### ONE MIND. EVERY LAYER.
 
-**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)** · **[BUILD WITH ME](docs/OMNIMASTER_BUILD_WITH_ME.md)** · **[30-DAY QUEST](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)** · **[UI/UX AND USABILITY](docs/OMNIMASTER_HUMAN_INTERFACE.md)** · **[RELIABILITY FIELD GUIDE](docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md)** · **[LIVE STUDY ROOM](https://omnimaster-study-room.cabo-solutions-za.workers.dev/)**
+**[EXPLORE OMNIMASTER](https://omnimaster-portfolio.onrender.com)** · **[PROJECT ATLAS](docs/PROJECT_PORTFOLIO.md)** · **[ENGINEERING DOSSIERS](docs/OMNIMASTER_MISSION_DOSSIERS.md)** · **[READ THE HANDBOOK](docs/OMNIMASTER_HANDBOOK.md)** · **[FIELD GUIDE](docs/OMNIMASTER_FIELD_GUIDE.md)** · **[ACADEMY](docs/OMNIMASTER_ACADEMY.md)** · **[MY OPERATING MANUAL](docs/OMNIMASTER_OPERATING_MANUAL.md)** · **[ARCADE](docs/OMNIMASTER_ARCADE.md)** · **[BUILD WITH ME](docs/OMNIMASTER_BUILD_WITH_ME.md)** · **[30-DAY QUEST](docs/THIRTY_DAY_ENGINEERING_EXPEDITION.md)** · **[UI/UX AND USABILITY](docs/OMNIMASTER_HUMAN_INTERFACE.md)** · **[RELIABILITY FIELD GUIDE](docs/OMNIMASTER_RELIABILITY_FIELD_GUIDE.md)** · **[LIVE STUDY ROOM](https://omnimaster-study-room-share.onrender.com/)**
 
 **[LINKEDIN](https://www.linkedin.com/in/cayelaem-jantjies-000b45144/)** · **[EMAIL](mailto:cay.jantjies1703@gmail.com)** · **[PUBLIC REPOSITORIES](https://github.com/CayelaemJ?tab=repositories)**
 

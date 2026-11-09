@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>OmniMaster | Offline Engineering Study Room</title>
+<style>
+:root{--bg:#08131f;--panel:#112637;--panel2:#1a3443;--line:#355266;--mint:#75e8d4;--gold:#f1ce84;--ink:#f0f6f7;--muted:#bfd0d8;--bad:#ffb6aa;--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 5% 0,#1d4050,var(--bg) 45%);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--mint);text-underline-offset:.22em}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.skip{position:absolute;top:-60px;left:10px;padding:8px 14px;background:#fff;color:#111;z-index:20}.skip:focus{top:10px}
+header,main,footer{max-width:1050px;margin:auto;padding:24px}
+header{padding-top:38px}
+.eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-size:.8rem}
+h1{font-size:clamp(2.3rem,5vw,4.6rem);line-height:1.12;max-width:850px;margin:10px 0 18px}
+h2{font-size:1.7rem;line-height:1.2;margin:0 0 20px}
+h3{font-size:1.1rem;line-height:1.3;margin:0 0 6px}
+p{max-width:75ch}header p{font-size:1.12rem;color:var(--muted)}
+nav{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 0}
+nav a,.pill{display:inline-block;text-decoration:none;border:1px solid var(--line);border-radius:100px;padding:9px 15px;background:var(--panel);color:var(--ink)}
+nav a:hover,.pill:hover{border-color:var(--mint)}
+section{padding:28px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:linear-gradient(145deg,var(--panel),#122937);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.card p{font-size:.93rem;color:var(--muted);margin:6px 0 10px}
+.tag{font-size:.76rem;letter-spacing:.08em;color:var(--gold);font-weight:800}
+button{border:1px solid var(--mint);background:var(--mint);color:#07131c;font:inherit;font-weight:750;border-radius:9px;padding:10px 16px;cursor:pointer}
+button:disabled{opacity:.4;cursor:not-allowed}
+button.secondary{background:transparent;color:var(--mint)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+#quiz-options{display:grid;gap:10px;max-width:750px;margin-top:17px}
+.choice{display:block;text-align:left;width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--ink);font-weight:500}
+.choice[aria-pressed="true"]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+#quiz-feedback{min-height:64px;margin-top:12px;color:var(--gold)}
+.progress-track{height:13px;background:#203a4d;border-radius:100px;overflow:hidden;margin:10px 0}
+#progress-bar{height:100%;background:var(--mint);width:0%;transition:width .2s}
+#days{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:20px}
+.day{display:flex;gap:11px;align-items:flex-start;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.day input{width:18px;height:18px;flex-shrink:0;accent-color:#75e8d4;margin-top:4px}
+.day label{cursor:pointer;font-size:.91rem}
+.note{border-left:3px solid var(--gold);padding:4px 15px;color:var(--muted);margin:15px 0}
+footer{border-top:1px solid var(--line);color:var(--muted);padding-bottom:50px;font-size:.92rem}
+code{background:#1f3a49;padding:2px 5px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#progress-bar{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<div class="eyebrow">Cayelaem Jantjies · The OmniMaster Library</div>
+<h1>Learn the system. Break the assumption. Prove the fix.</h1>
+<p>A tiny offline study room for the engineering habits behind my career: start with the business event, follow the data through the system, test what could go wrong, and explain the result.</p>
+<nav aria-label="Page sections">
+<a href="#paths">Study paths</a><a href="#cases">Decision room</a><a href="#expedition">30-day expedition</a><a href="#about">How it works</a>
+</nav>
+</header>
+<main id="main">
+<section id="paths" aria-labelledby="paths-title">
+<div class="eyebrow">01 · Choose a path</div><h2 id="paths-title">The course without the gatekeeping</h2>
+<div class="grid">
+<div class="card"><div class="tag">FOUNDATION</div><h3>01. Start by investigating</h3><p>Define a business event and design a reproducible experiment.</p><a href="../academy/01_START_HERE.md">Read lesson</a></div>
+<div class="card"><div class="tag">ANALYTICS</div><h3>02. SQL and data meaning</h3><p>Keys, grain, joins, measures and query plans.</p><a href="../academy/02_SQL_AND_MODELLING.md">Read lesson</a></div>
+<div class="card"><div class="tag">DATA ENGINEERING</div><h3>03. Pipelines and CDC</h3><p>Event identity, replay, deletes, quality and source freshness.</p><a href="../academy/03_PIPELINES_AND_CDC.md">Read lesson</a></div>
+<div class="card"><div class="tag">SOFTWARE ENGINEERING</div><h3>04. Build the workflow</h3><p>APIs, state transitions, tenant scope and useful interfaces.</p><a href="../academy/04_BUILD_APPLICATIONS.md">Read lesson</a></div>
+<div class="card"><div class="tag">APPLIED AI</div><h3>05. Evaluate before trusting</h3><p>Grounding, output contracts, fallback and human review.</p><a href="../academy/05_APPLIED_AI.md">Read lesson</a></div>
+<div class="card"><div class="tag">OPERATIONS</div><h3>06. Protect the release</h3><p>Negative tests, CI, MFA, migration rehearsal and rollback.</p><a href="../academy/06_SECURITY_AND_DELIVERY.md">Read lesson</a></div>
+<div class="card"><div class="tag">CAPSTONE</div><h3>07. Demonstrate the work</h3><p>Small end-to-end builds with reproducible proof.</p><a href="../academy/07_CAPSTONES.md">Read lesson</a></div>
+<div class="card"><div class="tag">RUNNABLE PROJECT</div><h3>08. Build with me</h3><p>Python, transactional SQLite, fictional source events and business metrics.</p><a href="../OMNIMASTER_BUILD_WITH_ME.md">Open Volume V</a></div>
+</div>
+</section>
+<section id="cases" aria-labelledby="cases-title">
+<div class="eyebrow">02 · Interactive engineering decisions</div>
+<h2 id="cases-title">The decision room</h2>
+<p>Five simplified, fictional incidents. The point is the reasoning, not collecting an impressive score. Use the choices to test your assumptions.</p>
+<div class="card">
+<p class="tag" id="quiz-counter">CASE 1 OF 5</p>
+<h3 id="quiz-question">Loading case...</h3>
+<div id="quiz-options" role="group" aria-label="Choose an engineering decision"></div>
+<div class="btnrow"><button id="quiz-submit" type="button" disabled>Check decision</button><button class="secondary" id="quiz-next" type="button" hidden>Next case</button></div>
+<div id="quiz-feedback" role="status" aria-live="polite"></div>
+</div>
+<p class="note">This room does not call AI or external services. The answer key is simplified for teaching, and real systems require context.</p>
+</section>
+<section id="expedition" aria-labelledby="expedition-title">
+<div class="eyebrow">03 · Daily practice</div>
+<h2 id="expedition-title">Your 30-day engineering expedition</h2>
+<p>Tick a mission when you have a real artifact and a passing explanation. Your progress is optional and stored in this browser only, when browser storage is available. There is no account or cloud sync.</p>
+<div class="card">
+<strong id="progress-label">0 of 30 missions completed</strong>
+<div class="progress-track" id="progress-track" role="progressbar" aria-label="Completed missions" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><div id="progress-bar"></div></div>
+<div class="btnrow"><button class="secondary" id="reset-progress" type="button">Clear local progress</button><a class="pill" href="../THIRTY_DAY_ENGINEERING_EXPEDITION.md">Read all 30 detailed missions</a></div>
+</div>
+<div id="days" aria-label="Thirty optional study missions"></div>
+</section>
+<section id="about" aria-labelledby="about-title">
+<div class="eyebrow">04 · About the person and project</div>
+<h2 id="about-title">Why I built this</h2>
+<p>I am a data engineer, analytics engineer and full-stack builder who moved from statistics and BI toward the full system: source data, backend logic, interface, security and operating constraints. I enjoy understanding the connections between these pieces and helping others learn them.</p>
+<p>I identify with the INTJ description as a personal shorthand for planning, independent investigation and systems thinking, not as a measure of intelligence or ability. I can contribute across much of software-oriented IT, while hardware engineering is not my specialist area.</p>
+<p>Read <a href="../OMNIMASTER_OPERATING_MANUAL.md">The Person Behind the Code</a> or <a href="../OMNIMASTER_HANDBOOK.md">my technical autobiography</a>. The runnable lessons are in <a href="../../projects/README.md">the public lab index</a>.</p>
+<p class="note"><strong>Open locally:</strong> Clone or download this GitHub repository, then open <code>docs/interactive/index.html</code> in your browser. GitHub's normal source-code view does not execute HTML. This is not claimed to be a hosted website.</p>
+</section>
+</main>
+<footer>
+<strong>One mind. Every layer.</strong> Synthetic teaching material only. No telemetry, third-party scripts, cookies, paid accounts or production data. Progress, if enabled, remains local to your browser and can be cleared here.
+</footer>
+<script>
+"use strict";
+(function () {
+  const questions = [
+    {q:"One invoice has two deliveries and three inspections. The joined report sums the invoice six times. First move?",a:["Add DISTINCT to the amount","Define the invoice grain and reconcile join cardinality","Change the chart framework"],c:1,why:"The invoice belongs at invoice grain. The two child relationships multiplied the rows; a correct model or aggregation must preserve the source total."},
+    {q:"Two source updates share one timestamp second. Your incremental query uses > last_timestamp. What is safest?",a:["Assume no change was missed","Refresh the browser faster","Prove a reliable change position or design bounded replay and reconciliation"],c:2,why:"A coarse exclusive watermark can miss boundary updates. A changed-row/event log is needed if full history and deletes matter."},
+    {q:"A normal employee changes the tenant ID in an API request to retrieve another employer's data. What protects the data?",a:["Check role and allowed tenant server-side","Hide the export button with CSS","Use a prettier login form"],c:0,why:"The client is untrusted. The backend must resolve permitted scope from verified identity and enforce it on each request."},
+    {q:"An AI-generated answer confidently cites text that is not in its approved document. What do you do?",a:["Trust the reported confidence","Reject unsupported evidence and request correction/review","Ask the same model whether it was honest"],c:1,why:"Source verification is a separate requirement from fluent output. Confidence is not proof; consequential decisions need review."},
+    {q:"Your migration target restored but is a day behind and the old database still receives writes. Deploy now?",a:["Switch traffic because restore passed","Delete the original database to avoid confusion","Hold until final sync, writer fencing, tests and rollback"],c:2,why:"Restore success is only one gate. Current data parity, sole-writer controls, restricted access and rollback must be verified."}
+  ];
+  let caseIndex = 0, chosen = -1, locked = false;
+  const counter=document.getElementById("quiz-counter"), question=document.getElementById("quiz-question"),
+        options=document.getElementById("quiz-options"), submit=document.getElementById("quiz-submit"),
+        next=document.getElementById("quiz-next"), feedback=document.getElementById("quiz-feedback");
+  function renderCase(){
+    chosen=-1;locked=false;const caseItem=questions[caseIndex];
+    counter.textContent="CASE "+(caseIndex+1)+" OF "+questions.length;
+    question.textContent=caseItem.q;
+    options.replaceChildren();
+    caseItem.a.forEach(function(answer,i){
+      const button=document.createElement("button");
+      button.type="button";button.className="choice";button.textContent=(i+1)+". "+answer;
+      button.setAttribute("aria-pressed","false");
+      button.addEventListener("click",function(){
+        if(locked)return;
+        chosen=i;
+        options.querySelectorAll("button").forEach(function(b,j){b.setAttribute("aria-pressed",String(j===i));});
+        submit.disabled=false;
+      });
+      options.append(button);
+    });
+    submit.disabled=true;submit.hidden=false;next.hidden=true;feedback.textContent="";
+    next.textContent=caseIndex===questions.length-1?"Play again":"Next case";
+  }
+  submit.addEventListener("click",function(){
+    if(chosen<0||locked)return;
+    const item=questions[caseIndex];locked=true;
+    feedback.textContent=(chosen===item.c?"Correct. ":"Not quite. The strongest choice here is "+(item.c+1)+". ")+item.why;
+    submit.hidden=true;next.hidden=false;next.focus();
+  });
+  next.addEventListener("click",function(){caseIndex=(caseIndex+1)%questions.length;renderCase();question.focus();});
+  question.tabIndex=-1;
+  renderCase();
+
+  const titles=[
+    "Define the business problem","Build a fictional dataset","Document keys and grain","Create a SQL schema","Reproduce a join error",
+    "Test date boundaries","Write five regression tests","Define source event identity","Reject malformed records","Separate event log and projection",
+    "Prove replay idempotency","Test stale and conflicting versions","Force transactional rollback","Rebuild state from history",
+    "Write a metric contract","Build a trusted aggregate","Define API error behaviour","Draw the access boundary","Build a simple user view",
+    "Verify accessibility and errors","Review assumptions with a skeptic","Select an appropriate AI use case","Reject fabricated model evidence",
+    "Create an evaluation dataset","Test provider failure fallback","Model application abuse paths","Run reproducible CI checks",
+    "Rehearse restore or rollback","Write an architecture decision","Publish and teach your capstone"
+  ];
+  const STORAGE_KEY="omnimaster.studyroom.days.v1";
+  let completed=[];
+  try {
+    const loaded=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");
+    if(Array.isArray(loaded))completed=loaded.filter(function(v){return Number.isInteger(v)&&v>=1&&v<=30;});
+  } catch(_){completed=[];}
+  const daysEl=document.getElementById("days"), label=document.getElementById("progress-label"),
+        bar=document.getElementById("progress-bar"), progress=document.getElementById("progress-track");
+  function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(completed));}catch(_){/* Browsers may disable storage for file URLs. */}}
+  function update(){
+    completed=Array.from(new Set(completed));
+    const count=completed.length;
+    label.textContent=count+" of 30 missions completed";
+    progress.setAttribute("aria-valuenow",String(count));
+    bar.style.width=(100*count/30)+"%";
+  }
+  titles.forEach(function(title,i){
+    const id=i+1, row=document.createElement("div"),checkbox=document.createElement("input"),text=document.createElement("label");
+    row.className="day";checkbox.type="checkbox";checkbox.id="day-"+id;checkbox.checked=completed.includes(id);
+    text.htmlFor=checkbox.id;text.textContent="Day "+id+": "+title;
+    checkbox.addEventListener("change",function(){
+      completed=completed.filter(function(v){return v!==id;});
+      if(checkbox.checked)completed.push(id);
+      save();update();
+    });
+    row.append(checkbox,text);daysEl.append(row);
+  });
+  document.getElementById("reset-progress").addEventListener("click",function(){
+    if(!window.confirm("Clear the 30-day checklist stored in this browser?"))return;
+    completed=[];daysEl.querySelectorAll("input").forEach(function(el){el.checked=false;});
+    save();update();
+  });
+  update();
+}());
+</script>
+</body>
+</html>

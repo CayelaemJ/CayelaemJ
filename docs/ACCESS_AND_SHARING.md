@@ -21,11 +21,11 @@ GitHub does not automatically establish that an anonymous visitor is a legitimat
 | Detailed engineering interviews, architecture samples, code review | Approved recruiters and technical reviewers | **Private GitHub repository**, individually granted access after manual identity and role verification |
 | Proprietary employer/client data, credentials, internal source | Nobody without underlying organisation authorisation | Do not publish or share outside the authorised project |
 
-**Important:** turning the special profile repository private may hide its profile README and break existing links. Before any visibility change, preserve a small public profile and migrate sensitive source into a separate private repository. Existing public project repositories also need their **own** visibility reviews. Previously published content may remain in forks, clones, caches or Git history even after a change.
+**Important:** turning the special profile repository private will remove its README from the public GitHub profile and break existing links. Before any visibility change, preserve a small public profile and migrate sensitive source into a separate private repository. Existing public project repositories also need their **own** visibility reviews. Previously published content may remain in forks, clones, caches or Git history even after a change.
 
 ## What to do for vetted code review
 
-For a real recruiter or technical reviewer, verify their identity and affiliation through a trusted channel, confirm what source they need and invite their **specific GitHub account** as a collaborator to an approved private repository. Give the least-privileged permission available, review access periodically, and revoke it when no longer needed.
+For a real recruiter or technical reviewer, verify their identity and affiliation through a trusted channel, confirm what source they need, and grant access only to the necessary private material. **A private repository owned by a personal GitHub account grants collaborators write access rather than read-only access.** For a read-only technical review, prefer a private GitHub **organisation** repository where an appropriate read role can be assigned, or an identity-protected read-only document/code-review experience. Review access periodically and revoke it when no longer needed.
 
 Where access requirements need corporate SSO, expiry policies or institutional controls, use an appropriate managed identity/access service. Cloudflare Access can protect a **website** using identity rules; it cannot retroactively make a **public GitHub repository** private.
 

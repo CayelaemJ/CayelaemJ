@@ -55,7 +55,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <h1>Learn the system. Break the assumption. Prove the fix.</h1>
 <p>A tiny offline study room for the engineering habits behind my career: start with the business event, follow the data through the system, test what could go wrong, and explain the result.</p>
 <nav aria-label="Page sections">
-<a href="#paths">Study paths</a><a href="#ux">Human-centred UX</a><a href="#cases">Decision room</a><a href="#expedition">30-day expedition</a><a href="#about">How it works</a>
+<a href="#paths">Study paths</a><a href="#book">Full-stack book</a><a href="#ux">Human-centred UX</a><a href="#cases">Decision room</a><a href="#expedition">30-day expedition</a><a href="#about">How it works</a>
 </nav>
 </header>
 <main id="main">
@@ -73,8 +73,20 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <div class="card"><div class="tag">HUMAN-CENTRED DESIGN</div><h3>09. UI/UX and usability</h3><p>How I design interfaces that help people complete tasks, understand results, and recover from errors.</p><a href="../OMNIMASTER_HUMAN_INTERFACE.md">Read Volume VI</a></div>
 </div>
 </section>
+<section id="book" aria-labelledby="book-title">
+<div class="eyebrow">02 · The engineering textbook</div>
+<h2 id="book-title">Frontend vs backend: read it here</h2>
+<p>Explore the responsibilities of both sides of a product, trace a feature from the screen through an API to a database, and understand where UI/UX, data engineering and security meet. The book is readable directly on this site, with a PDF edition for offline study.</p>
+<div class="grid">
+<div class="card"><div class="tag">FRONTEND</div><h3>The experience people touch</h3><p>React, interaction states, accessible components, responsive design, dashboards, and recovery.</p><a href="../OMNIMASTER_FULLSTACK_PLAYBOOK.md#2-frontend-what-people-experience">Read the frontend lesson</a></div>
+<div class="card"><div class="tag">BACKEND</div><h3>The trusted rules behind the UI</h3><p>APIs, authentication, tenant scope, SQL transactions, retries, jobs, audit and failure handling.</p><a href="../OMNIMASTER_FULLSTACK_PLAYBOOK.md#3-backend-what-the-system-guarantees">Read the backend lesson</a></div>
+<div class="card"><div class="tag">FULL STACK</div><h3>Connect the entire feature</h3><p>A guided trace from user intent through API, database commit, and truthful interface feedback.</p><a href="../OMNIMASTER_FULLSTACK_PLAYBOOK.md#4-trace-one-feature-across-the-stack">Open the full-stack playbook</a></div>
+</div>
+<div class="btnrow"><a class="pill" href="../OMNIMASTER_FULLSTACK_PLAYBOOK.md">Read the complete HTML book</a><a class="pill" href="/downloads/omnimaster-fullstack.pdf">Get the PDF edition</a></div>
+<p class="note"><strong>Learning materials are open to everyone.</strong> Study them on this website without visiting a code repository. Source reviews and private technical discussions are separate from this public classroom.</p>
+</section>
 <section id="ux" aria-labelledby="ux-title">
-<div class="eyebrow">02 · Interface design is system design</div>
+<div class="eyebrow">03 · Interface design is system design</div>
 <h2 id="ux-title">The human side of engineering</h2>
 <p>As a UI/UX developer working across analytics and software products, I have learned that correct data and functioning APIs still need a usable journey. People must find the task, understand the action, receive reliable feedback and recover when things go wrong.</p>
 <div class="grid">
@@ -85,7 +97,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <p><a href="../OMNIMASTER_HUMAN_INTERFACE.md">Read my six-chapter UI/UX development fieldbook</a> for case studies, accessibility, usability measurement and exercises.</p>
 </section>
 <section id="cases" aria-labelledby="cases-title">
-<div class="eyebrow">03 · Interactive engineering decisions</div>
+<div class="eyebrow">04 · Interactive engineering decisions</div>
 <h2 id="cases-title">The decision room</h2>
 <p>Six simplified, fictional incidents. The point is the reasoning, not collecting an impressive score. Use the choices to test your assumptions.</p>
 <div class="card">
@@ -98,7 +110,7 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <p class="note">This room does not call AI or external services. The answer key is simplified for teaching, and real systems require context.</p>
 </section>
 <section id="expedition" aria-labelledby="expedition-title">
-<div class="eyebrow">04 · Daily practice</div>
+<div class="eyebrow">05 · Daily practice</div>
 <h2 id="expedition-title">Your 30-day engineering expedition</h2>
 <p>Tick a mission when you have a real artifact and a passing explanation. Your progress is optional and stored in this browser only, when browser storage is available. There is no account or cloud sync.</p>
 <div class="card">
@@ -109,12 +121,12 @@ code{background:#1f3a49;padding:2px 5px;border-radius:4px}
 <div id="days" aria-label="Thirty optional study missions"></div>
 </section>
 <section id="about" aria-labelledby="about-title">
-<div class="eyebrow">05 · About the person and project</div>
+<div class="eyebrow">06 · About the person and project</div>
 <h2 id="about-title">Why I built this</h2>
 <p>I am a data engineer, analytics engineer, UI/UX developer and full-stack builder who moved from statistics and BI toward the full system: source data, backend logic, interface, security and operating constraints. I enjoy understanding the connections between these pieces and helping others learn them.</p>
 <p>I identify with the INTJ description as a personal shorthand for planning, independent investigation and systems thinking, not as a measure of intelligence or ability. I can contribute across much of software-oriented IT, while hardware engineering is not my specialist area.</p>
-<p>Read <a href="../OMNIMASTER_OPERATING_MANUAL.md">The Person Behind the Code</a>, <a href="../OMNIMASTER_HUMAN_INTERFACE.md">my UI/UX development story</a>, or <a href="../OMNIMASTER_HANDBOOK.md">my technical autobiography</a>. The runnable lessons are in <a href="../../projects/README.md">the public lab index</a>.</p>
-<p class="note"><strong>Launch or inspect:</strong> This is the hosted interactive Study Room served by a separate Cloudflare Worker. The <a href="https://github.com/CayelaemJ/CayelaemJ/blob/main/docs/interactive/index.html">HTML source</a> is also public. You can clone the repository and open <code>docs/interactive/index.html</code> offline. GitHub's source viewer does not execute the interactive page.</p>
+<p>Read <a href="../OMNIMASTER_OPERATING_MANUAL.md">The Person Behind the Code</a>, <a href="../OMNIMASTER_HUMAN_INTERFACE.md">my UI/UX development story</a>, or <a href="../OMNIMASTER_HANDBOOK.md">my technical autobiography</a>. The <a href="../OMNIMASTER_FULLSTACK_PLAYBOOK.md">frontend/backend fieldbook</a> and <a href="../../projects/README.md">project guide</a> are also available here.</p>
+<p class="note"><strong>Study here:</strong> lessons and books open as readable pages on this website. The site requires no account and does not link visitors directly into the development repository. Recruiter and technical code review access is handled separately.</p>
 </section>
 </main>
 <footer>

@@ -22,7 +22,7 @@ I don't stop at the chart. I trace the source, engineer the pipeline, model the 
 
 <div align="center">
 
-| **270M+** | **40%** | **70%** | **4 markets** |
+| **270M+** | **40%** | **Up to 70%** | **4 markets** |
 |:--:|:--:|:--:|:--:|
 | survey records processed | reported dashboard speed-up | less manual reporting effort | banking analytics delivered |
 

@@ -10,7 +10,7 @@
 
 **Johannesburg, South Africa** · 3+ years building across banking, FMCG, media, manufacturing, agriculture and social impact
 
-[THE WORK](#the-work) · [THE TOOLKIT](#the-toolkit) · [THE 3D GARDEN](#the-3d-garden) · [THE STORY](#the-story) · [THE DEEP DIVE](#the-deep-dive)
+[THE WORK](#the-work) · [THE TECHNOLOGY ATLAS](#the-technology-atlas) · [THE 3D GARDEN](#the-3d-garden) · [THE STORY](#the-story) · [THE DEEP DIVE](#the-deep-dive)
 
 </div>
 
@@ -106,7 +106,9 @@ I don't stop at the chart. I trace the source, engineer the pipeline, model the 
 
 ---
 
-## The toolkit
+## The technology atlas
+
+The complete stack across professional delivery, public GitHub repositories, independent prototypes and training. **Zoho is included too.** These tools do not all represent the same level of depth or the same release stage: project cards and case studies explain the context; “workstream” and “exploration” labels stay explicit.
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,typescript,react,nodejs,postgres,mysql,aws,docker,git,github&perline=10" alt="Python, TypeScript, React, Node.js, PostgreSQL, MySQL, AWS, Docker, Git and GitHub" />
@@ -115,18 +117,22 @@ I don't stop at the chart. I trace the source, engineer the pipeline, model the 
 <p align="center">
   <img src="https://img.shields.io/badge/POWER_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=182F3D" alt="Power BI" />
   <img src="https://img.shields.io/badge/MICROSOFT_FABRIC-625EEB?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Fabric" />
-  <img src="https://img.shields.io/badge/ETL_%2F_ELT-83E1D0?style=for-the-badge&logo=databricks&logoColor=182F3D" alt="ETL and ELT" />
+  <img src="https://img.shields.io/badge/ZOHO-EXPERIENCE-DA3B01?style=for-the-badge&logo=zoho&logoColor=white" alt="Zoho experience" />
   <img src="https://img.shields.io/badge/APPLIED_AI-F7CF80?style=for-the-badge&logo=openai&logoColor=182F3D" alt="Applied AI" />
 </p>
 
 <table>
-  <tr><td><strong>DATA</strong></td><td>SQL Server · PostgreSQL · MySQL · Python · ETL/ELT · dimensional modelling · data contracts · CDC experiments</td></tr>
-  <tr><td><strong>INSIGHT</strong></td><td>Power BI · DAX · Power Query · Microsoft Fabric · semantic models · row-level security · performance tuning</td></tr>
-  <tr><td><strong>PRODUCT</strong></td><td>React · TypeScript · Node.js · Fastify/Express · REST APIs · Prisma · responsive and role-aware UX</td></tr>
-  <tr><td><strong>DELIVERY</strong></td><td>Docker · GitHub Actions · Playwright · Vitest · security scanning · Render · Cloudflare · AWS experiments</td></tr>
-  <tr><td><strong>GROWING INTO</strong></td><td>Solution architecture · Kotlin/Android · iOS · platform reliability and technical leadership</td></tr>
+  <tr><td><strong>DATA ENGINEERING &amp; BI</strong></td><td>SQL · T-SQL · SQL Server · SSIS · SQL Server Agent · Power BI · DAX · Power Query M · Microsoft Fabric · Azure Synapse · Azure Data Factory · Databricks · PySpark · MDX · MS Access SQL · ETL/ELT · dimensional modelling · data contracts · dataflows · semantic models · row-level security · CDC experiments · Excel · VBA</td></tr>
+  <tr><td><strong>LANGUAGES &amp; ANALYTICS</strong></td><td>TypeScript · JavaScript · Python · pandas · scikit-learn · R · RStudio · C# / .NET 8 · Kotlin · Jetpack Compose · Swift / iOS workstream</td></tr>
+  <tr><td><strong>WEB, MOBILE &amp; UI</strong></td><td>React · React Native · Expo · Next.js · Vite · Node.js · Fastify · Express · Django · REST APIs · HTML · CSS · Three.js · Tailwind CSS · Material UI · Radix UI · Recharts · Framer Motion · React Hook Form · TanStack Query · Lucide</td></tr>
+  <tr><td><strong>DATABASES &amp; DATA ACCESS</strong></td><td>PostgreSQL · MySQL · SQLite · PGlite · Prisma · Drizzle ORM · Zod · AWS SDK for JavaScript · SQL Server / NAV staging · read-only source intake</td></tr>
+  <tr><td><strong>CLOUD &amp; DELIVERY</strong></td><td>AWS · Amazon RDS · S3-compatible storage · AWS Lambda workstream · Cloudflare Workers · Cloudflare Pages · Cloudflare R2 · Render · Railway · Neon · Aiven · Google Cloud Storage / Auth · Upstash Blob · Docker · Docker Compose · Git · GitHub · GitHub Actions · CircleCI</td></tr>
+  <tr><td><strong>AUTOMATION &amp; BUSINESS PLATFORMS</strong></td><td><strong>Zoho</strong> · Power Automate · Power Apps · SharePoint · Azure Logic Apps · Jira · ConnX · Dynamics GP · SAP · SMTP · Nodemailer · Pino logging</td></tr>
+  <tr><td><strong>AI &amp; INTELLIGENCE</strong></td><td>Groq · OpenAI APIs · Hugging Face · Ollama · ONNX Runtime · retrieval-augmented generation (RAG) · retrieval evaluation · document-grounded AI · AI-assisted assessment · model guardrails · scikit-learn</td></tr>
+  <tr><td><strong>TESTING, SECURITY &amp; IDENTITY</strong></td><td>Playwright · Vitest · integration and regression testing · Docker-based local CI · TOTP / MFA · WebAuthn · OpenID Connect · Semgrep · Trivy · Gitleaks · Snyk · OWASP-aligned review · health checks</td></tr>
 </table>
 
+<sub>Inventory combines repository dependencies, project evidence and tools I’ve used. “Learning,” “workstream,” prototype and production are different statuses; the labels above preserve those boundaries. Zoho is included from my own experience, without guessing a specific Zoho product.</sub>
 ---
 
 ## The 3D garden

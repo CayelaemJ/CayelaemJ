@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" role="img" aria-labelledby="title desc">
+<title id="title">Cayelaem Jantjies — The OmniMaster</title>
+<desc id="desc">A cinematic neon isometric data city: glowing data cubes flow from source systems through an analytics core into dashboards and human decisions.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07151B"/><stop offset=".52" stop-color="#0C2029"/><stop offset="1" stop-color="#102A32"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF0B0"/><stop offset=".48" stop-color="#F7CF80"/><stop offset="1" stop-color="#C8833E"/></linearGradient>
+ <linearGradient id="aqua" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#C5FFF1"/><stop offset=".48" stop-color="#83E1D0"/><stop offset="1" stop-color="#38A99D"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E6C7FF"/><stop offset=".5" stop-color="#B47CEC"/><stop offset="1" stop-color="#6850BA"/></linearGradient>
+ <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#173B45" stop-opacity=".96"/><stop offset="1" stop-color="#0B1D25" stop-opacity=".98"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#40D6C0" stop-opacity=".3"/><stop offset=".58" stop-color="#40D6C0" stop-opacity=".09"/><stop offset="1" stop-color="#40D6C0" stop-opacity="0"/></radialGradient>
+ <radialGradient id="haloGold"><stop stop-color="#F7CF80" stop-opacity=".25"/><stop offset="1" stop-color="#F7CF80" stop-opacity="0"/></radialGradient>
+ <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="13"/></filter>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+ <pattern id="stars" width="83" height="71" patternUnits="userSpaceOnUse"><circle cx="5" cy="13" r="1" fill="#D3F5EE" opacity=".26"/><circle cx="42" cy="48" r=".8" fill="#F7CF80" opacity=".35"/><circle cx="72" cy="22" r=".7" fill="#D3F5EE" opacity=".2"/></pattern>
+ <pattern id="floor" width="46" height="28" patternUnits="userSpaceOnUse" patternTransform="skewY(-27)"><path d="M46 0H0V28" fill="none" stroke="#83E1D0" stroke-opacity=".14" stroke-width="1"/></pattern>
+</defs>
+<rect width="1440" height="480" rx="28" fill="url(#bg)"/>
+<rect width="1440" height="480" rx="28" fill="url(#stars)"/>
+<ellipse cx="1065" cy="228" rx="390" ry="276" fill="url(#halo)"/>
+<ellipse cx="1242" cy="153" rx="182" ry="160" fill="url(#haloGold)"/>
+<circle cx="1102" cy="218" r="161" fill="none" stroke="#83E1D0" stroke-opacity=".14"/>
+<circle cx="1102" cy="218" r="126" fill="none" stroke="#F7CF80" stroke-opacity=".14" stroke-dasharray="2 11"/>
+<path d="M694 353 1084 137 1430 336 1041 471Z" fill="#071419" opacity=".55" filter="url(#shadow)"/>
+<path d="M692 335 1086 109 1438 312 1045 454Z" fill="url(#floor)" opacity=".78"/>
+<!-- orbit paths -->
+<g fill="none" stroke-linecap="round">
+ <path d="M752 285 866 217 983 284 1098 217 1212 284 1342 207" stroke="#83E1D0" stroke-width="2" stroke-opacity=".72"/>
+ <path d="M816 153 923 215 1031 153 1144 218 1259 151 1375 218" stroke="#F7CF80" stroke-width="1.5" stroke-opacity=".7" stroke-dasharray="3 8"/>
+ <path d="M797 344 906 280 1018 344 1127 280 1240 344 1360 276" stroke="#B47CEC" stroke-width="1.5" stroke-opacity=".65" stroke-dasharray="4 9"/>
+</g>
+<g>
+ <circle cx="752" cy="285" r="6" fill="#83E1D0"/><circle cx="866" cy="217" r="5" fill="#83E1D0"/><circle cx="983" cy="284" r="5" fill="#83E1D0"/><circle cx="1212" cy="284" r="4" fill="#83E1D0"/><circle cx="1342" cy="207" r="6" fill="#83E1D0"/>
+ <circle cx="816" cy="153" r="5" fill="#F7CF80"/><circle cx="923" cy="215" r="4" fill="#F7CF80"/><circle cx="1144" cy="218" r="4" fill="#F7CF80"/><circle cx="1375" cy="218" r="5" fill="#F7CF80"/>
+ <circle cx="797" cy="344" r="4" fill="#B47CEC"/><circle cx="1018" cy="344" r="4" fill="#B47CEC"/><circle cx="1240" cy="344" r="4" fill="#B47CEC"/>
+</g>
+<!-- source cube -->
+<g stroke="#E8FFF9" stroke-opacity=".42" stroke-width="1.2">
+ <path d="m786 205 42-24 43 24v48l-43 25-42-25z" fill="#14574F"/>
+ <path d="m786 205 42 25 43-25-43-24z" fill="url(#aqua)"/>
+ <path d="M828 230v48l43-25v-48z" fill="#13665C"/>
+ <path d="M786 205v48l42 25v-48z" fill="#238B7A"/>
+ <!-- central core -->
+ <path d="m988 188 61-35 61 35v70l-61 35-61-35z" fill="#584026"/>
+ <path d="m988 188 61 35 61-35-61-35z" fill="url(#gold)"/>
+ <path d="M1049 223v70l61-35v-70z" fill="#9C673B"/>
+ <path d="M988 188v70l61 35v-70z" fill="#BD874F"/>
+ <!-- output cube -->
+ <path d="m1219 211 44-25 44 25v50l-44 26-44-26z" fill="#473A69"/>
+ <path d="m1219 211 44 25 44-25-44-25z" fill="url(#violet)"/>
+ <path d="M1263 236v51l44-26v-50z" fill="#66529C"/>
+ <path d="M1219 211v50l44 26v-51z" fill="#856BBB"/>
+</g>
+<!-- floating glass dashboard -->
+<g transform="translate(1134 77)">
+ <path d="M0 23 105 0l94 53-105 25z" fill="#06141A" opacity=".62"/>
+ <path d="m0 10 105-24 94 53-105 25z" fill="url(#panel)" stroke="#83E1D0" stroke-opacity=".5"/>
+ <path d="m16 11 81-18 74 42-81 19z" fill="#102E36" stroke="#F7CF80" stroke-opacity=".32"/>
+ <path d="m32 16 18-4 0 17-18 4z" fill="#83E1D0" opacity=".78"/>
+ <path d="m57 10 18-4 0 17-18 4z" fill="#F7CF80" opacity=".92"/>
+ <path d="m82 5 18-4 0 17-18 4z" fill="#B47CEC" opacity=".9"/>
+ <path d="m108 10 34 18" stroke="#83E1D0" stroke-width="2" fill="none"/>
+ <path d="m108 19 21 11" stroke="#F7CF80" stroke-width="2" fill="none"/>
+ <circle cx="171" cy="11" r="5" fill="#83E1D0"/>
+</g>
+<!-- connector labels -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">
+ <text x="757" y="311" fill="#A9EBDD">SOURCE</text>
+ <text x="1006" y="322" fill="#F7CF80">TRUSTED DATA</text>
+ <text x="1223" y="287" fill="#D8C3FF">PRODUCT</text>
+ <text x="1144" y="65" fill="#C5FFF1" font-size="9">INSIGHT ENGINE</text>
+</g>
+<!-- copy -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+ <rect x="72" y="65" width="245" height="27" rx="13.5" fill="#83E1D0" fill-opacity=".12" stroke="#83E1D0" stroke-opacity=".42"/>
+ <circle cx="91" cy="78.5" r="4" fill="#83E1D0"/>
+ <text x="105" y="83" fill="#B9F5E9" font-size="11" font-weight="700" letter-spacing="2.2">DATA × PRODUCTS × IMPACT</text>
+ <text x="66" y="181" fill="#F7F9F6" font-size="72" font-weight="800" letter-spacing="-3">THE</text>
+ <text x="66" y="258" fill="url(#gold)" font-size="78" font-weight="850" letter-spacing="-3">OMNIMASTER</text>
+ <text x="72" y="306" fill="#C8DAD9" font-size="20" font-weight="500">Cayelaem Jantjies</text>
+ <text x="72" y="352" fill="#83E1D0" font-size="15" font-weight="700" letter-spacing="1.25">DATA ENGINEER  ·  FULL-STACK BUILDER</text>
+ <text x="72" y="381" fill="#F7CF80" font-size="15" font-weight="700" letter-spacing="1.25">ANALYTICS ENGINEER  ·  APPLIED AI</text>
+ <text x="72" y="431" fill="#94AAA9" font-size="12" letter-spacing="1.5">I ENGINEER THE PIPELINE, THE PRODUCT AND THE DECISION.</text>
+</g>
+<rect x="1" y="1" width="1438" height="478" rx="27" fill="none" stroke="#B4D5D1" stroke-opacity=".22"/>
+</svg>

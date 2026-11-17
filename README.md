@@ -161,6 +161,38 @@ Other documented project scope includes **18 banking dashboards**, an Australian
 
 [**Read the real client and project case studies →**](docs/CLIENT_CASE_STUDIES.md)
 
+### Live profile signals
+
+<p align="center">
+  <a href="https://github.com/CayelaemJ"><img height="175" src="https://github-readme-stats.vercel.app/api?username=CayelaemJ&show_icons=true&hide_border=true&bg_color=0D1B20&title_color=F7CF80&icon_color=83E1D0&text_color=EAF7F5&rank_icon=github" alt="Public GitHub profile statistics" /></a>
+  <a href="https://github.com/CayelaemJ?tab=repositories"><img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CayelaemJ&layout=compact&hide_border=true&bg_color=0D1B20&title_color=F7CF80&text_color=EAF7F5&langs_count=8" alt="Language mix across public repositories" /></a>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=CayelaemJ&bg_color=0D1B20&color=EAF7F5&line=83E1D0&point=F7CF80&area=true&hide_border=true" alt="GitHub contribution activity over time" width="98%" />
+</p>
+
+<sub>These live cards reflect public GitHub activity and repository language metadata. The detailed case studies below describe my work beyond public repositories.</sub>
+
+### My contribution garden, in 3D 🌌
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-south-season-animate.svg" alt="Animated 3D contribution landscape, using Southern Hemisphere seasons" width="98%" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./output/github-snake.svg" />
+    <img src="./output/github-snake.svg" alt="Animated snake tracing my contribution calendar" width="98%" />
+  </picture>
+</p>
+
+<details>
+  <summary>Open the alternate 3D contribution city</summary>
+  <p align="center"><img src="./profile-3d-contrib/profile-gitblock.svg" alt="Isometric 3D blocks shaped by my contributions" width="98%" /></p>
+</details>
+
 ### Reproducible engineering labs
 
 Want to inspect working code rather than read another list of tools? These two small, dependency-free projects contain synthetic demos, executable Python and unit tests:

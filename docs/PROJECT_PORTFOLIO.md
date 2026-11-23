@@ -1,5 +1,5 @@
 # Complete project and portfolio atlas
-*Public engineering portfolio · Updated 2 November 2026 · Cayelaem (Thabo) Jantjies*
+*Public engineering portfolio · Updated 23 November 2026 · Cayelaem (Thabo) Jantjies*
 
 This document inventories the repositories presently visible through my GitHub account and the important professional case studies that cannot be shared as source code. It distinguishes **demonstrated implementation**, **active development / pilot**, **prototype**, **design or roadmap**, and **legacy/supporting repository**. A repository, feature proposal, or deployment configuration does not by itself prove that a service is production-ready.
 
@@ -10,23 +10,25 @@ This document inventories the repositories presently visible through my GitHub a
 
 ## Education, learning and applied AI
 
-### 01. CABO Learning Hub
+### 01. CABO Learning Hub — connected education and lifelong development platform
 **Repository:** [Training-and-Development-Hub](https://github.com/CayelaemJ/Training-and-Development-Hub)  
-**Status:** Active development across implemented workflows, feature branches and pilot concepts; enterprise-wide and native parity are not complete.
+**System architecture:** [25-section engineering reference](https://github.com/CayelaemJ/Training-and-Development-Hub/blob/main/docs/ARCHITECTURE.md)  
+**Status (23 November 2026):** substantial multi-client **implementation present on `main`**; no open PRs observed at review time; still no verified production launch, live school pilot, government integration or signed mobile-store distribution.
 
-**Problem:** Learner support cannot be reduced to course content; schools need continuity of academic history, interventions, development milestones and coordinated educator/guardian visibility.
+**Problem.** School and learner information is fragmented across learning delivery, assessments, attendance, interventions, teachers, family communication and progression. Longitudinal support and cross-institution continuity must not compromise child privacy or educational provenance.
 
-**My contribution:** Architecture and development of connected learner, teacher and institution experiences; assessment workflows; API/database integration; security/role design; product positioning, documentation, proof-of-concept demos and testing strategy. Technology evident in the repository includes React, TypeScript, Express, PostgreSQL/Drizzle, file/material ingestion and AI-assisted assessment.
+**My role.** Independently designed the platform architecture and built or directed work across web/mobile UI, Node.js/Express 5 services, Drizzle/PostgreSQL data models, API contracts, assessments, AI assistance, institution roles, guardian controls, country-policy gates, source-grounded retrieval, CI pipelines and engineering documentation. This is pro-bono independent product development, **not** a registered CABO company role or revenue-generating employment.
 
-**Documented functionality:** Individual materials uploads; multiple-choice practice; document-grounded written examinations; short/long/scenario questions; partial-credit AI assessment and review flags. Other documented phases include organization spaces, teaching/assessment roles, academic gradebooks, learner progression, school reports, interventions, education governance and demonstrations with synthetic schools. The repo's own delivery register is authoritative for per-phase completeness.
+**What the repository demonstrates.**
+- React/Vite web/PWA, Kotlin/Jetpack Compose Android, Swift/SwiftUI iOS and C#/WinUI 3 Windows source.
+- Shared Express API with route modules for organisation/institution workspaces, admissions, school operations, attendance, timetables, academic assessment and reports, intervention planning, guardian verification and longitudinal learning passports.
+- Document-grounded question answering and assessment generation/marking; bounded lexical RAG, source-citation validation, AI quotas and evaluation foundations.
+- Server-side tenant and object authorization, session management, privacy-aware diagnostics, phased MFA/country safety gates, private material storage and notification outbox foundations.
+- Detailed architecture documentation of data provenance, trust boundaries, cross-platform contracts, failure handling, release risk and operational readiness.
 
-**My engineering priorities:** Tutor/teacher workflow usability; explicit separation of AI suggestions and human-approved marks; parent/guardian and institutional boundaries; learner history transfers; audit trails; support for school/district/province scale; WCAG 2.2 AA design goals; POPIA/Botswana privacy review; synthetic demonstration reliability.
+**Engineering judgment.** The central challenge is coordinating a complex **modular monolith and four clients** around one security model. AI advice and synthetic exam scores must not become institution-certified decisions. A national education vision does not constitute government accreditation or legal permission to process actual children’s data.
 
-**Cross-platform work:** Genuine Kotlin/Android Studio and native iOS experiences are target implementations, not web wrappers. Full feature parity, tested release binaries and device QA are outstanding goals, not completed releases.
-
-**AI architecture:** Multi-provider orchestration using Groq/Hugging Face has been explored and actively worked on; model availability, routing, fallback and end-to-end reliability must be verified from the relevant branch and environment. Do not infer universal availability from API credentials or prototype screens.
-
-**Evidence / constraints:** [Repository README](https://github.com/CayelaemJ/Training-and-Development-Hub/blob/main/README.md) · [Delivery register](https://github.com/CayelaemJ/Training-and-Development-Hub/blob/main/docs/PHASES_1_TO_4_DELIVERY_REGISTER.md). Never assert fully launched national deployment.
+**Validation boundaries.** GitHub source and completed documentation PR #214 demonstrate engineering work, not independent production security, signed releases, store publications, regulatory approvals, adoption or live outcomes. Current release status: [CABO release readiness](https://github.com/CayelaemJ/Training-and-Development-Hub/blob/main/docs/engineering/RELEASE_READINESS.md).
 
 ## Data platforms, engineering and enterprise apps
 

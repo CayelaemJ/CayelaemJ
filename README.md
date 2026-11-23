@@ -52,7 +52,7 @@ I don't stop at the chart. I trace the source, engineer the pipeline, model the 
       <h3>🎓 CABO LEARNING HUB</h3>
       <p><strong>Turn learner data into timely support.</strong></p>
       <p>An independent, pro-bono product prototype exploring learner journeys, educator tools, interventions, longitudinal data and carefully bounded AI support.</p>
-      <p><strong>Design rule:</strong> AI can assist with learning; educators retain review and decision ownership. This is active product development, not a national deployment.</p>
+      <p><strong>Design rule:</strong> AI can assist with learning; educators retain review and decision ownership. I have developed a modular Express/PostgreSQL platform with React/PWA, native Android (Kotlin), iOS (Swift) and Windows (WinUI 3) clients, alongside institution operations, RAG, safety and evidence boundaries. Source is on main, but this remains independent pro-bono product development, not a government-accredited national deployment or signed app-store release. <a href="https://github.com/CayelaemJ/Training-and-Development-Hub/blob/main/docs/ARCHITECTURE.md">Read the full architecture.</a></p>
       <a href="https://github.com/CayelaemJ/Training-and-Development-Hub"><img src="https://img.shields.io/badge/EXPLORE_THE_LEARNING_HUB-18323A?style=flat-square&logo=github&logoColor=F7CF80" alt="Explore the Learning Hub" /></a>
       &nbsp;<a href="docs/OMNIMASTER_MISSION_DOSSIERS.md#mission-02--cabo-learning-hub">Education, data & AI →</a>
     </td>

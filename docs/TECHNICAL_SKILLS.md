@@ -1,11 +1,12 @@
 # Technical capabilities and evidence matrix
-*Version: 2 November 2026. This is a transparent skills inventory, not an assertion of equal seniority or production deployment in every technology.*
+*Version: 23 November 2026. This is a transparent skills inventory, not an assertion of equal seniority or production deployment in every technology.*
 
 | Practice | Hands-on work evidenced in CV or repositories | Continuing development / validate before claiming production expertise |
 | --- | --- | --- |
 | Business intelligence | Power BI, DAX, Power Query M, semantic models, RLS, KPI workshops, management dashboards, drill-down, performance optimisation | Advanced Fabric capabilities and platform-specific certifications vary by engagement |
 | Data engineering | T-SQL, SQL Server, SQL Agent, SSIS, cross-database reporting, staging/validation, API/SQL/file ingestion, schema and grain diagnostics, dataflows | Formal CDC/streaming/enterprise lakehouse adoption depends on project |
 | Modern data platforms | Microsoft Fabric, Azure Synapse/ADF, dimensional modelling, Databricks/PySpark experience and training | Unity Catalog/DLT, Purview and complex lakehouse governance require role-specific verification |
+| Native client engineering | Kotlin/Jetpack Compose Android, Swift/SwiftUI iOS and C#/WinUI 3 Windows client source in the CABO education monorepo; CI/release scripts and identity-aware API workflows | Physical device acceptance, signed production distribution, store release and parity remain separately gated | 
 | Full-stack web | React, Vite, TypeScript, JavaScript, Node.js, Express, Fastify, REST APIs, authenticated workflows, HTML/CSS | Product completeness varies among prototypes |
 | Databases | SQL Server, PostgreSQL, Prisma, Drizzle, SQL Server/NAV staging, MySQL read-only intake, transaction semantics, indexing | Aiven/Neon/Render migrations need separately signed-off production cutovers |
 | Python/R/statistics | pandas, scikit-learn, R/RStudio, regression, forecasting, churn, sentiment, clustering, reproducible data preparation | Forecast accuracy/impact claims require source-verified benchmarks |
